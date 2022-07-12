@@ -1,0 +1,249 @@
+$color-blue: #2f76ff;
+$color-white: #ffffff;
+$color-background: #f1f1f1;
+$color-background-button: #f85a47;
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container-fluid--pading {
+  padding: 0;
+}
+
+.header {
+  height: 560px;
+  background-color: $color-background;
+  position: relative;
+  z-index: 0;
+
+  &__banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 108px;
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+
+      &--1 {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $color-blue;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &--2 {
+        margin-left: 10px;
+      }
+    }
+
+    &__navbar {
+      margin: 0 auto;
+
+      &--list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+
+        .header__menu__navbar--item {
+          padding: 0.5rem 1rem;
+
+          a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &__auth {
+      margin: 0 auto;
+
+      button {
+        padding: 0.5rem 1rem;
+        background-color: $color-blue;
+        border: none;
+        border-radius: 20px;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__content {
+    &__title {
+      width: 560px;
+      height: 210px;
+      font-weight: 700;
+      font-size: 30px;
+      block-size: fit-content;
+      margin: 1rem 0 0 1rem;
+      text-align: center;
+    }
+
+    &__desc {
+      width: 413px;
+      height: 56px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #717171;
+      margin: 1rem 0 0 1rem;
+      text-align: center;
+      block-size: fit-content;
+    }
+  }
+  &__menu--height {
+    height: 90px;
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 10;
+    background-color: $color-white;
+    justify-content: space-evenly;
+
+    &-line {
+      padding-right: 1rem;
+      border-right: 1px solid #dddddd;
+
+      h5,
+      p {
+        margin: 0;
+      }
+    }
+
+    &-search-background {
+      width: 255px;
+      height: 50px;
+      background-color: $color-background-button;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.row--margintop {
+  margin-top: 230px;
+
+  .card__info {
+    margin-left: 65px;
+    position: relative;
+
+    &__button {
+      width: 45px;
+      height: 40px;
+      background-color: $color-background-button;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: inline-block;
+      transform: translate(100%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 20px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.howitwork {
+  text-align: center;
+}
+
+.step {
+  width: 100%;
+  text-align: center;
+}
+
+.step__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  margin: 1rem auto;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.step__logo--blue {
+  background-color: #9672ff;
+}
+
+.step__logo--green {
+  background-color: #4ddffd;
+}
+
+.step__logo--violet {
+  background-color: #f2b8ec;
+}
+
+.service {
+  height: 449px;
+  margin-top: 5rem;
+
+  &__title {
+    width: 260px;
+    height: 80px;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      width: 285px;
+      height: 300px;
+
+      li {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &__list {
+      margin: 0 0.5rem;
+    }
+
+    &__img {
+      margin: 0 0.5rem;
+    }
+  }
+}
