@@ -7,138 +7,63 @@ ul {
   list-style: none;
   padding-left: 0;
 }
-
-.container-fluid--pading {
-  padding: 0;
+ul li {
+  padding: 0.5rem 1rem;
 }
 
-.header {
-  height: 560px;
-  background-color: #f1f1f1;
-  position: relative;
-  z-index: 0;
+a {
+  color: #ffffff;
 }
-.header__banner {
-  position: absolute;
-  top: 0;
+
+.bg-light {
+  background-color: #f1f1f1 !important;
+}
+
+.hero__banner {
   right: 0;
-  z-index: -1;
+  top: 0;
+  z-index: 10;
 }
+
+.hero {
+  height: 500px;
+  background-color: #f1f1f1;
+  margin-bottom: 10rem;
+}
+
 .header__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 108px;
-}
-.header__menu__logo {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
+  width: 100%;
+  z-index: 10;
 }
 .header__menu__logo--1 {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   background-color: #2f76ff;
-  position: relative;
 }
-.header__menu__logo--1 img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.header__menu__logo--2 {
-  margin-left: 10px;
-}
-.header__menu__navbar {
-  margin: 0 auto;
-}
-.header__menu__navbar--list {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style: none;
-}
-.header__menu__navbar--list .header__menu__navbar--item {
-  padding: 0.5rem 1rem;
-}
-.header__menu__navbar--list .header__menu__navbar--item a {
-  text-decoration: none;
+.header__menu__navbar a {
   color: black;
-  font-size: 20px;
-  font-weight: 600;
-}
-.header__menu__auth {
-  margin: 0 auto;
 }
 .header__menu__auth button {
-  padding: 0.5rem 1rem;
   background-color: #2f76ff;
-  border: none;
-  border-radius: 20px;
   color: #ffffff;
 }
-.header__content__title {
-  width: 560px;
-  height: 210px;
-  font-weight: 700;
-  font-size: 30px;
-  block-size: fit-content;
-  margin: 1rem 0 0 1rem;
-  text-align: center;
-}
-.header__content__desc {
-  width: 413px;
-  height: 56px;
-  font-weight: 400;
-  font-size: 16px;
-  color: #717171;
-  margin: 1rem 0 0 1rem;
-  text-align: center;
-  block-size: fit-content;
-}
 .header__menu--height {
-  height: 90px;
-  width: 90%;
-  margin: 0 auto;
-  border: none;
+  width: 80%;
+  background-color: #ffffff;
   border-radius: 10px;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  z-index: 10;
-  background-color: #ffffff;
-  justify-content: space-evenly;
-}
-.header__menu--height-line {
-  padding-right: 1rem;
-  border-right: 1px solid #dddddd;
-}
-.header__menu--height-line h5,
-.header__menu--height-line p {
-  margin: 0;
-}
-.header__menu--height-search-background {
-  width: 255px;
-  height: 50px;
-  background-color: #f85a47;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.row--margintop {
-  margin-top: 230px;
-  margin-bottom: 80px;
+.card__info__content {
+  width: 80%;
+  padding: 1rem 0;
 }
-.row--margintop .card__info {
-  margin-right: 65px;
-  position: relative;
-}
-.row--margintop .card__info__button {
+
+.card__info__button {
   width: 45px;
   height: 40px;
   background-color: #f85a47;
@@ -146,25 +71,21 @@ ul {
   right: 0;
   top: 50%;
   display: inline-block;
-  transform: translate(100%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.row--margintop .card__info__button img {
+.card__info__button img {
   width: 20px;
   height: 10px;
 }
 
-.howitwork {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 1.8rem;
-  font-weight: 650;
+.row-padding {
+  padding: 5rem 0;
 }
 
 .step {
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
 .step__logo {
@@ -173,6 +94,12 @@ ul {
   border-radius: 10px;
   position: relative;
   margin: 1rem auto;
+}
+.step__logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .step__logo--blue {
   background-color: #9672ff;
@@ -183,65 +110,44 @@ ul {
 .step__logo--violet {
   background-color: #f2b8ec;
 }
-.step__logo img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+.row-padding-fix {
+  padding-top: 2rem;
 }
 
 .service {
-  height: 449px;
-  margin-top: 5rem;
-  margin-bottom: 10rem;
-}
-.service__title {
   width: 260px;
-  height: 80px;
-  margin-bottom: 30px;
+  height: 60px;
 }
-.service__title h3 {
-  font-weight: 600;
-}
-.service__data {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.service__data ul {
-  list-style: none;
-  padding-left: 0;
-  width: max-content;
+.service__list {
   height: 300px;
-  display: grid;
-  margin: auto 0;
-}
-.service__data ul li {
-  margin: auto 0;
-}
-.service__data ul li:first-child {
-  color: #f85a47;
-}
-.service__data__list {
-  margin: 0 0.5rem;
-}
-.service__data__img {
-  margin: 0 0.5rem;
+  min-width: fit-content;
 }
 
 .service2 {
-  position: relative;
-  margin-bottom: 10rem;
+  height: 800px;
 }
-.service2__large {
+.service2__background {
+  background-color: #4ddffd;
+  right: 0;
   width: 90%;
-  height: 630px;
-  margin: 0 auto;
-  background-color: #d6ebe4;
+  height: 600px;
 }
-.service2__small {
-  position: absolute;
-  top: -10%;
+.service2__background__content {
+  width: 40%;
+  max-height: fit-content;
+  bottom: 0;
+  right: 0;
+  transform: translate(-20%, -50%);
+}
+.service2__background__content--btn {
+  margin: 0 auto;
+}
+.service2__background__content--btn button {
+  background-color: #f85a47;
+}
+.service2__img {
+  top: 2%;
 }
 
 .service2__large__content {
@@ -393,9 +299,36 @@ ul {
   bottom: 25%;
   transform: translateX(50%);
 }
-.footer li {
-  padding: 1rem 1rem;
-  width: max-content;
+
+.footer {
+  padding: 8rem 0;
+}
+.footer__logo--general {
+  width: 20%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero__banner {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero__banner {
+    width: 500px;
+    opacity: 0.9;
+  }
+  .feature__img img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1192px) {
+  .hero__banner {
+    width: 650px;
+  }
+  .feature__img img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -26,373 +26,408 @@
     <link rel="stylesheet" href="./sass/css/index.css" />
   </head>
   <body>
-    <div class="container-fluid container-fluid--pading">
-      <div class="header">
-        <div class="header__banner">
-          <img src="./assets/Image.png" alt="banner" />
-        </div>
-        <div class="header__menu">
-          <div class="header__menu__logo">
-            <div class="header__menu__logo--1">
-              <img src="./assets/Union.png" alt="logo" />
-            </div>
-            <div class="header__menu__logo--2">
-              <img src="./assets/Logo.png" alt="trademark" />
-            </div>
-          </div>
-          <div class="header__menu__navbar">
-            <ul class="header__menu__navbar--list">
-              <li class="header__menu__navbar--item"><a href="#">Home</a></li>
-              <li class="header__menu__navbar--item">
-                <a href="#">Services</a>
-              </li>
-              <li class="header__menu__navbar--item"><a href="#">About</a></li>
-              <li class="header__menu__navbar--item">
-                <a href="#">Contact us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="header__menu__auth">
-            <button type="submit">Sign up</button>
-          </div>
-        </div>
-        <div class="header__content">
-          <div class="header__content__title">
-            <h1>Find the perfect place to stay with your family</h1>
-          </div>
-          <div class="header__content__desc">
-            <p>Besnik is insanely flexible and amazingly easy to use.</p>
-            <p>This alone would be enough for a 5 star rating.</p>
-          </div>
-        </div>
-        <div class="header__menu header__menu--height">
-          <div class="header__menu--height-location header__menu--height-line">
-            <h5>Location</h6>
-            <p>Where are you going?</p>
-          </div>
-          <div class="header__menu--height-checkin header__menu--height-line">
-            <h5>Check in</h5>
-            <p>Add dates</p>
-          </div>
-          <div class="header__menu--height-checkout header__menu--height-line">
-            <h5>Check out</h5>
-            <p>Add dates</p>
-          </div>
-          <div class="header__menu--height-guests">Rent worksplace</div>
-          <div class="header__menu--height-search header__menu--height-search-background">
-            <div class="search">
-                <span>564 property found</span>
-                <img src="./assets/Vector.png" alt="search" />
-            </div>
-          </div>
-        </div>
+    <div class="container-fluid position-relative">
+      <div class="hero__banner position-absolute">
+        <img src="./assets/Image.png" alt="banner" />
       </div>
-      <div class="container">
-          <div class="row row--margintop">
-            <div class="col-12 col-md-3 col-lg-4">
-                <div class="card__info">
-                    <div class="card__info__user">
-                        <img src="./assets/Icon.png" alt="user" />
-                    </div>
-                    <div class="card__info__content">
-                        <h3>Want to sell a home in Besnik</h3>
-                    </div>
-                    <div class="card__info__desc">
-                        <span>Call  the broker for a quote!</span>
-                    </div>
-                    <div class="card__info__button">
-                        <img src="./assets/Arrow 7.png" alt="arrow" />
-                    </div>
-                </div>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light navbar--background"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div
+            class="header__menu d-flex justify-content-between align-items-center"
+          >
+            <div class="header__menu__logo d-flex">
+              <div
+                class="header__menu__logo--1 d-flex align-items-center justify-content-center"
+              >
+                <img src="./assets/Union.png" alt="logo" />
+              </div>
+              <div class="header__menu__logo--2">
+                <img src="./assets/Logo.png" alt="trademark" />
+              </div>
             </div>
-            <div class="col-12 col-md-3 col-lg-4">
-                <div class="card__info">
-                    <div class="card__info__user">
-                        <img src="./assets/Icon (1).png" alt="home" />
-                    </div>
-                    <div class="card__info__content">
-                        <h3>What is the value of your home?</h3>
-                    </div>
-                    <div class="card__info__desc">
-                        <span>Calculate the estimated value!</span>
-                    </div>
-                    <div class="card__info__button">
-                        <img src="./assets/Arrow 7.png" alt="arrow" />
-                    </div>
-                </div>
+            <div class="header__menu__navbar">
+              <ul
+                class="header__menu__navbar--list d-flex justify-content-between align-items-center"
+              >
+                <li class="header__menu__navbar--item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="header__menu__navbar--item">
+                  <a href="#">Services</a>
+                </li>
+                <li class="header__menu__navbar--item">
+                  <a href="#">About</a>
+                </li>
+                <li class="header__menu__navbar--item">
+                  <a href="#">Contact us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__menu__auth">
+              <button type="button" class="btn">Sign up</button>
             </div>
           </div>
-          <div class="howitwork">How it works?</div>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="container hero">
           <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="step">
-                        <div class="step__logo step__logo--blue">
-                            <img src="./assets/Vector.png" alt="logo" />
-                        </div>
-                        <div class="step__title">
-                            <h3>Research Suburbs</h3>
-                        </div>
-                        <div class="step__desc">
-                            <p>Get started swiftly & easily by importing a demo of your choice in a single click</p>
-                        </div>
-                    </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="hero__info">
+                <div class="hero__info__title">
+                  <h1>Find the perfect place to stay with your family</h1>
                 </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="step">
-                        <div class="step__logo step__logo--green">
-                            <img src="./assets/Icon(2).png" alt="logo">
-                        </div>
-                        <div class="step__title">
-                            <h3>Instant Valuation</h3>
-                        </div>
-                        <div class="step__desc">
-                            <p>Over 30 high quality profession designed re-built website concepts to choose from.</p>
-                        </div>
-                    </div>
+                <div class="hero__info__desc">
+                  Besnik is insanely flexible and amazingly easy to use. This
+                  alone would be enough for a 5 star rating.
                 </div>
-                <div class="col-12 col-md-12 col-lg-4">
-                    <div class="step">
-                        <div class="step__logo step__logo--violet">
-                            <img src="./assets/Icon(3).png" alt="logo">
-                        </div>
-                        <div class="step__title">
-                            <h3>Track Property</h3>
-                        </div>
-                        <div class="step__desc">
-                            <p>Build your website using fully visual interface, using our revolutionary page builder.</p>
-                        </div>
-                    </div>
+              </div>
+            </div>
+            <div class="header__menu header__menu--height d-flex justify-content-between align-items-center">
+              <div class="header__menu--height-location header__menu--height-line">
+                <h5>Location</h6>
+                <p>Where are you going?</p>
+              </div>
+              <div class="header__menu--height-checkin header__menu--height-line">
+                <h5>Check in</h5>
+                <p>Add dates</p>
+              </div>
+              <div class="header__menu--height-checkout header__menu--height-line">
+                <h5>Check out</h5>
+                <p>Add dates</p>
+              </div>
+              <div class="header__menu--height-guests">Rent worksplace</div>
+              <div class="header__menu--height-search header__menu--height-search-background">
+                <div class="search">
+                    <span>564 property found</span>
+                    <img src="./assets/Vector.png" alt="search" />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row row-padding">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card__info">
+                <div class="card__info__user">
+                    <img src="./assets/Icon.png" alt="user" />
+                </div>
+                <div class="card__info__content">
+                    <h3>Want to sell a home in Besnik</h3>
+                </div>
+                <div class="card__info__desc">
+                    <span>Call  the broker for a quote!</span>
+                </div>
+                <div class="card__info__button">
+                    <img src="./assets/Arrow 7.png" alt="arrow" />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card__info">
+                  <div class="card__info__user">
+                      <img src="./assets/Icon (1).png" alt="home" />
+                  </div>
+                  <div class="card__info__content">
+                      <h3>What is the value of your home?</h3>
+                  </div>
+                  <div class="card__info__desc">
+                      <span>Calculate the estimated value!</span>
+                  </div>
+                  <div class="card__info__button">
+                      <img src="./assets/Arrow 7.png" alt="arrow" />
+                  </div>
+              </div>
+
+          
+            </div>
+          </div>
+          <div class="text-center">
+            <h3>How it works?</h3>
+          </div>
+          <div class="row row-padding row-padding-fix">
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="step">
+                  <div class="step__logo step__logo--blue">
+                      <img src="./assets/Vector.png" alt="logo" />
+                  </div>
+                  <div class="step__title">
+                      <h3>Research Suburbs</h3>
+                  </div>
+                  <div class="step__desc">
+                      <p>Get started swiftly & easily by importing a demo of your choice in a single click</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+              <div class="step">
+                  <div class="step__logo step__logo--green">
+                      <img src="./assets/Icon(2).png" alt="logo">
+                  </div>
+                  <div class="step__title">
+                      <h3>Instant Valuation</h3>
+                  </div>
+                  <div class="step__desc">
+                      <p>Over 30 high quality profession designed re-built website concepts to choose from.</p>
+                  </div>
+              </div>
+          </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="step">
+                <div class="step__logo step__logo--violet">
+                  <img src="./assets/Icon(3).png" alt="logo">
+                  </div>
+                  <div class="step__title">
+                      <h3>Track Property</h3>
+                  </div>
+                  <div class="step__desc">
+                      <p>Build your website using fully visual interface, using our revolutionary page builder.</p>
+                  </div>
+              </div>
+            </div>
           </div>
           <div class="service">
-            <div class="service__title">
-                <h3>We're already arround americas</h3>
+            <h3>We’re already arround americas.</h3>
+          </div>
+          <div class="row row-padding row-padding-fix d-flex justify-content-between align-items-center flex-nowrap">
+            <div class="service__list flex-column pr-3">
+                  <p>United States</p>
+                  <p>Canada</p>
+                  <p>United Kingdom</p>
+                  <p>Mexico</p>
             </div>
-            <div class="service__data">
-                <div class="service__data__list">
-                    <ul>
-                        <li>United States</li>
-                        <li>Canada</li>
-                        <li>United Kingdom</li>
-                        <li>Mexico</li>
-                    </ul>
-                </div>
-                <div class="service__data__img">
-                    <img src="./assets/Image(10).png" alt="home">
-                </div>
-                <div class="service__data__img">
-                    <img src="./assets/Image (1).png" alt="home">
-                </div>
-                <div class="service__data__img">
-                    <img src="./assets/Image (3).png" alt="home">
-                </div>
-                <div class="service__data__img">
-                    <img src="./assets/Image (9).png" alt="home">
-                </div>
+            <div class="service__img pr-3">
+              <img src="./assets/Image(10).png" alt="home">
+            </div>
+            <div class="service__img pr-3">
+              <img src="./assets/Image (1).png" alt="home">
+            </div>
+            <div class="service__img pr-3">
+              <img src="./assets/Image (3).png" alt="home">
+            </div>
+            <div class="service__img pr-3">
+              <img src="./assets/Image (9).png" alt="home">
             </div>
           </div>
-          <div class="row service2">
-              <div class="service2__large">
-                <div class="service2__large__content">
-                  <div class="service2__large__content__title">
-                    <h3>All the stuff you need and none that you don't</h3>
+          <div class="row row-padding position-relative service2">
+            <div class="service2__background position-absolute">
+              <div class="service2__background__content position-absolute">
+                <div class="service2__background__content--title pb-2">
+                  <h3>All the stuff you need and none that you don't</h3>
+                </div>
+                <div class="service2__background__content--desc pb-2">
+                  <p>Crafted with care by the authors of Oshine, a best seller with over 25K customers. Take complete control of your website.</p>
+                </div>
+                <div class="service2__background__content--list d-flex justify-content-between align-items-center">
+                  <div class="service2__background__content--list-item">
+                    <h6>Budget</h6>
+                    <p>Confidential</p>
                   </div>
-                  <div class="service2__large__content__desc">
-                    <span>Crafted with care by the authors Of Oshine, a best seller with over 25K customers. Take complete control of your website.</span>
+                  <div class="service2__background__content--list-item">
+                    <h6>Size</h6>
+                    <p>1200 m2</p>
                   </div>
-                  <div class="service2__large__content__info">
-                    <div class="service2__large__content__info__text">
-                      <h5>Budget</h5>
-                      <span>Confidential</span>
-                    </div>
-                    <div class="service2__large__content__info__text">
-                      <h5>Size</h5>
-                      <span>1200 m2</span>
-                    </div>
-                    <div class="service2__large__content__info__text">
-                      <h5>Type</h5>
-                      <span>Office</span>
-                    </div>
-                    <div class="service2__large__content__info__text">
-                      <h5>Status</h5>
-                      <span>Done</span>
-                    </div>
-                    <div class="service2__large__content__info__text">
-                      <h5>Location</h5>
-                      <span>Switzerland</span>
-                    </div>
-                    <div class="service2__large__content__info__text">
-                      <h5>Flat</h5>
-                      <span>8 Room</span>
-                    </div>
-                  </div>
-                  <div class="service2__large__content__btn">
-                    <button type="submit" class="btn">Yes! I WANT BOOK "OFFICE PACKAGE"</button>
+                  <div class="service2__background__content--list-item">
+                    <h6>Type</h6>
+                    <p>Office</p>
                   </div>
                 </div>
-              </div>
-              <div class="service2__small">
-                <img src="./assets/Image (4).png" alt="home" />
-              </div>
-          </div>
-      </div>
-      <div class="container">
-        <div class="container__title">
-          <h3>Loved by bussinesses, and individuals across the globe.</h3>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-3 col-lg-4 mt-5 mb-5">
-            <div class="testimonial">
-              <div class="testimonial__star">
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-              </div>
-              <div class="testimonial__desc">
-                <span>Vast Conference is second to none. Lorem ipsum dolor sit amet, confer consectetur adipiscing elit. Congue pharetra non.</span>
-              </div>
-              <div class="testimonial__auth">
-                <div class="testimonial__auth__img">
-                  <img src="./assets/Image (5).png" alt="avatar">
+                <div class="service2__background__content--list d-flex justify-content-between align-items-center">
+                  <div class="service2__background__content--list-item">
+                    <h6>Status</h6>
+                    <p>Done</p>
+                  </div>
+                  <div class="service2__background__content--list-item">
+                    <h6>Location</h6>
+                    <p>Switzerland</p>
+                  </div>
+                  <div class="service2__background__content--list-item">
+                    <h6>Flat</h6>
+                    <p>8 Room</p>
+                  </div>
                 </div>
-                <div class="testimonial__auth__info">
-                  <h5>Natalie Hernandez</h5>
-                  <span>CEO @Stacksy</span>
+                <div class="service2__background__content--btn pt-2">
+                  <button type="button" class="btn">YES! I WANT BOOK “OFFICE PACKAGE”</button>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-3 col-lg-4 mt-5 mb-5">
-            <div class="testimonial">
-              <div class="testimonial__star">
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-              </div>
-              <div class="testimonial__desc">
-                <span>Vast Conference is second to none. Lorem ipsum dolor sit amet, confer consectetur adipiscing elit. Congue pharetra non.</span>
-              </div>
-              <div class="testimonial__auth">
-                <div class="testimonial__auth__img">
-                  <img src="./assets/Image (6).png" alt="avatar">
-                </div>
-                <div class="testimonial__auth__info">
-                  <h5>Natalie Hernandez</h5>
-                  <span>CEO @Stacksy</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-3 col-lg-4 mt-5 mb-5">
-            <div class="testimonial">
-              <div class="testimonial__star">
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-                <img src="./assets/Star 1.png" alt="star" />
-              </div>
-              <div class="testimonial__desc">
-                <span>Vast Conference is second to none. Lorem ipsum dolor sit amet, confer consectetur adipiscing elit. Congue pharetra non.</span>
-              </div>
-              <div class="testimonial__auth">
-                <div class="testimonial__auth__img">
-                  <img src="./assets/Image (7).png" alt="avatar">
-                </div>
-                <div class="testimonial__auth__info">
-                  <h5>Natalie Hernandez</h5>
-                  <span>CEO @Stacksy</span>
-                </div>
-              </div>
+            <div class="service2__img position-absolute">
+              <img src="./assets/Image (4).png" alt="home" />
             </div>
           </div>
         </div>
-        <div class="row mb-5">
-          <div class="col-12 col-md-8 col-lg-9 my-auto">
-            <div class="logo d-flex justify-content-between">
-              <div class="logo__img">
-                <img src="./assets/Vector1.png" alt="logo" />
-              </div>
-              <div class="logo__img">
-                <img src="./assets/Vector2.png" alt="logo" />
-              </div>
-              <div class="logo__img">
-                <img src="./assets/Union1.png" alt="logo" />
-              </div>
-              <div class="logo__img">
-                <img src="./assets/Vector3.png" alt="logo" />
-              </div>
-              <div class="logo__img">
-                <img src="./assets/Vector4.png" alt="logo" />
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 col-lg-3">
-            <div class="info">
-              <span>Give us a call 1-888-498-9240 and we can set you up, or <a href="#">check our pricing plans</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-5 mb-5">
-        <div class="feature">
-          <div class="feature__header mb-3 d-flex justify-content-between align-items-center">
-            <div class="feature__header__title">Best Real Estate Deals</div>
-            <div class="feature__header__btn">View All Property</div>
-          </div>
-          <div class="feature__desc mb-3">We collaborate with organizations that are keen to transform the legal industry with tech.</div>
-          <div class="feature__nav mb-3">
-            <ul class="feature__nav__list d-flex justify-content-between align-items-center">
-              <li>Residential Property</li>
-              <li>Commercial Property</li>
-              <li>Agriculture Property</li>
-              <li>Industrial Property</li>
-            </ul>
+        <div class="container">
+          <div class="container__title">
+            <h3>Loved by bussinesses, and individuals across the globe.</h3>
           </div>
           <div class="row">
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="feature__img mb-3">
-                <img src="./assets/Image10.png" alt="home" />
-              </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="feature__img mb-3">
-                <img src="./assets/Image12.png" alt="home" />
-              </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4">
-              <div class="feature__img mb-3">
-                <img src="./assets/Image12.png" alt="home" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5 pt-5 cta">
-          <div class="col-12 col-md-12 col-lg-12">
-            <div class="cta">
-              <div class="cta__background ">
-                <div class="cta__background__info">
-                  <div class="cta__background__info__title">Trusted by over 250,000 businesses owners worldwide</div>
-                  <div class="cta__background__info__desc">
-                    <span class="cta__background__info__desc--block">Start your business for $0+ state fees.</span>
-                    <span class="cta__background__info__desc--block">Clear Pricing. No Contracts. No Surprises.</span>
+            <div class="col-12 col-md-4 col-lg-4 mt-5 mb-5">
+              <div class="testimonial">
+                <div class="testimonial__star">
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                </div>
+                <div class="testimonial__desc">
+                  <span>Vast Conference is second to none. Lorem ipsum dolor sit amet, confer consectetur adipiscing elit. Congue pharetra non.</span>
+                </div>
+                <div class="testimonial__auth">
+                  <div class="testimonial__auth__img">
+                    <img src="./assets/Image (5).png" alt="avatar">
                   </div>
-                  <div class="cta__background__info__btn">Get Started</div>
+                  <div class="testimonial__auth__info">
+                    <h5>Natalie Hernandez</h5>
+                    <span>CEO @Stacksy</span>
+                  </div>
                 </div>
               </div>
-              <div class="cta__img">
-                <img src="./assets/Image (8).png" alt="home" />
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 mt-5 mb-5">
+              <div class="testimonial">
+                <div class="testimonial__star">
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                </div>
+                <div class="testimonial__desc">
+                  <span>Vast Conference is second to none. Lorem ipsum dolor sit amet, confer consectetur adipiscing elit. Congue pharetra non.</span>
+                </div>
+                <div class="testimonial__auth">
+                  <div class="testimonial__auth__img">
+                    <img src="./assets/Image (6).png" alt="avatar">
+                  </div>
+                  <div class="testimonial__auth__info">
+                    <h5>Natalie Hernandez</h5>
+                    <span>CEO @Stacksy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 mt-5 mb-5">
+              <div class="testimonial">
+                <div class="testimonial__star">
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                  <img src="./assets/Star 1.png" alt="star" />
+                </div>
+                <div class="testimonial__desc">
+                  <span>Vast Conference is second to none. Lorem ipsum dolor sit amet, confer consectetur adipiscing elit. Congue pharetra non.</span>
+                </div>
+                <div class="testimonial__auth">
+                  <div class="testimonial__auth__img">
+                    <img src="./assets/Image (7).png" alt="avatar">
+                  </div>
+                  <div class="testimonial__auth__info">
+                    <h5>Natalie Hernandez</h5>
+                    <span>CEO @Stacksy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div class="col-12 col-md-8 col-lg-9 my-auto">
+              <div class="logo d-flex justify-content-between">
+                <div class="logo__img">
+                  <img src="./assets/Vector1.png" alt="logo" />
+                </div>
+                <div class="logo__img">
+                  <img src="./assets/Vector2.png" alt="logo" />
+                </div>
+                <div class="logo__img">
+                  <img src="./assets/Union1.png" alt="logo" />
+                </div>
+                <div class="logo__img">
+                  <img src="./assets/Vector3.png" alt="logo" />
+                </div>
+                <div class="logo__img">
+                  <img src="./assets/Vector4.png" alt="logo" />
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="info">
+                <span>Give us a call 1-888-498-9240 and we can set you up, or <a href="#">check our pricing plans</a></span>
               </div>
             </div>
           </div>
         </div>
-        <div class="row" style="margin-top: 100px">
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="footer">
+        <div class="container mt-5 mb-5">
+          <div class="feature">
+            <div class="feature__header mb-3 d-flex justify-content-between align-items-center">
+              <div class="feature__header__title">Best Real Estate Deals</div>
+              <div class="feature__header__btn">View All Property</div>
+            </div>
+            <div class="feature__desc mb-3">We collaborate with organizations that are keen to transform the legal industry with tech.</div>
+            <div class="feature__nav mb-3">
+              <ul class="feature__nav__list d-flex justify-content-between align-items-center">
+                <li>Residential Property</li>
+                <li>Commercial Property</li>
+                <li>Agriculture Property</li>
+                <li>Industrial Property</li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="feature__img mb-3">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="feature__img mb-3">
+                  <img src="./assets/Image11.png" alt="home" />
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="feature__img mb-3">
+                  <img src="./assets/Image12.png" alt="home" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 pt-5 cta">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="cta">
+                <div class="cta__background ">
+                  <div class="cta__background__info">
+                    <div class="cta__background__info__title">Trusted by over 250,000 businesses owners worldwide</div>
+                    <div class="cta__background__info__desc">
+                      <span class="cta__background__info__desc--block">Start your business for $0+ state fees.</span>
+                      <span class="cta__background__info__desc--block">Clear Pricing. No Contracts. No Surprises.</span>
+                    </div>
+                    <div class="cta__background__info__btn">Get Started</div>
+                  </div>
+                </div>
+                <div class="cta__img">
+                  <img src="./assets/Image (8).png" alt="home" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="container">
+          <div class="footer d-flex justify-content-between align-items-center">
+            <div class="footer__logo footer__logo--general flex-column">
               <div class="footer__logo pt-1 pb-1 d-flex justify-content-start align-items-center">
                 <div class="footer__logo__img">
                   <img src="./assets/Union.png" alt="logo" />
@@ -415,90 +450,40 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer">
-              <div class="footer__logo pt-1 pb-1">
-                <div class="footer__logo__title">Company</div>
-              </div>
-              <div class="footer__logo__list">
-                <ul>
-                  <li>Home</li>
-                  <li>Pricing</li>
-                  <li>About</li>
-                </ul>
-              </div>
+            <div class="footer__logo footer__logo--general flex-column">
+              <p>Company</p>
+              <p>Home</p>
+              <p>Pricing</p>
+              <p>About</p>
             </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="footer">
-              <div class="footer__logo pt-1 pb-1">
-                <div class="footer__logo__title">Connect</div>
-              </div>
-              <div class="footer__logo__list">
-                <ul>
-                  <li>Our Community</li>
-                  <li>Facebook</li>
-                  <li>Blog</li>
-                  <li>Contact us</li>
-                </ul>
-              </div>
+            <div class="footer__logo footer__logo--general flex-column">
+              <p>Connect</p>
+              <p>Our Community</p>
+              <p>Facebook</p>
+              <p>Blog</p>
+              <p>Contact Us</p>
             </div>
-          </div>
-          <div class="col-6 col-md-6 col-lg-2">
-            <div class="footer">
-              <div class="footer__logo pt-1 pb-1">
-                <div class="footer__logo__title">Experts</div>
-              </div>
-              <div class="footer__logo__list">
-                <ul>
-                  <li>Apply as an Expert</li>
-                  <li>Vetting Guidelines</li>
-                  <li>Expert Sign In</li>
-                </ul>
-              </div>
+            <div class="footer__logo footer__logo--general flex-column">
+              <p>Experts</p>
+              <p>Apply as an Expert</p>
+              <p>Vetting Guidelines</p>
+              <p>Expert Sign In</p>
             </div>
-          </div>
-          <div class="col-6 col-md-6 col-lg-3">
-            <div class="footer">
-              <div class="footer__logo pt-1 pb-1">
-                <div class="footer__logo__start">
-                  <img src="./assets/Star 1.png" alt="start" />
-                  <img src="./assets/Star 1.png" alt="start" />
-                  <img src="./assets/Star 1.png" alt="start" />
-                  <img src="./assets/Star 1.png" alt="start" />
-                  <img src="./assets/Star 1.png" alt="start" />
-                </div>
+            <div class="footer__logo footer__logo--general flex-column">
+              <div class="footer__logo__star">
+                <img src="./assets/Star 1.png" alt="star">
+                <img src="./assets/Star 1.png" alt="star">
+                <img src="./assets/Star 1.png" alt="star">
+                <img src="./assets/Star 1.png" alt="star">
+                <img src="./assets/Star 1.png" alt="star">
               </div>
               <div class="footer__logo__desc">
-                <span>4190 jobs completed successfully with 97.4% 5 star reviews</span>
+                <p>4190 jobs completed successfully with 97.4% 5 star reviews</p>
               </div>
             </div>
           </div>
-        </div>
+        </div>   
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   </body>
 </html>
