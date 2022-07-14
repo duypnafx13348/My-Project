@@ -30,21 +30,8 @@
       <div class="hero__banner position-absolute">
         <img src="./assets/Image.png" alt="banner" />
       </div>
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-light navbar--background"
-      >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
           <div
             class="header__menu d-flex justify-content-between align-items-center"
           >
@@ -58,34 +45,36 @@
                 <img src="./assets/Logo.png" alt="trademark" />
               </div>
             </div>
-            <div class="header__menu__navbar">
-              <ul
-                class="header__menu__navbar--list d-flex justify-content-between align-items-center"
-              >
-                <li class="header__menu__navbar--item">
-                  <a href="#">Home</a>
-                </li>
-                <li class="header__menu__navbar--item">
-                  <a href="#">Services</a>
-                </li>
-                <li class="header__menu__navbar--item">
-                  <a href="#">About</a>
-                </li>
-                <li class="header__menu__navbar--item">
-                  <a href="#">Contact us</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header__menu__auth">
-              <button type="button" class="btn">Sign up</button>
-            </div>
           </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse zindex" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto m-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 header__menu__auth">
+            <button class="btn my-2 my-sm-0" type="submit">Sign up</button>
+          </form>
         </div>
       </nav>
       <div class="hero">
         <div class="container hero">
           <div class="row">
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-12 col-lg-4">
               <div class="hero__info">
                 <div class="hero__info__title">
                   <h1>Find the perfect place to stay with your family</h1>
@@ -96,7 +85,7 @@
                 </div>
               </div>
             </div>
-            <div class="header__menu header__menu--height d-flex justify-content-between align-items-center">
+            <div class="header__menu header__menu--height d-flex flex-wrap justify-content-around align-items-center">
               <div class="header__menu--height-location header__menu--height-line">
                 <h5>Location</h6>
                 <p>Where are you going?</p>
@@ -110,7 +99,7 @@
                 <p>Add dates</p>
               </div>
               <div class="header__menu--height-guests">Rent worksplace</div>
-              <div class="header__menu--height-search header__menu--height-search-background">
+              <div class="header__menu--height-search header__menu--height-search-background btn">
                 <div class="search">
                     <span>564 property found</span>
                     <img src="./assets/Vector.png" alt="search" />
@@ -152,8 +141,6 @@
                       <img src="./assets/Arrow 7.png" alt="arrow" />
                   </div>
               </div>
-
-          
             </div>
           </div>
           <div class="text-center">
@@ -201,7 +188,7 @@
             </div>
           </div>
           <div class="service">
-            <h3>We’re already arround americas.</h3>
+            <h3>We're already arround americas.</h3>
           </div>
           <div class="row row-padding row-padding-fix d-flex justify-content-between align-items-center flex-nowrap">
             <div class="service__list flex-column pr-3">
@@ -224,8 +211,8 @@
             </div>
           </div>
           <div class="row row-padding position-relative service2">
-            <div class="service2__background position-absolute">
-              <div class="service2__background__content position-absolute">
+            <div class="service2__background">
+              <div class="service2__background__content">
                 <div class="service2__background__content--title pb-2">
                   <h3>All the stuff you need and none that you don't</h3>
                 </div>
@@ -265,7 +252,7 @@
                 </div>
               </div>
             </div>
-            <div class="service2__img position-absolute">
+            <div class="service2__img">
               <img src="./assets/Image (4).png" alt="home" />
             </div>
           </div>
@@ -485,5 +472,8 @@
         </div>   
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
