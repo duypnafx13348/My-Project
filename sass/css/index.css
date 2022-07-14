@@ -15,10 +15,6 @@ a {
   color: #ffffff;
 }
 
-.bg-light {
-  background-color: #f1f1f1 !important;
-}
-
 .hero__banner {
   right: 0;
   top: 0;
@@ -35,9 +31,14 @@ a {
   z-index: 10;
 }
 
+.navbar-light {
+  background-color: #f1f1f1 !important;
+}
+
 .header__menu {
   width: 100%;
   z-index: 10;
+  padding: 20px;
 }
 .header__menu__logo--1 {
   width: 36px;
@@ -128,8 +129,9 @@ a {
   height: 60px;
 }
 .service__list {
-  height: 300px;
   min-width: fit-content;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .service2 {
@@ -324,6 +326,12 @@ a {
   .hero__banner {
     display: none;
   }
+  .overflow {
+    overflow-x: scroll;
+  }
+  .container__title {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .hero__banner {
@@ -337,6 +345,9 @@ a {
   }
   .container__title {
     width: 100%;
+  }
+  .overflow {
+    overflow-x: scroll;
   }
   .service2__background {
     left: 50%;
@@ -404,7 +415,7 @@ a {
     display: none;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1192px) {
+@media only screen and (min-width: 993px) and (max-width: 1192px) {
   .hero__banner {
     width: 650px;
   }
