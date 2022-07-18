@@ -1,136 +1,136 @@
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  // main
-  #main {
-    margin-top: 15rem;
-  }
+// @media screen and (min-width: 992px) and (max-width: 1200px) {
+//   // main
+//   #main {
+//     margin-top: 15rem;
+//   }
 
-  // hero
+//   // hero
 
-  .hero {
-    &__navbar {
-      background: #000;
-      width: 100%;
-      opacity: 0.7;
+//   .hero {
+//     &__navbar {
+//       background: #000;
+//       width: 100%;
+//       opacity: 0.7;
 
-      li:first-child {
-        a {
-          color: #ffffff;
-        }
-      }
+//       li:first-child {
+//         a {
+//           color: #ffffff;
+//         }
+//       }
 
-      li a {
-        color: #ffffff;
-      }
-    }
+//       li a {
+//         color: #ffffff;
+//       }
+//     }
 
-    &__banner {
-      position: static;
-      width: 100%;
-      height: 57%;
+//     &__banner {
+//       position: static;
+//       width: 100%;
+//       height: 57%;
 
-      img {
-        height: 100%;
-      }
-    }
+//       img {
+//         height: 100%;
+//       }
+//     }
 
-    &__content {
-      height: auto;
+//     &__content {
+//       height: auto;
 
-      .col-lg-7 {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
+//       .col-lg-7 {
+//         flex: 0 0 100%;
+//         max-width: 100%;
+//       }
 
-      &__header {
-        margin: 7rem auto 0;
-        width: 75%;
+//       &__header {
+//         margin: 7rem auto 0;
+//         width: 75%;
 
-        &__title {
-          margin: 0 auto;
-          text-align: center;
+//         &__title {
+//           margin: 0 auto;
+//           text-align: center;
 
-          h1 {
-            font-size: 55px;
-          }
-        }
+//           h1 {
+//             font-size: 55px;
+//           }
+//         }
 
-        &__desc {
-          width: 51%;
-          margin: 0 auto;
-          text-align: center;
-        }
-      }
-    }
+//         &__desc {
+//           width: 51%;
+//           margin: 0 auto;
+//           text-align: center;
+//         }
+//       }
+//     }
 
-    &__background {
-      height: 670px;
-    }
+//     &__background {
+//       height: 670px;
+//     }
 
-    &__menu__list__search {
-      button {
-        width: 85%;
-        border-radius: 5px;
-      }
-    }
-  }
+//     &__menu__list__search {
+//       button {
+//         width: 85%;
+//         border-radius: 5px;
+//       }
+//     }
+//   }
 
-  // service
-  .service {
-    &__header {
-      width: 30%;
-    }
-  }
+//   // service
+//   .service {
+//     &__header {
+//       width: 30%;
+//     }
+//   }
 
-  // service2
-  .service2__background__content {
-    &__btn {
-      font-size: 15px;
-    }
-  }
+//   // service2
+//   .service2__background__content {
+//     &__btn {
+//       font-size: 15px;
+//     }
+//   }
 
-  // feature
-  .feature {
-    &__img {
-      &__item {
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
+//   // feature
+//   .feature {
+//     &__img {
+//       &__item {
+//         img {
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
 
-  // testimonial
-  .testimonial {
-    &__header {
-      width: 60%;
-    }
-  }
+//   // testimonial
+//   .testimonial {
+//     &__header {
+//       width: 60%;
+//     }
+//   }
 
-  //cta
-  .cta {
-    &__img {
-      width: 400px;
-    }
+//   //cta
+//   .cta {
+//     &__img {
+//       width: 400px;
+//     }
 
-    &__background {
-      width: 860px;
-      height: 500px;
+//     &__background {
+//       width: 860px;
+//       height: 500px;
 
-      &__content {
-        width: 60%;
-        margin-left: 43%;
-        margin-top: 7%;
+//       &__content {
+//         width: 60%;
+//         margin-left: 43%;
+//         margin-top: 7%;
 
-        &__title {
-          h2 {
-            font-size: 41px;
-          }
-        }
-      }
+//         &__title {
+//           h2 {
+//             font-size: 41px;
+//           }
+//         }
+//       }
 
-      &__desc {
-        width: 100%;
-      }
-    }
-  }
-}
+//       &__desc {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

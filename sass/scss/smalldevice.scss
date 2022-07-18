@@ -1,115 +1,115 @@
-@media screen and (max-width: 532px) {
-  // hero
-  .hero {
-    &__content {
-      &__header {
-        &__title {
-          h1 {
-            font-size: 38px;
-          }
-        }
+// @media screen and (max-width: 532px) {
+//   // hero
+//   .hero {
+//     &__content {
+//       &__header {
+//         &__title {
+//           h1 {
+//             font-size: 38px;
+//           }
+//         }
 
-        &__desc {
-          width: 75%;
-        }
-      }
+//         &__desc {
+//           width: 75%;
+//         }
+//       }
 
-      &--style {
-        &__card {
-          &__content h3 {
-            font-size: 28px;
-          }
-        }
-      }
-    }
-  }
+//       &--style {
+//         &__card {
+//           &__content h3 {
+//             font-size: 28px;
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .howitworks {
-    &__header {
-      h3 {
-        font-size: 35px;
-      }
-    }
-  }
+//   .howitworks {
+//     &__header {
+//       h3 {
+//         font-size: 35px;
+//       }
+//     }
+//   }
 
-  //   service
-  .service {
-    &__header {
-      width: 77%;
-    }
+//   //   service
+//   .service {
+//     &__header {
+//       width: 77%;
+//     }
 
-    &__content {
-      &__list {
-        width: 100%;
-        flex-direction: row;
-      }
-    }
-  }
+//     &__content {
+//       &__list {
+//         width: 100%;
+//         flex-direction: row;
+//       }
+//     }
+//   }
 
-  //   service2
-  .service2 {
-    &__background {
-      height: 100%;
+//   //   service2
+//   .service2 {
+//     &__background {
+//       height: 100%;
 
-      &__content {
-        width: 100%;
-        &__title {
-          h4 {
-            font-size: 26px;
-          }
-        }
+//       &__content {
+//         width: 100%;
+//         &__title {
+//           h4 {
+//             font-size: 26px;
+//           }
+//         }
 
-        &__title,
-        &__desc,
-        &__other {
-          text-align: center;
-        }
+//         &__title,
+//         &__desc,
+//         &__other {
+//           text-align: center;
+//         }
 
-        &__btn {
-          font-size: 10px;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
+//         &__btn {
+//           font-size: 10px;
+//           margin: 0 auto;
+//         }
+//       }
+//     }
+//   }
 
-  //   testimonial
-  .testimonial {
-    margin-top: 10rem;
+//   //   testimonial
+//   .testimonial {
+//     margin-top: 10rem;
 
-    &__header {
-      width: 100%;
+//     &__header {
+//       width: 100%;
 
-      h3 {
-        font-size: 29px;
-      }
-    }
-  }
+//       h3 {
+//         font-size: 29px;
+//       }
+//     }
+//   }
 
-  //   feature
-  .feature {
-    &__header {
-      &__content {
-        &__title {
-          h3 {
-            // font-size: 30px;
-          }
-        }
-      }
+//   //   feature
+//   .feature {
+//     &__header {
+//       &__content {
+//         &__title {
+//           h3 {
+//             // font-size: 30px;
+//           }
+//         }
+//       }
 
-      &__btn {
-        width: 130px;
-      }
-    }
+//       &__btn {
+//         width: 130px;
+//       }
+//     }
 
-    &__menu {
-      flex-wrap: wrap;
-      justify-content: center;
+//     &__menu {
+//       flex-wrap: wrap;
+//       justify-content: center;
 
-      &__text {
-        margin: 1rem 0;
-        padding: 0 2rem;
-      }
-    }
-  }
-}
+//       &__text {
+//         margin: 1rem 0;
+//         padding: 0 2rem;
+//       }
+//     }
+//   }
+// }
