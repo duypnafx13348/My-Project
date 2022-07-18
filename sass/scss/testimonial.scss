@@ -1,0 +1,92 @@
+$font-manrope: "Manrope", sans-serif;
+
+.testimonial {
+  margin-top: 10rem;
+
+  &__header {
+    width: 50%;
+
+    h3 {
+      font-family: $font-manrope;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 55px;
+      color: #000000;
+    }
+  }
+
+  &__content {
+    &--style {
+      padding: 0;
+    }
+
+    &__card {
+      border: 1px solid #ebebeb;
+      width: 95%;
+      border-radius: 10px;
+      background: #ffffff;
+
+      &--shadow {
+        border: none;
+        box-shadow: 3px 44px 54px rgba(0, 0, 0, 0.08);
+      }
+
+      &__star {
+        display: inline-block;
+        padding: 2rem;
+      }
+
+      &__desc {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          color: #333333;
+        }
+      }
+
+      &__author {
+        padding: 2rem;
+
+        strong,
+        p {
+          padding-left: 2rem;
+        }
+      }
+    }
+
+    // &__card:nth-last-child(1) {
+    //   border: none;
+    //   box-shadow: 3px 44px 54px rgba(0, 0, 0, 0.08);
+    // }
+  }
+
+  &__info {
+    &__logo {
+      &__item {
+        // width: 20%;
+      }
+    }
+
+    &__callme {
+      width: 90%;
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2cbde7;
+      }
+    }
+  }
+}

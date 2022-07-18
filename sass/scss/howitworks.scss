@@ -1,0 +1,84 @@
+$color-blue: #2f76ff;
+$color-white: #ffffff;
+$color-background-button: #f85a47;
+$font-inter: "Inter", sans-serif;
+$font-manrope: "Manrope", sans-serif;
+$font-inter: "Inter", sans-serif;
+$font-ropoto: "Ropoto", sans-serif;
+
+.howitworks {
+  padding: 2rem 0;
+
+  &__header {
+    text-align: center;
+
+    h3 {
+      font-family: $font-manrope;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+
+  &__content {
+    padding: 4rem 0;
+
+    &__list__item {
+      width: 100%;
+      text-align: center;
+
+      &__icon {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        display: inline-block;
+        position: relative;
+
+        &--violet {
+          background: #9672ff;
+        }
+
+        &--blue {
+          background: #4ddffd;
+        }
+
+        &--pink {
+          background: #f2b8ec;
+        }
+
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &__title {
+        min-width: max-content;
+        // text-align: center;
+        padding: 2rem 0 0.5rem;
+
+        h6 {
+          font-family: $font-manrope;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+
+      &__desc {
+        width: 70%;
+        margin: 0 auto;
+
+        p {
+          font-family: $font-ropoto;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: #333333;
+        }
+      }
+    }
+  }
+}

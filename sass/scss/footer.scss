@@ -1,0 +1,100 @@
+.footer {
+  &__content {
+    width: 100%;
+    padding: 1rem 0;
+
+    &__logo {
+      &__background {
+        width: 35.51px;
+        height: 35.99px;
+        background: #2f76ff;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 0.5rem;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    &__desc {
+      width: 90%;
+      padding: 1rem 0;
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #101130;
+      }
+    }
+
+    &__payment {
+      max-width: 70%;
+
+      &__online {
+        width: 16.08px;
+        height: 16.11px;
+        position: relative;
+
+        &--red,
+        &--orange {
+          width: 16.08px;
+          height: 16.11px;
+          border-radius: 50%;
+        }
+
+        &--red {
+          background-color: #ea001b;
+          position: absolute;
+        }
+
+        &--orange {
+          background-color: #ff5f01;
+          position: absolute;
+          left: 50%;
+        }
+      }
+    }
+
+    &__item {
+      width: 44%;
+      margin: 0 auto;
+
+      &--style {
+        width: 100%;
+      }
+
+      &__desc {
+        padding: 1rem 0;
+      }
+
+      h6 {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #101130;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #101130;
+      }
+    }
+  }
+}
+
+#footer2 {
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #101130;
+  }
+}

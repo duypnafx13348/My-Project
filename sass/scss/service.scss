@@ -1,0 +1,58 @@
+$color-background-button: #f85a47;
+$font-manrope: "Manrope", sans-serif;
+
+.service {
+  &__header {
+    width: 25%;
+
+    h4 {
+      font-family: $font-manrope;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow-x: hidden;
+
+    &__arrow {
+      position: absolute;
+      width: 15%;
+      left: 65%;
+      top: 0;
+
+      img {
+        width: 40px;
+        cursor: pointer;
+      }
+    }
+
+    &__list {
+      min-width: max-content;
+      padding-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #666666;
+      }
+
+      p:first-child {
+        color: $color-background-button;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &__img {
+      padding: 0 1rem;
+    }
+  }
+}

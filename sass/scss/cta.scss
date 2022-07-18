@@ -1,0 +1,72 @@
+$color-background-button: #f85a47;
+$font-manrope: "Manrope", sans-serif;
+
+.cta {
+  position: relative;
+
+  &__img {
+    width: 500px;
+    height: 600px;
+    border-radius: 0px 100px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__background {
+    width: 960px;
+    height: 600px;
+    background: #edf3ff;
+    border-radius: 0px 100px;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    z-index: -1;
+
+    &__content {
+      width: 55%;
+      margin-left: 45%;
+      margin-top: 10%;
+
+      &__title {
+        width: 90%;
+
+        h2 {
+          font-family: $font-manrope;
+          font-weight: 600;
+          font-size: 45px;
+          line-height: 55px;
+          color: #101130;
+        }
+      }
+
+      &__desc {
+        width: 78%;
+        padding: 1rem 0;
+
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          color: #66677a;
+        }
+      }
+
+      &__btn {
+        width: 200px;
+        height: 60px;
+        border-radius: 5px;
+        background-color: $color-background-button;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 23px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
