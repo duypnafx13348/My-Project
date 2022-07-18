@@ -129,6 +129,11 @@
           width: 20px;
         }
       }
+
+      &__list {
+        width: 100%;
+        flex-direction: row;
+      }
     }
   }
 
@@ -245,7 +250,7 @@
 
     &__img {
       &__item {
-        width: 75%;
+        width: 100%;
         margin: 0 auto;
         padding: 0.5rem 0;
       }

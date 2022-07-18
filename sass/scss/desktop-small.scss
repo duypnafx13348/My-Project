@@ -88,8 +88,18 @@
     }
   }
 
-  // testimonial
+  // feature
+  .feature {
+    &__img {
+      &__item {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 
+  // testimonial
   .testimonial {
     &__header {
       width: 60%;

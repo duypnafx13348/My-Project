@@ -52,7 +52,14 @@ $font-manrope: "Manrope", sans-serif;
     }
 
     &__img {
-      padding: 0 1rem;
+      // width: 100%;
+      &--item {
+        margin: 0 1rem;
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
     }
   }
 }

@@ -64,10 +64,11 @@ $font-manrope: "Manrope", sans-serif;
       }
     }
 
-    &__text:first-child {
+    &__text:hover {
       p {
         color: $color-background-button;
         border-bottom: 1px solid $color-background-button;
+        cursor: pointer;
       }
     }
   }
@@ -75,7 +76,7 @@ $font-manrope: "Manrope", sans-serif;
   &__img {
     &__item {
       img {
-        width: 100%;
+        margin: 0 auto;
         object-fit: cover;
       }
     }

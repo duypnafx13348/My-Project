@@ -91,6 +91,13 @@
     &__header {
       width: 38%;
     }
+
+    &__content {
+      &__list {
+        width: 100%;
+        flex-direction: row;
+      }
+    }
   }
 
   //   service2
@@ -171,6 +178,10 @@
         &--small {
           width: 50%;
           margin: 2rem auto;
+        }
+
+        img {
+          width: 100%;
         }
       }
     }

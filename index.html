@@ -20,13 +20,18 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./sass/css/index.css" />
+
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   </head>
   <body>
     <div class="container-fluid realestate">
-      <header class="hero">
+      <header id="home" class="hero">
         <div class="hero__navbar">
           <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#home">
               <div class="hero__navbar__logo d-flex align-items-center">
                 <div class="hero__navbar__logo--1">
                   <img src="./assets/logo.svg" alt="logo" />
@@ -54,13 +59,13 @@
                   <a href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a href="#">Services</a>
+                  <a href="#service">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#"> About </a>
+                  <a href="#testimonial"> About </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#">Contact us</a>
+                  <a href="#footer">Contact us</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -194,7 +199,7 @@
       <!-- main -->
       <main id="main">
         <!-- How it works -->
-        <div class="container howitworks">
+        <div id="howitworks" class="container howitworks">
           <div class="howitworks__header">
             <h3>How it works?</h3>
           </div>
@@ -257,42 +262,44 @@
         </div>
 
         <!-- Service and Service2 -->
-        <div class="container service">
+        <div id="service" class="container service">
           <div class="service__header">
             <h4>We're already arround americas.</h4>
           </div>
-          <div class="row flex-nowrap service__content general--padding">
-            <div
-              class="service__content__arrow d-flex justify-content-between align-items-center"
-            >
-              <div class="service__content__arrow--left">
-                <img src="./assets/arrow-left.svg" alt="arrowleft" />
-              </div>
-              <div class="service__content__arrow--right">
-                <img src="./assets/arrow-right.svg" alt="arrowright" />
+          <div class="row service__content general--padding">
+            <div class="col-lg-2 d-flex service__content-center">
+              <div class="service__content__list">
+                <p>United States</p>
+                <p>Canada</p>
+                <p>United Kingdom</p>
+                <p>Mexico</p>
               </div>
             </div>
-            <div class="service__content__list">
-              <p>United States</p>
-              <p>Canada</p>
-              <p>United Kingdom</p>
-              <p>Mexico</p>
-            </div>
-            <div class="service__content__img">
-              <img src="./assets/Image(10).png" alt="home" />
-            </div>
-            <div class="service__content__img">
-              <img src="./assets/Image (1).png" alt="home" />
-            </div>
-            <div class="service__content__img">
-              <img src="./assets/Image (3).png" alt="home" />
-            </div>
-            <div class="service__content__img">
-              <img src="./assets/Image (9).png" alt="home" />
+            <div class="col-lg-10">
+              <div class="service__content__img d-flex">
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+              </div>
             </div>
           </div>
           <!-- Service2 -->
-          <div class="row general--padding service2">
+          <div id="service2" class="row general--padding service2">
             <div class="service2__img">
               <img src="./assets/Image (4).png" alt="home" />
             </div>
@@ -483,17 +490,26 @@
               <div class="feature__header__btn">View All Property</div>
             </div>
             <div class="feature__menu">
-              <div class="feature__menu__text">
+              <div id="item1" class="feature__menu__text">
                 <p>Residential Property</p>
               </div>
-              <div class="feature__menu__text">
+              <div id="item2" class="feature__menu__text">
                 <p>Commercial Property</p>
               </div>
-              <div class="feature__menu__text">
+              <div id="item3" class="feature__menu__text">
                 <p>Agriculture Property</p>
               </div>
-              <div class="feature__menu__text">
+              <div id="item4" class="feature__menu__text">
                 <p>Industrial Property</p>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Vui Lòng Chọn</button>
+              <div class="dropdown-content">
+                <a href="#item1">Residential Property</a>
+                <a href="#item2">Commercial Property</a>
+                <a href="#item3">Agriculture Property</a>
+                <a href="#item4">Industrial Property</a>
               </div>
             </div>
             <div class="row feature__img">
@@ -679,5 +695,19 @@
       })();
     </script> -->
     <!-- End of Tawk.to Script -->
+
+    <!-- slick slider -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"
+      integrity="sha512-QDsjSX1mStBIAnNXx31dyvw4wVdHjonOwrkaIhpiIlzqGUCdsI62MwQtHpJF+Npy2SmSlGSROoNWQCOFpqbsOg=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
