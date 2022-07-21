@@ -9,7 +9,6 @@
     &__navbar {
       background: #000;
       width: 100%;
-      opacity: 0.7;
 
       button {
         background-color: #007bff;
@@ -148,7 +147,7 @@
     margin-top: 0;
 
     &__header {
-      width: 90%;
+      width: 60%;
     }
 
     &__content {
@@ -184,6 +183,14 @@
           width: 100%;
         }
       }
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    .dropdown {
+      display: block;
     }
   }
 

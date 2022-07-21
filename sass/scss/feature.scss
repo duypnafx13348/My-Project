@@ -10,13 +10,6 @@ $font-manrope: "Manrope", sans-serif;
       width: 50%;
 
       &__title {
-        h3 {
-          font-family: $font-manrope;
-          font-weight: 600;
-          font-size: 40px;
-          line-height: 55px;
-          color: #000000;
-        }
       }
 
       &__desc {
@@ -51,34 +44,39 @@ $font-manrope: "Manrope", sans-serif;
   &__menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     &__text {
-      padding: 2rem 2rem 2rem 0;
+      margin: 2rem 1rem;
+      cursor: pointer;
 
       p {
-        padding-bottom: 1rem;
         font-weight: 400;
         font-size: 19px;
         line-height: 23px;
-        color: #000000;
       }
     }
+  }
 
-    &__text:hover {
-      p {
-        color: $color-background-button;
-        border-bottom: 1px solid $color-background-button;
-        cursor: pointer;
-      }
-    }
+  .active {
+    color: $color-background-button;
+    border-bottom: 1px solid $color-background-button;
   }
 
   &__img {
-    &__item {
-      img {
-        margin: 0 auto;
-        object-fit: cover;
+    position: relative;
+
+    &__list {
+      &__item {
+        img {
+          width: 95%;
+          object-fit: cover;
+        }
       }
     }
   }
+}
+
+.abc {
+  cursor: pointer;
 }

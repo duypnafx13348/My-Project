@@ -6,15 +6,17 @@
 @import "./feature";
 @import "./cta";
 @import "./footer";
+@import "./smalldevice.scss";
 @import "./mobile";
 @import "./tablet";
 @import "./desktop-small";
-@import "./smalldevice.scss";
+@import "./large";
 @import "./dropdown";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&family=Roboto&display=swap");
 
 $font-inter: "Inter", sans-serif;
+$font-manrope: "Manrope", sans-serif;
 
 * {
   box-sizing: border-box;

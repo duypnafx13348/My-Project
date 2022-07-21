@@ -158,7 +158,7 @@
                 <div
                   class="hero__content--style__card__content hero__content--style__card--padding"
                 >
-                  <h3>Want to sell a home in Besnik</h3>
+                  <h6>Want to sell a home in Besnik</h6>
                 </div>
                 <div
                   class="hero__content--style__card__desc hero__content--style__card--padding"
@@ -180,7 +180,7 @@
                 <div
                   class="hero__content--style__card__content hero__content--style__card--padding"
                 >
-                  <h3>What is the value of your home?</h3>
+                  <h6>What is the value of your home?</h6>
                 </div>
                 <div
                   class="hero__content--style__card__desc hero__content--style__card--padding"
@@ -266,17 +266,127 @@
           <div class="service__header">
             <h4>We're already arround americas.</h4>
           </div>
-          <div class="row service__content general--padding">
-            <div class="col-lg-2 d-flex service__content-center">
+          <div class="row service__content">
+            <div
+              class="col-12 col-md-12 col-lg-3 d-flex service__content-center"
+            >
               <div class="service__content__list">
-                <p>United States</p>
-                <p>Canada</p>
-                <p>United Kingdom</p>
-                <p>Mexico</p>
+                <div
+                  service-id="service-usa"
+                  class="service__content__list__item service-active"
+                >
+                  <p>United States</p>
+                </div>
+                <div
+                  service-id="service-canada"
+                  class="service__content__list__item"
+                >
+                  <p>Canada</p>
+                </div>
+                <div
+                  service-id="service-england"
+                  class="service__content__list__item"
+                >
+                  <p>United Kingdom</p>
+                </div>
+                <div
+                  service-id="service-mexico"
+                  class="service__content__list__item"
+                >
+                  <p>Mexico</p>
+                </div>
+              </div>
+              <div class="dropdown__service">
+                <button service-id="service-usa" class="dropbtn__service">
+                  United States
+                </button>
+                <div class="dropdown-content">
+                  <div
+                    service-id="service-usa"
+                    class="dropdown-content__service"
+                  >
+                    United States
+                  </div>
+                  <div
+                    service-id="service-canada"
+                    class="dropdown-content__service"
+                  >
+                    Canada
+                  </div>
+                  <div
+                    service-id="service-england"
+                    class="dropdown-content__service"
+                  >
+                    United Kingdom
+                  </div>
+                  <div service-id="mexico" class="dropdown-content__service">
+                    Mexico
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-10">
-              <div class="service__content__img d-flex">
+            <div class="col-12 col-md-12 col-lg-9">
+              <div service-id="service-usa" class="service__content__img">
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image(10).png" alt="home" />
+                </div>
+              </div>
+              <div service-id="service-canada" class="service__content__img">
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (1).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (1).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (1).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (1).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (1).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (1).png" alt="home" />
+                </div>
+              </div>
+              <div service-id="service-england" class="service__content__img">
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (2).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (2).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (2).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (2).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (2).png" alt="home" />
+                </div>
+                <div class="service__content__img--item">
+                  <img src="./assets/Image (2).png" alt="home" />
+                </div>
+              </div>
+              <div service-id="service-mexico" class="service__content__img">
                 <div class="service__content__img--item">
                   <img src="./assets/Image(10).png" alt="home" />
                 </div>
@@ -490,42 +600,96 @@
               <div class="feature__header__btn">View All Property</div>
             </div>
             <div class="feature__menu">
-              <div id="item1" class="feature__menu__text">
+              <div data-id="item1" class="feature__menu__text active">
                 <p>Residential Property</p>
               </div>
-              <div id="item2" class="feature__menu__text">
+              <div data-id="item2" class="feature__menu__text">
                 <p>Commercial Property</p>
               </div>
-              <div id="item3" class="feature__menu__text">
+              <div data-id="item3" class="feature__menu__text">
                 <p>Agriculture Property</p>
               </div>
-              <div id="item4" class="feature__menu__text">
+              <div data-id="item4" class="feature__menu__text">
                 <p>Industrial Property</p>
               </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn">Vui Lòng Chọn</button>
+              <button data-id="item1" class="dropbtn">
+                Residential Property
+              </button>
               <div class="dropdown-content">
-                <a href="#item1">Residential Property</a>
-                <a href="#item2">Commercial Property</a>
-                <a href="#item3">Agriculture Property</a>
-                <a href="#item4">Industrial Property</a>
+                <div data-id="item1" class="dropdown-content__item">
+                  Residential Property
+                </div>
+                <div data-id="item2" class="dropdown-content__item">
+                  Commercial Property
+                </div>
+                <div data-id="item3" class="dropdown-content__item">
+                  Agriculture Property
+                </div>
+                <div data-id="item4" class="dropdown-content__item">
+                  Industrial Property
+                </div>
               </div>
             </div>
-            <div class="row feature__img">
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="feature__img__item">
+            <div class="feature__img">
+              <div data-id="item1" class="feature__img__list">
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
                   <img src="./assets/Image10.png" alt="home" />
                 </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="feature__img__item">
+              <div data-id="item2" class="feature__img__list">
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image11.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image11.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
                   <img src="./assets/Image11.png" alt="home" />
                 </div>
               </div>
-              <div class="col-12 col-md-12 col-lg-4">
-                <div class="feature__img__item feature__img__item--small">
+              <div data-id="item3" class="feature__img__list">
+                <div class="feature__img__list__item">
                   <img src="./assets/Image12.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image12.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image12.png" alt="home" />
+                </div>
+              </div>
+              <div data-id="item4" class="feature__img__list">
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
+                </div>
+                <div class="feature__img__list__item">
+                  <img src="./assets/Image10.png" alt="home" />
                 </div>
               </div>
             </div>

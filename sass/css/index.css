@@ -131,11 +131,6 @@
 .hero__content__header__title {
   width: 90%;
 }
-.hero__content__header__title h1 {
-  font-family: "Manrope", sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-}
 .hero__content__header__desc {
   width: 60%;
   padding: 1rem 0;
@@ -193,12 +188,6 @@
 .howitworks__header {
   text-align: center;
 }
-.howitworks__header h3 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 55px;
-}
 .howitworks__content {
   padding: 4rem 0;
 }
@@ -252,26 +241,7 @@
 
 .service__header {
   width: 25%;
-}
-.service__header h4 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 40px;
-}
-.service__content {
-  position: relative;
-  overflow-x: hidden;
-}
-.service__content__arrow {
-  position: absolute;
-  width: 15%;
-  left: 65%;
-  top: 0;
-}
-.service__content__arrow img {
-  width: 40px;
-  cursor: pointer;
+  margin-bottom: 4rem;
 }
 .service__content__list {
   min-width: max-content;
@@ -280,24 +250,25 @@
   flex-direction: column;
   justify-content: space-around;
 }
+.service__content__list__item {
+  padding: 1rem;
+  cursor: pointer;
+}
 .service__content__list p {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: #666666;
 }
-.service__content__list p:first-child {
+.service__content__list .service-active {
   color: #f85a47;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
-}
-.service__content__img--item {
-  margin: 0 1rem;
 }
 .service__content__img--item img {
   object-fit: cover;
-  width: 100%;
+  width: 95%;
 }
 
 .service2 {
@@ -330,12 +301,6 @@
   width: 85%;
   display: inline-block;
   padding: 0.5rem 0;
-}
-.service2__background__content__title h4 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 42px;
 }
 .service2__background__content__desc {
   width: 76%;
@@ -391,13 +356,6 @@
 }
 .testimonial__header {
   width: 50%;
-}
-.testimonial__header h3 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 55px;
-  color: #000000;
 }
 .testimonial__content--style {
   padding: 0;
@@ -456,13 +414,6 @@
 .feature__header__content {
   width: 50%;
 }
-.feature__header__content__title h3 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 55px;
-  color: #000000;
-}
 .feature__header__content__desc {
   width: 85%;
 }
@@ -490,25 +441,31 @@
 .feature__menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .feature__menu__text {
-  padding: 2rem 2rem 2rem 0;
+  margin: 2rem 1rem;
+  cursor: pointer;
 }
 .feature__menu__text p {
-  padding-bottom: 1rem;
   font-weight: 400;
   font-size: 19px;
   line-height: 23px;
-  color: #000000;
 }
-.feature__menu__text:hover p {
+.feature .active {
   color: #f85a47;
   border-bottom: 1px solid #f85a47;
-  cursor: pointer;
 }
-.feature__img__item img {
-  margin: 0 auto;
+.feature__img {
+  position: relative;
+}
+.feature__img__list__item img {
+  width: 95%;
   object-fit: cover;
+}
+
+.abc {
+  cursor: pointer;
 }
 
 .cta {
@@ -540,13 +497,6 @@
 }
 .cta__background__content__title {
   width: 90%;
-}
-.cta__background__content__title h2 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 45px;
-  line-height: 55px;
-  color: #101130;
 }
 .cta__background__content__desc {
   width: 78%;
@@ -630,7 +580,7 @@
   width: 100%;
 }
 .footer__content__item__desc {
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 .footer__content__item h6 {
   font-weight: 500;
@@ -652,14 +602,280 @@
   color: #101130;
 }
 
+@media screen and (max-width: 444px) {
+  h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h2 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.4;
+    color: #101130;
+  }
+  h3 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    color: #000000;
+  }
+  h4 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .hero {
+    height: auto;
+  }
+  .hero__banner {
+    width: 100%;
+    position: static;
+    opacity: 0.9;
+  }
+  .hero__background {
+    height: 780px;
+  }
+  .hero__content__header__title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero__content__header__desc {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero__content__header.general--margin-top {
+    margin-top: 2rem;
+  }
+  .hero__content--style {
+    height: auto;
+    margin-top: 4rem;
+  }
+  .hero__content--style__card__user {
+    width: 35px;
+  }
+  .hero__content--style__card__user img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero__content--style__card__content h6 {
+    font-size: 18px;
+  }
+  .hero__content--style__card__desc span {
+    font-size: 14px;
+  }
+  .hero__content--style__card__icon {
+    right: 10%;
+  }
+  .hero__menu {
+    top: 55%;
+  }
+  .hero__menu--padding {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .hero__menu--padding .col-12:not(:last-child) {
+    display: none;
+  }
+  .hero__menu__list__search button {
+    font-size: 16px;
+  }
+  .hero__menu__list__search img {
+    padding: 0 0.5rem;
+  }
+  main {
+    margin-top: 4rem;
+  }
+  main p {
+    font-size: 14px;
+  }
+  main .testimonial.general--padding {
+    padding: 0;
+  }
+  .howitworks {
+    padding: 0;
+  }
+  .howitworks__header {
+    padding: 2rem;
+  }
+  .howitworks__content {
+    padding: 0;
+  }
+  .howitworks__content__list {
+    margin: 2rem auto 0.5rem;
+  }
+  .howitworks__content__list__item__title {
+    padding: 1.5rem 0 0;
+  }
+  .howitworks__content__list__item__title h6 {
+    font-size: 20px;
+  }
+  .howitworks__content__list__item__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+  }
+  .howitworks__content__list__item__desc p {
+    font-size: 14px;
+  }
+  .service__header {
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0;
+  }
+  .service__content__list {
+    display: none;
+  }
+  .service__content__list__item {
+    width: 50%;
+  }
+  .service__content__list__item p {
+    font-size: 16px;
+  }
+  .service__content .dropdown__service {
+    display: block;
+  }
+  .service2 {
+    height: 850px;
+  }
+  .service2__img img {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .service2__background {
+    width: 100%;
+    height: 645px;
+    top: 20%;
+  }
+  .service2__background__content {
+    width: 100%;
+    margin-top: 232px;
+    margin-left: 0;
+  }
+  .service2__background__content__title, .service2__background__content__desc {
+    width: 100%;
+    text-align: center;
+  }
+  .service2__background__content__title h4, .service2__background__content__desc h4 {
+    font-size: 22px;
+  }
+  .service2__background__content__title p, .service2__background__content__desc p {
+    font-size: 14px;
+  }
+  .service2__background__content__other {
+    text-align: center;
+  }
+  .service2__background__content__other__text {
+    padding: 0;
+  }
+  .service2__background__content__btn {
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  .testimonial {
+    margin-top: 2rem;
+  }
+  .testimonial__header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .testimonial__content--style {
+    margin: 0.5rem auto;
+  }
+  .testimonial__content__card__desc p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .testimonial__content__card__author {
+    padding: 1rem;
+  }
+  .testimonial__info__logo {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .testimonial__info__logo__item {
+    width: 33%;
+    margin: 0.5rem 0;
+  }
+  .testimonial__info__callme {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .feature__header__content {
+    width: 100%;
+  }
+  .feature__header__content__title, .feature__header__content__desc {
+    text-align: center;
+  }
+  .feature__header__btn {
+    display: none;
+  }
+  .feature__menu {
+    display: none;
+  }
+  .feature .dropdown {
+    display: block;
+  }
+  .cta {
+    height: 780px;
+  }
+  .cta__img {
+    text-align: center;
+    width: auto;
+    height: auto;
+  }
+  .cta__img img {
+    width: 85%;
+  }
+  .cta__background {
+    width: auto;
+    border-radius: 0;
+  }
+  .cta__background__content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 90%;
+  }
+  .cta__background__content__title {
+    width: 100%;
+    text-align: center;
+  }
+  .cta__background__content__desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cta__background__content__desc p {
+    font-size: 16px;
+  }
+  .cta__background__content__btn {
+    margin: 0 auto;
+  }
+  .footer__content__item--style {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
-  #main {
-    margin-top: 35rem;
+  main {
+    margin-top: 3rem;
+  }
+  .hero {
+    height: auto;
   }
   .hero__navbar {
     background: #000;
     width: 100%;
-    opacity: 0.7;
   }
   .hero__navbar button {
     background-color: #007bff;
@@ -685,16 +901,20 @@
   .hero__content--style__card {
     width: 80%;
   }
+  .hero__content--style__card__content h6 {
+    font-size: 24px;
+  }
   .hero__content__header {
     margin: 7rem auto 0;
     width: 100%;
   }
   .hero__content__header__title {
+    width: 91%;
     margin: 0 auto;
     text-align: center;
   }
   .hero__content__header__title h1 {
-    font-size: 55px;
+    font-size: 40px;
   }
   .hero__content__header__desc {
     width: 70%;
@@ -705,7 +925,7 @@
     margin-top: 9rem;
   }
   .hero__background {
-    height: 100%;
+    height: 850px;
   }
   .hero__menu {
     position: absolute;
@@ -732,8 +952,16 @@
   .howitworks {
     padding-top: 4rem;
   }
+  .howitworks__content {
+    padding: 3rem 0;
+  }
   .service__header {
-    width: 51%;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+  .service__header h4 {
+    font-size: 25px;
   }
   .service__content__arrow--left, .service__content__arrow--right {
     margin: 0 1rem;
@@ -742,59 +970,61 @@
     width: 20px;
   }
   .service__content__list {
-    width: 100%;
-    flex-direction: row;
+    display: none;
+  }
+  .service__content .dropdown__service {
+    display: block;
   }
   .service2 {
-    height: 450px;
-  }
-  .service2__img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 27%;
-    left: 7%;
-    opacity: 0.3;
+    height: 950px;
   }
   .service2__img img {
-    height: 100%;
+    width: 90%;
+    margin-left: 10%;
   }
   .service2__background {
     width: 100%;
-    height: 500px;
+    height: 675px;
+    top: 30%;
   }
   .service2__background__content {
-    width: 60%;
-    height: 94%;
-    margin: 1rem auto;
-  }
-  .service2__background__content__title {
     width: 100%;
+    margin-top: 232px;
+    margin-left: 0;
+    text-align: center;
   }
-  .service2__background__content__title h4 {
-    font-size: 27px;
+  .service2__background__content__title, .service2__background__content__desc {
+    width: 80%;
+    text-align: center;
   }
-  .service2__background__content__desc {
-    width: 97%;
+  .service2__background__content__title h4, .service2__background__content__desc h4 {
+    font-size: 30px;
+  }
+  .service2__background__content__title p, .service2__background__content__desc p {
+    font-size: 16px;
   }
   .service2__background__content__other {
-    padding: 0;
-    width: 100%;
+    text-align: center;
   }
   .service2__background__content__other__text {
     padding: 0;
   }
   .service2__background__content__btn {
-    width: 90%;
-    font-size: 15px;
+    width: 60%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
   }
   .testimonial {
-    margin-top: 16rem;
+    margin-top: 6rem;
   }
   .testimonial__header {
-    width: 90%;
+    margin: auto;
+    width: 80%;
   }
   .testimonial__header h3 {
+    text-align: center;
     font-size: 33px;
   }
   .testimonial__content .col-12 {
@@ -809,7 +1039,11 @@
     margin: 2rem auto;
   }
   .feature__header__content {
-    width: 70%;
+    width: 100%;
+  }
+  .feature__header__content__title, .feature__header__content__desc {
+    width: 100%;
+    text-align: center;
   }
   .feature__header__content__title h3 {
     font-size: 30px;
@@ -818,47 +1052,56 @@
     text-align: center;
   }
   .feature__header__btn {
-    width: 168px;
+    display: none;
   }
   .feature__img__item {
     width: 100%;
     margin: 0 auto;
     padding: 0.5rem 0;
   }
+  .feature__menu {
+    display: none;
+  }
+  .feature .dropdown {
+    display: block;
+  }
   .cta {
-    height: 420px;
+    height: 840px;
   }
   .cta__img {
-    position: static;
-    width: 100%;
-    height: 90%;
-    opacity: 0.2;
-    margin: 3rem 0;
+    text-align: center;
+    width: auto;
+    height: auto;
   }
   .cta__img img {
-    height: 100%;
-    border-radius: 20% 0;
+    width: 85%;
   }
   .cta__background {
-    width: 100%;
-    height: 100%;
-    top: 7%;
+    width: auto;
+    border-radius: 0;
+    height: 720px;
   }
   .cta__background__content {
-    width: 70%;
-    height: auto;
-    margin: 10% auto;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 95%;
   }
   .cta__background__content__title {
     width: 100%;
     text-align: center;
   }
-  .cta__background__content__title h2 {
-    font-size: 32px;
-    line-height: 45px;
-  }
-  .cta__background__content__desc, .cta__background__content__btn {
+  .cta__background__content__desc {
     width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cta__background__content__desc p {
+    font-size: 16px;
+  }
+  .cta__background__content__btn {
+    margin: 0 auto;
+  }
+  .footer__content {
     text-align: center;
   }
 }
@@ -869,7 +1112,6 @@
   .hero__navbar {
     background: #000;
     width: 100%;
-    opacity: 0.7;
   }
   .hero__navbar button {
     background-color: #007bff;
@@ -966,7 +1208,7 @@
     margin-top: 0;
   }
   .testimonial__header {
-    width: 90%;
+    width: 60%;
   }
   .testimonial__content__card--shadow {
     width: 50%;
@@ -984,6 +1226,12 @@
   }
   .feature__img__item img {
     width: 100%;
+  }
+  .feature__menu {
+    display: none;
+  }
+  .feature .dropdown {
+    display: block;
   }
   .cta {
     height: 420px;
@@ -1022,7 +1270,6 @@
   .hero__navbar {
     background: #000;
     width: 100%;
-    opacity: 0.7;
   }
   .hero__navbar li:first-child a {
     color: #ffffff;
@@ -1062,7 +1309,7 @@
     text-align: center;
   }
   .hero__background {
-    height: 670px;
+    height: 620px;
   }
   .hero__menu__list__search button {
     width: 85%;
@@ -1099,64 +1346,41 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 532px) {
-  .hero__content__header__title h1 {
-    font-size: 38px;
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
   }
-  .hero__content__header__desc {
-    width: 75%;
+  h2 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 55px;
+    color: #101130;
   }
-  .hero__content--style__card__content h3 {
-    font-size: 28px;
+  h3 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+    color: #000000;
   }
-  .howitworks__header h3 {
-    font-size: 35px;
+  h4 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 42px;
   }
-  .service__header {
-    width: 77%;
-  }
-  .service__content__list {
-    width: 100%;
-    flex-direction: row;
-  }
-  .service2__background {
-    height: 100%;
-  }
-  .service2__background__content {
-    width: 100%;
-  }
-  .service2__background__content__title h4 {
-    font-size: 26px;
-  }
-  .service2__background__content__title, .service2__background__content__desc, .service2__background__content__other {
-    text-align: center;
-  }
-  .service2__background__content__btn {
-    font-size: 10px;
-    margin: 0 auto;
-  }
-  .testimonial {
-    margin-top: 10rem;
-  }
-  .testimonial__header {
-    width: 100%;
-  }
-  .testimonial__header h3 {
-    font-size: 29px;
-  }
-  .feature__header__btn {
-    width: 130px;
-  }
-  .feature__menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .feature__menu__text {
-    margin: 1rem 0;
-    padding: 0 2rem;
+  h6 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 32px;
   }
 }
-.dropbtn {
+.dropbtn,
+.dropbtn__service {
   background-color: #f85a47;
   border-radius: 10px;
   color: white;
@@ -1164,19 +1388,20 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
+  margin: 3rem 0;
 }
 
-.dropdown {
-  position: relative;
-  display: none;
-  padding: 2rem 0;
+.dropdown,
+.dropdown__service {
   text-align: center;
-  width: 100%;
+  display: none;
+  margin: 0 auto;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #f9f9f9;
@@ -1185,15 +1410,26 @@
   z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
+.dropdown-content .dropdown-content__item {
+  color: #f1f1f1;
   padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+  cursor: pointer;
+  background-color: #f85a47;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.dropdown-content .dropdown-content__item:hover {
+  background-color: #3e8e41;
+}
+
+.dropdown-content .dropdown-content__service {
+  color: #f1f1f1;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #f85a47;
+}
+
+.dropdown-content .dropdown-content__service:hover {
+  background-color: #3e8e41;
 }
 
 .dropdown:hover .dropdown-content {
@@ -1201,6 +1437,14 @@
 }
 
 .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.dropdown__service:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown__service:hover .dropbtn {
   background-color: #3e8e41;
 }
 
