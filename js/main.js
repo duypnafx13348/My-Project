@@ -118,6 +118,7 @@ $(document).ready(function () {
           infinite: true,
           speed: 300,
           slidesToShow: 1,
+          arrows: false,
         },
       },
       {
@@ -126,6 +127,7 @@ $(document).ready(function () {
           infinite: true,
           speed: 300,
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
@@ -201,9 +203,9 @@ $(document).ready(function () {
       var bbox = e.geocode.bbox;
       var poly = L.polygon([
         bbox.getSouthEast(),
-        // bbox.getNorthEast(),
-        // bbox.getNorthWest(),
-        // bbox.getSouthWest(),
+        bbox.getNorthEast(),
+        bbox.getNorthWest(),
+        bbox.getSouthWest(),
       ]).addTo(map);
       map.fitBounds(poly.getBounds());
     })
@@ -240,12 +242,12 @@ $(document).ready(function () {
     $("p.location").text(locationValue);
   });
 
-  // event leaflet
+  // event leaflet popupopen để lấy giá trị search input
   map.on("popupopen", function (e) {
-    $(".leaflet-control-geocoder-alternatives li").on("click", function () {
-      const abc = $(this).text();
-      console.log(abc);
-      console.log($("#location").text(abc));
-    });
+    const searchValue = e.popup._contentNode.innerText;
+    $("#location").text(searchValue);
   });
+
+  // e.popup._content.split(">")[1].split("<")[0]
+  // $(".leaflet-popup-content").text()
 });

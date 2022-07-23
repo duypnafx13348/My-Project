@@ -654,10 +654,15 @@
   }
   .hero__navbar {
     width: 100%;
+    background: #f1f1f1;
+    opacity: 0.9;
+  }
+  .hero__navbar form button {
+    height: auto;
   }
   .hero__banner {
     width: 100%;
-    opacity: 0.6;
+    opacity: 0.4;
   }
   .hero__background {
     height: 935px;
@@ -675,12 +680,15 @@
     padding: 0;
   }
   .hero__content__header__desc p {
-    font-size: 16px;
+    font-size: 15px;
     color: black;
+  }
+  .hero__content__header.general--margin-top {
+    margin-top: 6rem;
   }
   .hero__content--style {
     height: auto;
-    margin-top: 14rem;
+    margin-top: 15rem;
   }
   .hero__content--style__card {
     margin: 1rem 0;
@@ -705,8 +713,9 @@
     height: 40px;
   }
   .hero__menu {
-    top: 38%;
-    width: 80%;
+    left: 50%;
+    width: 100%;
+    top: 41%;
   }
   .hero__menu--border {
     border: none;
@@ -725,11 +734,17 @@
     margin-bottom: 0;
   }
   .hero__menu__list__item span {
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .hero__menu__list__search {
+    height: 38px;
   }
   .hero__menu__list__item:not(:last-child) {
     border: none;
     padding: 0;
+  }
+  .howitworks {
+    padding: 2rem 0 0;
   }
   .howitworks__content {
     padding: 0;
@@ -754,7 +769,7 @@
     width: 63%;
   }
   .service__header h4 {
-    font-size: 30px;
+    font-size: 26px;
   }
   .service__content .slick-prev:before,
 .service__content .slick-next:before {
@@ -777,6 +792,22 @@
   .service__content .dropdown__service .dropbtn {
     margin-bottom: 2rem;
   }
+  .service .dropdown__service {
+    margin: 2rem auto;
+  }
+  .service .dropdown__service button {
+    padding: 10px;
+    font-size: 14px;
+    margin: 0;
+    min-width: 126px;
+  }
+  .service .dropdown-content {
+    background-color: #f85a47;
+    opacity: 0.9;
+  }
+  .service .dropdown-content .dropdown-content__service {
+    font-size: 14px;
+  }
   .service2 {
     height: 950px;
   }
@@ -786,12 +817,12 @@
   }
   .service2__background {
     width: 100%;
-    height: 675px;
-    top: 30%;
+    top: 14%;
+    height: 765px;
   }
   .service2__background__content {
     width: 100%;
-    margin-top: 232px;
+    margin-top: 310px;
     margin-left: 0;
     text-align: center;
   }
@@ -800,10 +831,10 @@
     text-align: center;
   }
   .service2__background__content__title h4, .service2__background__content__desc h4 {
-    font-size: 30px;
+    font-size: 26px;
   }
   .service2__background__content__title p, .service2__background__content__desc p {
-    font-size: 16px;
+    font-size: 15px;
   }
   .service2__background__content__other {
     text-align: center;
@@ -811,23 +842,30 @@
   .service2__background__content__other__text {
     padding: 0;
   }
-  .service2__background__content__btn {
-    width: 68%;
-    border-radius: 10px;
-    text-align: center;
-    margin: 0 auto;
+  .service2__background__content__other__text h6 {
     font-size: 16px;
   }
+  .service2__background__content__other__text p {
+    font-size: 14px;
+  }
+  .service2__background__content__btn {
+    width: 73%;
+    border-radius: 15px;
+    text-align: center;
+    margin: 1rem auto 0;
+    font-size: 14px;
+    height: 45px;
+  }
   .testimonial {
-    margin-top: 6rem;
+    margin: 0;
   }
   .testimonial__header {
     margin: auto;
-    width: 90%;
+    width: 95%;
   }
   .testimonial__header h3 {
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
   }
   .testimonial__content .col-12 {
     margin: 0.5rem 0;
@@ -867,10 +905,14 @@
     text-align: center;
   }
   .feature__header__content__title h3 {
-    font-size: 30px;
+    font-size: 26px;
   }
   .feature__header__content__desc {
     text-align: center;
+  }
+  .feature__header__content__desc p {
+    font-size: 14px;
+    line-height: 22px;
   }
   .feature__header__btn {
     display: none;
@@ -893,9 +935,22 @@
   }
   .feature .dropdown {
     display: block;
+    margin: 2rem auto;
+  }
+  .feature .dropdown button {
+    margin: 0;
+    font-size: 14px;
+    min-width: 170px;
+    padding: 12px;
+  }
+  .feature .dropdown .dropdown-content {
+    top: 103%;
+  }
+  .feature .dropdown .dropdown-content .dropdown-content__item {
+    font-size: 14px;
   }
   .cta {
-    height: 840px;
+    height: 695px;
   }
   .cta__img {
     text-align: center;
@@ -908,33 +963,44 @@
   .cta__background {
     width: auto;
     border-radius: 0;
-    height: 720px;
+    height: 595px;
   }
   .cta__background__content {
     width: 100%;
     margin-left: 0;
-    margin-top: 95%;
+    margin-top: 90%;
   }
   .cta__background__content__title {
     width: 100%;
     text-align: center;
   }
+  .cta__background__content__title h2 {
+    font-size: 27px;
+  }
   .cta__background__content__desc {
-    width: 100%;
+    width: 90%;
     text-align: center;
     padding: 0;
+    margin: 0 auto;
   }
   .cta__background__content__desc p {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 22px;
   }
   .cta__background__content__btn {
     margin: 0 auto;
+    width: 110px;
+    height: 45px;
+    font-size: 14px;
   }
   .footer__content {
     text-align: center;
   }
   .footer__content__item--style {
     width: 65%;
+  }
+  .footer2 {
+    justify-content: space-around !important;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
