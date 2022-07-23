@@ -9,9 +9,6 @@ $font-manrope: "Manrope", sans-serif;
     &__content {
       width: 50%;
 
-      &__title {
-      }
-
       &__desc {
         width: 85%;
 
@@ -66,7 +63,22 @@ $font-manrope: "Manrope", sans-serif;
   &__img {
     position: relative;
 
+    .slick-prev:before,
+    .slick-next:before {
+      background-color: #f85a47;
+    }
+
     &__list {
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        color: #f85a47;
+      }
+
+      .slick-dots li button:before {
+        font-size: 15px;
+        color: #f85a47;
+      }
+
       &__item {
         img {
           width: 95%;

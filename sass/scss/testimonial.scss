@@ -8,6 +8,11 @@ $font-manrope: "Manrope", sans-serif;
   }
 
   &__content {
+    .slick-prev:before,
+    .slick-next:before {
+      background-color: #f85a47;
+    }
+
     &--style {
       padding: 0;
     }
@@ -26,6 +31,10 @@ $font-manrope: "Manrope", sans-serif;
       &__star {
         display: inline-block;
         padding: 2rem;
+
+        img {
+          display: inline-block !important;
+        }
       }
 
       &__desc {
@@ -49,20 +58,9 @@ $font-manrope: "Manrope", sans-serif;
         }
       }
     }
-
-    // &__card:nth-last-child(1) {
-    //   border: none;
-    //   box-shadow: 3px 44px 54px rgba(0, 0, 0, 0.08);
-    // }
   }
 
   &__info {
-    &__logo {
-      &__item {
-        // width: 20%;
-      }
-    }
-
     &__callme {
       width: 90%;
 
@@ -81,4 +79,8 @@ $font-manrope: "Manrope", sans-serif;
       }
     }
   }
+}
+
+.slick-slide {
+  margin: 0 10px;
 }

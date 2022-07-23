@@ -98,6 +98,39 @@ $(document).ready(function () {
     ],
   });
 
+  // xử dụng slick slider để xử lý ảnh
+  $(".testimonial__content").slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          infinite: true,
+          speed: 300,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   // handleClick feature
   function handleClick() {
     let itemId = $(this).attr("data-id");

@@ -254,6 +254,10 @@
   width: 25%;
   margin-bottom: 4rem;
 }
+.service__content .slick-prev:before,
+.service__content .slick-next:before {
+  background-color: #f85a47;
+}
 .service__content__list {
   min-width: max-content;
   padding-right: 2rem;
@@ -276,6 +280,14 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 22px;
+}
+.service__content__img .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #f85a47;
+}
+.service__content__img .slick-dots li button:before {
+  font-size: 15px;
+  color: #f85a47;
 }
 .service__content__img--item img {
   object-fit: cover;
@@ -368,6 +380,10 @@
 .testimonial__header {
   width: 50%;
 }
+.testimonial__content .slick-prev:before,
+.testimonial__content .slick-next:before {
+  background-color: #f85a47;
+}
 .testimonial__content--style {
   padding: 0;
 }
@@ -384,6 +400,9 @@
 .testimonial__content__card__star {
   display: inline-block;
   padding: 2rem;
+}
+.testimonial__content__card__star img {
+  display: inline-block !important;
 }
 .testimonial__content__card__desc {
   padding-left: 2rem;
@@ -416,6 +435,10 @@
   font-size: 16px;
   line-height: 24px;
   color: #2cbde7;
+}
+
+.slick-slide {
+  margin: 0 10px;
 }
 
 .feature__header {
@@ -469,6 +492,18 @@
 }
 .feature__img {
   position: relative;
+}
+.feature__img .slick-prev:before,
+.feature__img .slick-next:before {
+  background-color: #f85a47;
+}
+.feature__img__list .slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #f85a47;
+}
+.feature__img__list .slick-dots li button:before {
+  font-size: 15px;
+  color: #f85a47;
 }
 .feature__img__list__item img {
   width: 95%;
@@ -613,7 +648,7 @@
   color: #101130;
 }
 
-@media screen and (min-width: 444px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero {
     height: 937px;
   }
@@ -720,6 +755,10 @@
   }
   .service__header h4 {
     font-size: 30px;
+  }
+  .service__content .slick-prev:before,
+.service__content .slick-next:before {
+    background-color: #f85a47;
   }
   .service__content__list {
     display: none;

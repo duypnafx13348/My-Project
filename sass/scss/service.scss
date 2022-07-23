@@ -8,6 +8,11 @@ $font-manrope: "Manrope", sans-serif;
   }
 
   &__content {
+    .slick-prev:before,
+    .slick-next:before {
+      background-color: #f85a47;
+    }
+
     &__list {
       min-width: max-content;
       padding-right: 2rem;
@@ -36,7 +41,15 @@ $font-manrope: "Manrope", sans-serif;
     }
 
     &__img {
-      // position: absolute;
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        color: #f85a47;
+      }
+
+      .slick-dots li button:before {
+        font-size: 15px;
+        color: #f85a47;
+      }
 
       &--item {
         // margin: 0 1rem;
