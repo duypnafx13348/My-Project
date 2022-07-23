@@ -43,3 +43,21 @@ ul {
 .general--margin-top {
   margin-top: 7rem;
 }
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-control-geocoder-alternatives-minimized {
+  display: block;
+}
+
+#checkin,
+#checkout {
+  display: none;
+}

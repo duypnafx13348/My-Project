@@ -24,14 +24,12 @@ $font-manrope: "Manrope", sans-serif;
       color: #596b7b;
     }
 
-    li:first-child {
-      a {
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 21px;
-        letter-spacing: -0.01em;
-        color: #1f2b6c;
-      }
+    li a.active {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 21px;
+      letter-spacing: -0.01em;
+      color: #1f2b6c;
     }
 
     &__logo--1 {
@@ -114,22 +112,30 @@ $font-manrope: "Manrope", sans-serif;
 
     &__list {
       &__item:not(:last-child) {
-        padding-right: 3rem;
+        padding-right: 1rem;
         border-right: 1px solid #dddddd;
       }
       &__item {
+        margin: 0 auto;
         h6 {
           font-weight: 600;
           font-size: 13px;
           line-height: 16px;
           color: #222222;
+          margin-bottom: 0;
         }
 
+        input,
         span {
           font-weight: 400;
           font-size: 15px;
           line-height: 18px;
           color: #b7b7b7;
+          border: none;
+        }
+
+        input {
+          width: 120px;
         }
       }
 
@@ -161,12 +167,14 @@ $font-manrope: "Manrope", sans-serif;
       }
 
       &__desc {
-        width: 60%;
+        width: 68%;
         padding: 1rem 0;
 
         p {
-          font-size: 14px;
           font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          color: #717171;
         }
       }
     }
