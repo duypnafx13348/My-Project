@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 543px) and (max-width: 768px) {
   //hero
   .hero {
     height: 937px;
@@ -18,6 +18,7 @@
     &__banner {
       width: 100%;
       opacity: 0.4;
+      height: 455px;
     }
 
     &__background {
@@ -53,7 +54,7 @@
 
       &--style {
         height: auto;
-        margin-top: 15rem;
+        margin-top: 18rem;
 
         &__card {
           margin: 1rem 0;
@@ -106,6 +107,7 @@
         &__item {
           width: 50%;
           text-align: center;
+          border: none;
 
           h6 {
             margin-bottom: 0;
@@ -113,6 +115,10 @@
 
           span {
             font-size: 13px;
+          }
+
+          input {
+            padding-left: 25px;
           }
         }
 
@@ -191,32 +197,8 @@
         }
       }
 
-      .dropdown__service {
+      .btn-group {
         display: block;
-
-        .dropbtn {
-          margin-bottom: 2rem;
-        }
-      }
-    }
-
-    .dropdown__service {
-      margin: 2rem auto;
-
-      button {
-        padding: 10px;
-        font-size: 14px;
-        margin: 0;
-        min-width: 126px;
-      }
-    }
-
-    .dropdown-content {
-      background-color: #f85a47;
-      opacity: 0.9;
-
-      .dropdown-content__service {
-        font-size: 14px;
       }
     }
   }
@@ -228,7 +210,8 @@
     &__img {
       img {
         width: 90%;
-        margin-left: 10%;
+        margin-left: 7%;
+        height: auto;
       }
     }
 
@@ -287,7 +270,7 @@
 
   //  testimonial
   .testimonial {
-    margin: 0;
+    margin-top: 0;
 
     &__header {
       margin: auto;
@@ -330,9 +313,13 @@
     }
 
     &__info {
+      &__logo {
+        margin: 1rem auto;
+      }
+
       &__callme {
-        width: 77%;
-        margin: 2rem auto;
+        width: 85%;
+        margin: 1rem auto;
 
         p {
           text-align: center;
@@ -341,7 +328,7 @@
     }
 
     .general--padding {
-      padding: 2rem 0;
+      padding: 2rem 0 0;
     }
   }
 
@@ -401,30 +388,14 @@
       display: none;
     }
 
-    .dropdown {
+    .btn-group {
       display: block;
-      margin: 2rem auto;
-
-      button {
-        margin: 0;
-        font-size: 14px;
-        min-width: 170px;
-        padding: 12px;
-      }
-
-      .dropdown-content {
-        top: 103%;
-
-        .dropdown-content__item {
-          font-size: 14px;
-        }
-      }
     }
   }
 
   //   cta
   .cta {
-    height: 695px;
+    height: 780px;
 
     &__img {
       text-align: center;
@@ -439,12 +410,12 @@
     &__background {
       width: auto;
       border-radius: 0;
-      height: 595px;
+      height: 670px;
 
       &__content {
         width: 100%;
         margin-left: 0;
-        margin-top: 90%;
+        margin-top: 86%;
 
         &__title {
           width: 100%;

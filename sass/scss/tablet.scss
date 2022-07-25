@@ -65,22 +65,49 @@
     }
 
     &__menu {
-      position: absolute;
-      top: 0;
       left: 50%;
+      width: 100%;
+      top: 0;
       transform: translate(-50%, -50%);
 
+      &--border {
+        border: none;
+      }
+
+      &--padding {
+        padding: 10px;
+      }
+
       &__list {
-        &--padding {
-          padding-top: 2rem;
+        padding: 0.5rem;
+
+        &__item {
+          width: 50%;
+          text-align: center;
+          border: none;
+          padding: 0;
+
+          h6 {
+            margin-bottom: 0;
+          }
+
+          span {
+            font-size: 13px;
+          }
+
+          input {
+            padding-left: 25px;
+          }
         }
 
         &__search {
-          button {
-            width: 85%;
-            border-radius: 5px;
-          }
+          height: 38px;
         }
+      }
+
+      &__list__item:not(:last-child) {
+        border: none;
+        padding: 0;
       }
     }
   }

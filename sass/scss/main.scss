@@ -6,7 +6,7 @@
 @import "./feature";
 @import "./cta";
 @import "./footer";
-// @import "./smalldevice.scss";
+@import "./smalldevice.scss";
 @import "./mobile";
 @import "./tablet";
 @import "./desktop-small";
@@ -60,4 +60,70 @@ ul {
 #checkin,
 #checkout {
   display: none;
+}
+
+//  css modal
+.modal-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  background-color: #d6ebe4;
+}
+
+.modal-header {
+  border-bottom: 1px solid white;
+
+  h4 {
+    font-size: 20px;
+  }
+
+  button {
+    span {
+      color: red;
+    }
+  }
+}
+
+.modal-body {
+  .hero__menu__modal__name {
+    margin: 1rem auto;
+
+    h4 {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  .hero__menu__modal__booking {
+    .hero__menu__modal__location,
+    .hero__menu__modal__checkin,
+    .hero__menu__modal__checkout {
+      margin: 2rem 0;
+
+      h5 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid white;
+}
+
+.modal-footer__location__desc {
+  font-size: 14px;
 }

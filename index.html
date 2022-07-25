@@ -68,6 +68,9 @@
           </div>
           <div class="modal-body">
             <div id="map"></div>
+            <div class="modal-footer__location">
+              <span class="modal-footer__location__desc"></span>
+            </div>
           </div>
           <div class="modal-footer">
             <button
@@ -76,6 +79,13 @@
               data-dismiss="modal"
             >
               Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary save"
+              data-dismiss="modal"
+            >
+              Save
             </button>
           </div>
         </div>
@@ -194,7 +204,7 @@
           </div>
           <div class="hero__menu">
             <div class="row hero__menu--padding">
-              <div class="col-12 col-md-6 col-lg-5 hero__menu--border">
+              <div class="col-12 col-md-6 col-lg-5">
                 <div
                   class="hero__menu__list d-flex justify-content-around align-items-center"
                 >
@@ -403,35 +413,46 @@
                   <p>Mexico</p>
                 </div>
               </div>
-              <div class="dropdown__service">
-                <button service-id="service-usa" class="dropbtn__service">
+              <div class="btn-group">
+                <button
+                  service-id="service-usa"
+                  type="button"
+                  class="btn btn-secondary dropdown-toggle dropbtn__service"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   United States
                 </button>
-                <div class="dropdown-content">
-                  <div
+                <div class="dropdown-menu dropdown-menu-right">
+                  <button
                     service-id="service-usa"
-                    class="dropdown-content__service"
+                    class="dropdown-item dropdown-content__service"
+                    type="button"
                   >
                     United States
-                  </div>
-                  <div
+                  </button>
+                  <button
                     service-id="service-canada"
-                    class="dropdown-content__service"
+                    class="dropdown-item dropdown-content__service"
+                    type="button"
                   >
                     Canada
-                  </div>
-                  <div
+                  </button>
+                  <button
                     service-id="service-england"
-                    class="dropdown-content__service"
+                    class="dropdown-item dropdown-content__service"
+                    type="button"
                   >
                     United Kingdom
-                  </div>
-                  <div
+                  </button>
+                  <button
                     service-id="service-mexico"
-                    class="dropdown-content__service"
+                    class="dropdown-item dropdown-content__service"
+                    type="button"
                   >
                     Mexico
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -521,7 +542,7 @@
           <!-- Service2 -->
           <div id="service2" class="row general--padding service2">
             <div class="service2__img">
-              <img src="./assets/Image (4).png" alt="home" />
+              <img src="./assets/sevice2.jpg" alt="home" />
             </div>
             <div class="service2__background">
               <div class="service2__background__content">
@@ -577,7 +598,6 @@
             <h3>Loved by businesses, and individuals across the globe.</h3>
           </div>
           <div class="general--padding testimonial__content">
-            <!-- <div class="col-12 col-md-6 col-lg-4 testimonial__content--style"> -->
             <div class="testimonial__content__card">
               <div class="testimonial__content__card__star">
                 <img src="./assets/Star 1.png" alt="start" />
@@ -602,8 +622,6 @@
                 </div>
               </div>
             </div>
-            <!-- </div> -->
-            <!-- <div class="col-12 col-md-6 col-lg-4 testimonial__content--style"> -->
             <div class="testimonial__content__card">
               <div class="testimonial__content__card__star">
                 <img src="./assets/Star 1.png" alt="start" />
@@ -628,8 +646,6 @@
                 </div>
               </div>
             </div>
-            <!-- </div> -->
-            <!-- <div class="col-12 col-md-12 col-lg-4 testimonial__content--style"> -->
             <div
               class="testimonial__content__card testimonial__content__card--shadow"
             >
@@ -656,12 +672,11 @@
                 </div>
               </div>
             </div>
-            <!-- </div> -->
           </div>
           <div class="row align-items-center testimonial__info">
-            <div class="col-12 col-md-12 col-lg-8">
+            <div class="col-12 col-md-12 col-lg-5">
               <div
-                class="testimonial__info__logo d-flex justify-content-between align-items-center"
+                class="testimonial__info__logo d-flex justify-content-around align-items-center"
               >
                 <div class="testimonial__info__logo__item">
                   <img src="./assets/Vector.svg" alt="logo" />
@@ -672,6 +687,12 @@
                 <div class="testimonial__info__logo__item">
                   <img src="./assets/Vector (2).svg" alt="logo" />
                 </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-3">
+              <div
+                class="testimonial__info__logo d-flex justify-content-around align-items-center"
+              >
                 <div class="testimonial__info__logo__item">
                   <img src="./assets/Vector (3).svg" alt="logo" />
                 </div>
@@ -720,23 +741,46 @@
                 <p>Industrial Property</p>
               </div>
             </div>
-            <div class="dropdown">
-              <button data-id="item1" class="dropbtn">
+            <div class="btn-group">
+              <button
+                data-id="item1"
+                type="button"
+                class="btn btn-secondary dropdown-toggle dropbtn__feature"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Residential Property
               </button>
-              <div class="dropdown-content">
-                <div data-id="item1" class="dropdown-content__item">
+              <div class="dropdown-menu dropdown-menu-right">
+                <button
+                  data-id="item1"
+                  class="dropdown-item dropdown-content__item"
+                  type="button"
+                >
                   Residential Property
-                </div>
-                <div data-id="item2" class="dropdown-content__item">
+                </button>
+                <button
+                  data-id="item2"
+                  class="dropdown-item dropdown-content__item"
+                  type="button"
+                >
                   Commercial Property
-                </div>
-                <div data-id="item3" class="dropdown-content__item">
+                </button>
+                <button
+                  data-id="item3"
+                  class="dropdown-item dropdown-content__item"
+                  type="button"
+                >
                   Agriculture Property
-                </div>
-                <div data-id="item4" class="dropdown-content__item">
+                </button>
+                <button
+                  data-id="item4"
+                  class="dropdown-item dropdown-content__item"
+                  type="button"
+                >
                   Industrial Property
-                </div>
+                </button>
               </div>
             </div>
             <div class="feature__img">
@@ -936,7 +980,6 @@
         </div>
       </main>
     </div>
-
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script

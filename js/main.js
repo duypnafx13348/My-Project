@@ -1,5 +1,3 @@
-// const map = require("leaflet-search");
-const smallDesktop = $(window).width();
 const lengthService = $(
   ".service__content__list .service__content__list__item"
 ).length;
@@ -9,7 +7,7 @@ $(document).ready(function () {
   // handleService > 4 item
   if (lengthService > 4) {
     $(".service__content__list").show();
-    $(".dropdown__service").show();
+    $(".btn-group").show();
   }
 
   // handleClick service
@@ -67,7 +65,7 @@ $(document).ready(function () {
   // handle feature > 5 item
   if (lengthFeature > 5) {
     $(".feature__menu").hide();
-    $(".dropdown").show();
+    $(".btn-group").show();
   }
 
   // xử dụng slick slider để xử lý ảnh
@@ -140,7 +138,7 @@ $(document).ready(function () {
     $(".feature__menu__text").removeClass("active");
     $(`.feature__menu__text[data-id=${itemId}]`).addClass("active");
 
-    $(".dropbtn").text($(this).text());
+    $(".dropbtn__feature").text($(this).text());
 
     console.log(itemId);
     let sliderId = $(`.feature__img__list[data-id=${itemId}]`);
@@ -186,6 +184,7 @@ $(document).ready(function () {
     }
   });
 
+  // hiển thị button search trong leaflet map
   var map = L.map("map").setView([0, 0], 2);
   L.tileLayer("https://{s}.tile.osm.org/{z}/{x}/{y}.png", {
     attribution:
@@ -195,41 +194,22 @@ $(document).ready(function () {
     zoomControl: true,
     trackResize: true,
   }).addTo(map);
-
-  var geocoder = L.Control.geocoder({
-    defaultMarkGeocode: true,
-  })
-    .on("markgeocode", function (e) {
-      var bbox = e.geocode.bbox;
-      var poly = L.polygon([
-        bbox.getSouthEast(),
-        bbox.getNorthEast(),
-        bbox.getNorthWest(),
-        bbox.getSouthWest(),
-      ]).addTo(map);
-      map.fitBounds(poly.getBounds());
-    })
-    .addTo(map);
-  // L.Control.geocoder().addTo(map);
+  L.Control.geocoder().addTo(map);
 
   // xử lý datapicker và hero__menu
   $(".hero__menu__list__item--checkin").on("click", function () {
     $(".hero__menu__list__item--checkin span").hide();
-    $("#checkin").show();
-    $(function () {
-      $("#checkin").datepicker({
-        dateFormat: "dd/mm/yy",
-      });
+    $("#checkin").show().focus();
+    $("#checkin").datepicker({
+      dateFormat: "dd/mm/yy",
     });
   });
 
   $(".hero__menu__list__item--checkout").on("click", function () {
     $(".hero__menu__list__item--checkout span").hide();
     $("#checkout").show();
-    $(function () {
-      $("#checkout").datepicker({
-        dateFormat: "dd/mm/yy",
-      });
+    $("#checkout").datepicker({
+      dateFormat: "dd/mm/yy",
     });
   });
 
@@ -245,9 +225,11 @@ $(document).ready(function () {
   // event leaflet popupopen để lấy giá trị search input
   map.on("popupopen", function (e) {
     const searchValue = e.popup._contentNode.innerText;
-    $("#location").text(searchValue);
+    $(".modal-footer__location__desc").text(searchValue);
+    // $("#location").text(searchValue);
   });
 
-  // e.popup._content.split(">")[1].split("<")[0]
-  // $(".leaflet-popup-content").text()
+  $(".modal-footer .save").on("click", function () {
+    $("#location").text($(".modal-footer__location__desc").text());
+  });
 });

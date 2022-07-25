@@ -106,23 +106,23 @@ $font-manrope: "Manrope", sans-serif;
       border-radius: 10px;
     }
 
-    &--border {
-      border-right: 1px solid #dddddd;
-    }
-
     &__list {
-      &__item:not(:last-child) {
-        padding-right: 1rem;
-        border-right: 1px solid #dddddd;
-      }
       &__item {
         margin: 0 auto;
+        padding-right: 3rem;
+        border-right: 1px solid #dddddd;
+        min-width: 165px;
+
+        &--rent {
+          border: none;
+        }
+
         h6 {
           font-weight: 600;
           font-size: 13px;
           line-height: 16px;
           color: #222222;
-          margin-bottom: 0;
+          margin-bottom: 5px;
         }
 
         input,
@@ -136,6 +136,17 @@ $font-manrope: "Manrope", sans-serif;
 
         input {
           width: 120px;
+        }
+
+        #location {
+          max-width: 200px;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          word-break: break-word;
+          margin: 0 auto;
         }
       }
 

@@ -87,8 +87,11 @@ $font-manrope: "Manrope", sans-serif;
       }
     }
   }
-}
 
-.abc {
-  cursor: pointer;
+  .btn-group {
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    text-align: center;
+  }
 }
