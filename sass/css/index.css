@@ -109,6 +109,7 @@
   line-height: 18px;
   color: #b7b7b7;
   border: none;
+  cursor: pointer;
 }
 .hero__menu__list__item input {
   width: 120px;
@@ -122,6 +123,7 @@
   text-overflow: ellipsis;
   word-break: break-word;
   margin: 0 auto;
+  cursor: pointer;
 }
 .hero__menu__list__search {
   width: 225px;
@@ -1829,29 +1831,23 @@ ul li {
 .modal-content {
   width: 90%;
   margin: 0 auto;
-}
-
-.modal-header,
-.modal-footer {
-  background-color: #f85a47;
-}
-.modal-header .btn-primary,
-.modal-footer .btn-primary {
-  background-color: #159fed;
+  border: 3px solid #f85a47;
+  border-radius: 15px;
 }
 
 .modal-header {
-  border-bottom: 1px solid #f85a47;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid #f85a47;
 }
 .modal-header h4 {
   font-size: 20px;
-  color: #f1f1f1;
+  color: #000;
 }
 .modal-header h5 {
-  color: #f1f1f1;
+  color: #000;
 }
 .modal-header button span {
-  color: #333;
+  color: #f85a47;
 }
 
 .modal-body .hero__menu__modal__name {
@@ -1883,7 +1879,12 @@ ul li {
 }
 
 .modal-footer {
-  border-top: 1px solid #f85a47;
+  border-radius: 0 0 20px 20px;
+  border-top: 2px solid #f85a47;
+}
+.modal-footer .btn-save {
+  background-color: #f85a47;
+  border: none;
 }
 
 .modal-footer__location__desc {

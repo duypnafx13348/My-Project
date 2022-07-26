@@ -129,6 +129,7 @@ $font-manrope: "Manrope", sans-serif;
           line-height: 18px;
           color: #b7b7b7;
           border: none;
+          cursor: pointer;
         }
 
         input {
@@ -144,6 +145,7 @@ $font-manrope: "Manrope", sans-serif;
           text-overflow: ellipsis;
           word-break: break-word;
           margin: 0 auto;
+          cursor: pointer;
         }
       }
 

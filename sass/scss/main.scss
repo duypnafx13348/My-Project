@@ -82,33 +82,26 @@ ul {
 .modal-content {
   width: 90%;
   margin: 0 auto;
-  // border: 1px solid #f85a47;
-}
-
-.modal-header,
-.modal-footer {
-  background-color: #f85a47;
-
-  .btn-primary {
-    background-color: #159fed;
-  }
+  border: 3px solid #f85a47;
+  border-radius: 15px;
 }
 
 .modal-header {
-  border-bottom: 1px solid #f85a47;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 2px solid #f85a47;
 
   h4 {
     font-size: 20px;
-    color: #f1f1f1;
+    color: #000;
   }
 
   h5 {
-    color: #f1f1f1;
+    color: #000;
   }
 
   button {
     span {
-      color: #333;
+      color: #f85a47;
     }
   }
 }
@@ -147,7 +140,12 @@ ul {
 }
 
 .modal-footer {
-  border-top: 1px solid #f85a47;
+  border-radius: 0 0 20px 20px;
+  border-top: 2px solid #f85a47;
+  .btn-save {
+    background-color: #f85a47;
+    border: none;
+  }
 }
 
 .modal-footer__location__desc {

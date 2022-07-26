@@ -239,7 +239,7 @@ $(document).ready(function () {
     $("span.checkout").text(checkoutValue);
   });
 
-  $(".modal-footer .save").on("click", function () {
+  $(".modal-footer .btn-save").on("click", function () {
     $("#location").text($(".modal-footer__location__desc").text());
   });
 
