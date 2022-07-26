@@ -6,11 +6,12 @@
 }
 .hero__navbar {
   position: fixed;
-  width: 90%;
-  left: 50%;
+  width: 100%;
   top: 0;
-  transform: translateX(-50%);
   z-index: 1;
+}
+.hero__navbar .navbar {
+  padding: 1rem 5rem;
 }
 .hero__navbar a {
   font-weight: 400;
@@ -40,22 +41,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hero__navbar form {
+.hero__navbar .navbar__signup {
   width: 120px;
   height: 48px;
-  background: #159fed;
-  border-radius: 5px;
-}
-.hero__navbar form button {
-  width: 100%;
-  height: 100%;
   background: #159fed;
   border-radius: 5px;
   font-weight: 500;
   font-size: 17px;
   line-height: 21px;
-  text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }
 .hero__banner {
   width: 50%;
@@ -133,15 +128,15 @@
   height: 50px;
   background-color: #f85a47;
   border-radius: 5px;
-}
-.hero__menu__list__search button {
-  width: 70%;
-  height: 100%;
+  color: #ffffff;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #ffffff;
-  background-color: #f85a47;
+  cursor: pointer;
+}
+.hero__menu__list__search img {
+  padding-left: 1rem;
+  width: 35px;
 }
 .hero__content {
   height: 90%;
@@ -265,7 +260,9 @@
 }
 .service__content .slick-prev:before,
 .service__content .slick-next:before {
-  background-color: #f85a47;
+  background-color: #f1f1f1;
+  color: #f85a47;
+  border-radius: 100%;
 }
 .service__content__list {
   min-width: max-content;
@@ -277,8 +274,6 @@
 .service__content__list__item {
   padding: 1rem;
   cursor: pointer;
-}
-.service__content__list p {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -371,7 +366,7 @@
 .service2__background__content__btn {
   background-color: #f85a47;
   border-radius: 7px;
-  width: 90%;
+  width: 75%;
   display: inline-block;
   padding: 1rem;
   font-weight: 500;
@@ -392,7 +387,9 @@
 }
 .testimonial__content .slick-prev:before,
 .testimonial__content .slick-next:before {
-  background-color: #f85a47;
+  background-color: #f1f1f1;
+  color: #f85a47;
+  border-radius: 100%;
 }
 .testimonial__content--style {
   padding: 0;
@@ -431,6 +428,12 @@
 .testimonial__content__card__author p {
   padding-left: 2rem;
 }
+.testimonial__content .slick-slide {
+  border: 1px solid #f85a47;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
 .testimonial__info__callme {
   width: 90%;
 }
@@ -445,10 +448,6 @@
   font-size: 16px;
   line-height: 24px;
   color: #2cbde7;
-}
-
-.slick-slide {
-  margin: 0 10px;
 }
 
 .feature__header {
@@ -505,7 +504,9 @@
 }
 .feature__img .slick-prev:before,
 .feature__img .slick-next:before {
-  background-color: #f85a47;
+  background-color: #f1f1f1;
+  border-radius: 100%;
+  color: #f85a47;
 }
 .feature__img__list .slick-dots li.slick-active button:before {
   opacity: 0.75;
@@ -662,29 +663,47 @@
 
 @media screen and (max-width: 543px) {
   .hero {
-    height: 937px;
+    height: 865px;
   }
   .hero__navbar {
+    padding: 0;
     width: 100%;
-    background: #f1f1f1;
-    opacity: 0.9;
+  }
+  .hero__navbar .navbar {
+    padding: 1rem;
   }
   .hero__navbar form button {
     height: auto;
+  }
+  .hero__navbar__logo--1 {
+    width: 23px;
+    height: 23px;
+  }
+  .hero__navbar__logo--1 img {
+    width: 50%;
+  }
+  .hero__navbar__logo--2 img {
+    width: 65px;
+  }
+  .hero__navbar .navbar__signup {
+    width: 80px;
+    height: 40px;
+    margin: 0.5rem 1rem;
   }
   .hero__banner {
     width: 100%;
     opacity: 0.4;
   }
   .hero__background {
-    height: 935px;
+    height: 860px;
   }
   .hero__content__header__title {
     width: 100%;
     text-align: center;
   }
   .hero__content__header__title h1 {
-    font-size: 45px;
+    font-size: 40px;
+    line-height: 1.1;
   }
   .hero__content__header__desc {
     width: 100%;
@@ -694,40 +713,47 @@
   .hero__content__header__desc p {
     font-size: 15px;
     color: black;
+    line-height: 23px;
   }
   .hero__content__header.general--margin-top {
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
   .hero__content--style {
     height: auto;
-    margin-top: 17.5rem;
+    margin-top: 14.5rem;
   }
   .hero__content--style__card {
     margin: 1rem 0;
     position: relative;
   }
   .hero__content--style__card__user img {
-    width: 22px;
+    width: 16px;
   }
   .hero__content--style__card__content {
     width: 48%;
   }
   .hero__content--style__card__content h6 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
   }
   .hero__content--style__card__desc {
     padding: 0 0.5rem;
   }
+  .hero__content--style__card__desc span {
+    font-size: 14px;
+  }
   .hero__content--style__card__icon {
     right: 10%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+  }
+  .hero__content--style__card--padding {
+    padding: 3px;
   }
   .hero__menu {
     left: 50%;
-    width: 100%;
-    top: 41%;
+    width: 93%;
+    top: 35%;
   }
   .hero__menu--border {
     border: none;
@@ -753,7 +779,13 @@
     padding-left: 25px;
   }
   .hero__menu__list__search {
+    width: 180px;
     height: 38px;
+    font-size: 14px;
+  }
+  .hero__menu__list__search img {
+    padding-left: 0.5rem;
+    width: 24px;
   }
   .hero__menu__list__item:not(:last-child) {
     border: none;
@@ -761,6 +793,9 @@
   }
   .howitworks {
     padding: 2rem 0 0;
+  }
+  .howitworks__header h3 {
+    font-size: 23px;
   }
   .howitworks__content {
     padding: 0;
@@ -772,20 +807,26 @@
   .howitworks__content__list__item__title {
     padding: 0;
   }
+  .howitworks__content__list__item__title h6 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
   .howitworks__content__list__item__desc p {
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.2;
   }
   .howitworks__content__list__item__icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
   }
   .service__header {
     text-align: center;
     margin: 0 auto;
-    width: 63%;
+    width: 61%;
   }
   .service__header h4 {
-    font-size: 26px;
+    font-size: 23px;
   }
   .service__content .slick-prev:before,
 .service__content .slick-next:before {
@@ -805,8 +846,11 @@
   .service__content .btn-group {
     display: block;
   }
+  .service__content .btn-group button {
+    font-size: 14px;
+  }
   .service2 {
-    height: 855px;
+    height: 820px;
   }
   .service2__img {
     margin-left: 50%;
@@ -815,13 +859,14 @@
     height: auto;
   }
   .service2__img img {
-    width: 300px;
+    width: 330px;
     height: auto;
+    border-radius: 20px;
   }
   .service2__background {
     width: 100%;
     top: 14%;
-    height: 680px;
+    height: 660px;
   }
   .service2__background__content {
     width: 100%;
@@ -834,10 +879,11 @@
     text-align: center;
   }
   .service2__background__content__title h4, .service2__background__content__desc h4 {
-    font-size: 26px;
+    font-size: 23px;
   }
   .service2__background__content__title p, .service2__background__content__desc p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 23px;
   }
   .service2__background__content__other {
     text-align: center;
@@ -847,6 +893,7 @@
   }
   .service2__background__content__other__text h6 {
     font-size: 16px;
+    margin-bottom: 2px;
   }
   .service2__background__content__other__text p {
     font-size: 14px;
@@ -868,7 +915,7 @@
   }
   .testimonial__header h3 {
     text-align: center;
-    font-size: 26px;
+    font-size: 23px;
   }
   .testimonial__content .col-12 {
     margin: 0.5rem 0;
@@ -882,23 +929,38 @@
   }
   .testimonial__content__card__desc p {
     margin-bottom: 0;
+    font-size: 14px;
+    line-height: 23px;
   }
-  .testimonial__content__card__auto {
+  .testimonial__content__card__author {
     padding: 1rem 2rem;
+  }
+  .testimonial__content__card__author strong {
+    font-size: 16px;
+  }
+  .testimonial__content__card__author p {
+    font-size: 14px;
   }
   .testimonial__content__card--shadow {
     width: 100%;
-    margin: 1rem auto;
   }
-  .testimonial__info__logo {
-    margin: 1rem auto;
+  .testimonial__info__logo__item img {
+    width: 60px;
+  }
+  .testimonial__info .testimonial__info__logo-1 {
+    margin-top: 1rem;
+  }
+  .testimonial__info .testimonial__info__logo-2 {
+    margin: 1rem 0;
   }
   .testimonial__info__callme {
     width: 85%;
-    margin: 1rem auto;
+    margin: 0 auto;
   }
   .testimonial__info__callme p {
     text-align: center;
+    font-size: 14px;
+    line-height: 18px;
   }
   .testimonial .general--padding {
     padding: 2rem 0 0;
@@ -911,14 +973,14 @@
     text-align: center;
   }
   .feature__header__content__title h3 {
-    font-size: 26px;
+    font-size: 23px;
   }
   .feature__header__content__desc {
     text-align: center;
   }
   .feature__header__content__desc p {
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
   }
   .feature__header__btn {
     display: none;
@@ -943,19 +1005,27 @@
     display: block;
     text-align: center;
   }
+  .feature .btn-group button {
+    font-size: 15px;
+  }
   .cta {
-    height: 585px;
+    height: 537px;
   }
   .cta__img {
-    text-align: center;
-    height: auto;
     margin-left: 50%;
     transform: translateX(-50%);
+    width: auto;
+    height: auto;
+  }
+  .cta__img img {
+    width: 335px;
+    height: 260px;
+    border-radius: 20px;
   }
   .cta__background {
     width: auto;
     border-radius: 0;
-    height: 505px;
+    height: 455px;
   }
   .cta__background__content {
     width: 100%;
@@ -967,17 +1037,17 @@
     text-align: center;
   }
   .cta__background__content__title h2 {
-    font-size: 27px;
+    font-size: 24px;
   }
   .cta__background__content__desc {
-    width: 90%;
+    width: 80%;
     text-align: center;
     padding: 0;
     margin: 0 auto;
   }
   .cta__background__content__desc p {
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
   }
   .cta__background__content__btn {
     margin: 0 auto;
@@ -985,11 +1055,43 @@
     height: 45px;
     font-size: 14px;
   }
-  .footer__content {
+  .footer__content__logo {
+    justify-content: center;
+  }
+  .footer__content__logo__background {
+    width: 20.51px;
+    height: 20.99px;
+    margin-right: 2px;
+  }
+  .footer__content__logo__background img {
+    width: 50%;
+  }
+  .footer__content__logo__trademark img {
+    width: 65px;
+  }
+  .footer__content__item__title {
     text-align: center;
+  }
+  .footer__content__item__title h6 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .footer__content__item__desc {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  .footer__content__item__desc p {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .footer__content__item__logo {
+    justify-content: center;
   }
   .footer__content__item--style {
     width: 65%;
+  }
+  .footer__content__item__star {
+    text-align: center;
   }
   .footer2 {
     justify-content: space-around !important;
@@ -1000,6 +1102,7 @@
     height: 937px;
   }
   .hero__navbar {
+    padding: 0;
     width: 100%;
     background: #f1f1f1;
     opacity: 0.9;
@@ -1459,7 +1562,6 @@
   }
   .testimonial__content__card--shadow {
     width: 50%;
-    margin: 1rem auto;
   }
   .testimonial__info__callme {
     margin: 2rem auto;
@@ -1639,14 +1741,51 @@
 }
 
 .dropdown-item {
-  color: #f1f1f1;
-  background-color: #333;
-  padding: 0.5rem 1.5rem;
+  background-color: #f1f1f1;
+  color: #f85a47;
+  border: 1px solid #f85a47;
+}
+
+.dropdown-menu {
+  display: none;
+  background: #f1f1f1;
+}
+
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+}
+
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgb(132, 250, 176), rgb(143, 211, 244));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(132, 250, 176), rgb(143, 211, 244));
 }
 
 * {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #159fed, #f85a47);
+  border-radius: 100rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-image: linear-gradient(to bottom, #333, #f1f1f1);
+  border-radius: 100rem;
 }
 
 .container-fluid {
@@ -1693,31 +1832,34 @@ ul li {
 }
 
 .modal-header,
-.modal-body,
 .modal-footer {
-  background-color: #d6ebe4;
+  background-color: #f85a47;
+}
+.modal-header .btn-primary,
+.modal-footer .btn-primary {
+  background-color: #159fed;
 }
 
 .modal-header {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f85a47;
 }
 .modal-header h4 {
   font-size: 20px;
+  color: #f1f1f1;
+}
+.modal-header h5 {
+  color: #f1f1f1;
 }
 .modal-header button span {
-  color: red;
+  color: #333;
 }
 
 .modal-body .hero__menu__modal__name {
   margin: 1rem auto;
+  text-align: center;
 }
 .modal-body .hero__menu__modal__name h4 {
-  font-size: 1rem;
-  text-align: center;
-}
-.modal-body .hero__menu__modal__name h3 {
-  font-size: 20px;
-  text-align: center;
+  font-size: 24px;
 }
 .modal-body .hero__menu__modal__booking .hero__menu__modal__location,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkin,
@@ -1727,20 +1869,38 @@ ul li {
 .modal-body .hero__menu__modal__booking .hero__menu__modal__location h5,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkin h5,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkout h5 {
-  font-size: 1rem;
+  font-size: 18px;
+  font-weight: 500;
 }
-.modal-body .hero__menu__modal__booking .hero__menu__modal__location p,
-.modal-body .hero__menu__modal__booking .hero__menu__modal__checkin p,
-.modal-body .hero__menu__modal__booking .hero__menu__modal__checkout p {
-  font-size: 14px;
+.modal-body .hero__menu__modal__booking .hero__menu__modal__location span,
+.modal-body .hero__menu__modal__booking .hero__menu__modal__checkin span,
+.modal-body .hero__menu__modal__booking .hero__menu__modal__checkout span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.modal-body .leaflet-touch .leaflet-control-geocoder {
+  border: 1px solid #f85a47;
 }
 
 .modal-footer {
-  border-top: 1px solid white;
+  border-top: 1px solid #f85a47;
 }
 
 .modal-footer__location__desc {
   font-size: 14px;
+}
+
+.ui-widget-header,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight {
+  border: 1px solid #f85a47 !important;
+  background: #f85a47 !important;
+  color: #f1f1f1 !important;
+}
+
+.leaflet-control-zoom-in span,
+.leaflet-control-zoom-out span {
+  color: #f85a47;
 }
 
 /*# sourceMappingURL=index.css.map */

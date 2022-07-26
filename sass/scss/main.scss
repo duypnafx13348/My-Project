@@ -12,6 +12,7 @@
 @import "./desktop-small";
 @import "./large";
 @import "./dropdown";
+@import "./signup";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&family=Roboto&display=swap");
 
@@ -21,6 +22,21 @@ $font-manrope: "Manrope", sans-serif;
 * {
   box-sizing: border-box;
   font-family: $font-inter;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #159fed, #f85a47);
+  border-radius: 100rem;
+}
+
+body::-webkit-scrollbar-track {
+  // background-color: #333;
+  background-image: linear-gradient(to bottom, #333, #f1f1f1);
+  border-radius: 100rem;
 }
 
 .container-fluid {
@@ -66,24 +82,33 @@ ul {
 .modal-content {
   width: 90%;
   margin: 0 auto;
+  // border: 1px solid #f85a47;
 }
 
 .modal-header,
-.modal-body,
 .modal-footer {
-  background-color: #d6ebe4;
+  background-color: #f85a47;
+
+  .btn-primary {
+    background-color: #159fed;
+  }
 }
 
 .modal-header {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f85a47;
 
   h4 {
     font-size: 20px;
+    color: #f1f1f1;
+  }
+
+  h5 {
+    color: #f1f1f1;
   }
 
   button {
     span {
-      color: red;
+      color: #333;
     }
   }
 }
@@ -91,15 +116,10 @@ ul {
 .modal-body {
   .hero__menu__modal__name {
     margin: 1rem auto;
+    text-align: center;
 
     h4 {
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    h3 {
-      font-size: 20px;
-      text-align: center;
+      font-size: 24px;
     }
   }
 
@@ -110,20 +130,42 @@ ul {
       margin: 2rem 0;
 
       h5 {
-        font-size: 1rem;
+        font-size: 18px;
+        font-weight: 500;
       }
 
-      p {
-        font-size: 14px;
+      span {
+        font-size: 16px;
+        font-weight: 400;
       }
     }
+  }
+
+  .leaflet-touch .leaflet-control-geocoder {
+    border: 1px solid #f85a47;
   }
 }
 
 .modal-footer {
-  border-top: 1px solid white;
+  border-top: 1px solid #f85a47;
 }
 
 .modal-footer__location__desc {
   font-size: 14px;
+}
+
+.ui-widget-header,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight {
+  border: 1px solid #f85a47 !important;
+  background: #f85a47 !important;
+  color: #f1f1f1 !important;
+}
+
+// leaflet
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  span {
+    color: #f85a47;
+  }
 }

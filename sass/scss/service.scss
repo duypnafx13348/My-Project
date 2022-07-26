@@ -10,7 +10,9 @@ $font-manrope: "Manrope", sans-serif;
   &__content {
     .slick-prev:before,
     .slick-next:before {
-      background-color: #f85a47;
+      background-color: #f1f1f1;
+      color: #f85a47;
+      border-radius: 100%;
     }
 
     &__list {
@@ -23,9 +25,6 @@ $font-manrope: "Manrope", sans-serif;
       &__item {
         padding: 1rem;
         cursor: pointer;
-      }
-
-      p {
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;

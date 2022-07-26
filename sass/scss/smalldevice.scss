@@ -1,17 +1,41 @@
 @media screen and (max-width: 543px) {
   //hero
   .hero {
-    height: 937px;
+    height: 865px;
 
     &__navbar {
+      padding: 0;
       width: 100%;
-      background: #f1f1f1;
-      opacity: 0.9;
+
+      .navbar {
+        padding: 1rem;
+      }
 
       form {
         button {
           height: auto;
         }
+      }
+
+      &__logo--1 {
+        width: 23px;
+        height: 23px;
+
+        img {
+          width: 50%;
+        }
+      }
+
+      &__logo--2 {
+        img {
+          width: 65px;
+        }
+      }
+
+      .navbar__signup {
+        width: 80px;
+        height: 40px;
+        margin: 0.5rem 1rem;
       }
     }
 
@@ -21,7 +45,7 @@
     }
 
     &__background {
-      height: 935px;
+      height: 860px;
     }
 
     &__content {
@@ -31,7 +55,8 @@
           text-align: center;
 
           h1 {
-            font-size: 45px;
+            font-size: 40px;
+            line-height: 1.1;
           }
         }
 
@@ -43,17 +68,18 @@
           p {
             font-size: 15px;
             color: black;
+            line-height: 23px;
           }
         }
       }
 
       &__header.general--margin-top {
-        margin-top: 6rem;
+        margin-top: 5rem;
       }
 
       &--style {
         height: auto;
-        margin-top: 17.5rem;
+        margin-top: 14.5rem;
 
         &__card {
           margin: 1rem 0;
@@ -61,7 +87,7 @@
 
           &__user {
             img {
-              width: 22px;
+              width: 16px;
             }
           }
 
@@ -69,19 +95,27 @@
             width: 48%;
 
             h6 {
-              font-size: 20px;
+              font-size: 18px;
               margin-bottom: 0;
             }
           }
 
           &__desc {
             padding: 0 0.5rem;
+
+            span {
+              font-size: 14px;
+            }
           }
 
           &__icon {
             right: 10%;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
+          }
+
+          &--padding {
+            padding: 3px;
           }
         }
       }
@@ -89,8 +123,8 @@
 
     &__menu {
       left: 50%;
-      width: 100%;
-      top: 41%;
+      width: 93%;
+      top: 35%;
 
       &--border {
         border: none;
@@ -122,7 +156,14 @@
         }
 
         &__search {
+          width: 180px;
           height: 38px;
+          font-size: 14px;
+
+          img {
+            padding-left: 0.5rem;
+            width: 24px;
+          }
         }
       }
 
@@ -137,6 +178,12 @@
   .howitworks {
     padding: 2rem 0 0;
 
+    &__header {
+      h3 {
+        font-size: 23px;
+      }
+    }
+
     &__content {
       padding: 0;
       margin: 3rem 0;
@@ -147,16 +194,23 @@
         &__item {
           &__title {
             padding: 0;
+
+            h6 {
+              font-size: 18px;
+              margin-bottom: 0;
+            }
           }
 
           &__desc {
             p {
-              line-height: 1.5;
+              font-size: 14px;
+              line-height: 1.2;
             }
           }
           &__icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
           }
         }
       }
@@ -168,10 +222,10 @@
     &__header {
       text-align: center;
       margin: 0 auto;
-      width: 63%;
+      width: 61%;
 
       h4 {
-        font-size: 26px;
+        font-size: 23px;
       }
     }
 
@@ -198,13 +252,17 @@
 
       .btn-group {
         display: block;
+
+        button {
+          font-size: 14px;
+        }
       }
     }
   }
 
   // service2
   .service2 {
-    height: 855px;
+    height: 820px;
 
     &__img {
       margin-left: 50%;
@@ -213,15 +271,16 @@
       height: auto;
 
       img {
-        width: 300px;
+        width: 330px;
         height: auto;
+        border-radius: 20px;
       }
     }
 
     &__background {
       width: 100%;
       top: 14%;
-      height: 680px;
+      height: 660px;
 
       &__content {
         width: 100%;
@@ -235,11 +294,12 @@
           text-align: center;
 
           h4 {
-            font-size: 26px;
+            font-size: 23px;
           }
 
           p {
-            font-size: 15px;
+            font-size: 14px;
+            line-height: 23px;
           }
         }
 
@@ -251,6 +311,7 @@
 
             h6 {
               font-size: 16px;
+              margin-bottom: 2px;
             }
 
             p {
@@ -281,7 +342,7 @@
 
       h3 {
         text-align: center;
-        font-size: 26px;
+        font-size: 23px;
       }
     }
 
@@ -301,31 +362,54 @@
         &__desc {
           p {
             margin-bottom: 0;
+            font-size: 14px;
+            line-height: 23px;
           }
         }
 
-        &__auto {
+        &__author {
           padding: 1rem 2rem;
+
+          strong {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+          }
         }
       }
 
       &__card--shadow {
         width: 100%;
-        margin: 1rem auto;
       }
     }
 
     &__info {
       &__logo {
-        margin: 1rem auto;
+        &__item {
+          img {
+            width: 60px;
+          }
+        }
+      }
+
+      .testimonial__info__logo-1 {
+        margin-top: 1rem;
+      }
+
+      .testimonial__info__logo-2 {
+        margin: 1rem 0;
       }
 
       &__callme {
         width: 85%;
-        margin: 1rem auto;
+        margin: 0 auto;
 
         p {
           text-align: center;
+          font-size: 14px;
+          line-height: 18px;
         }
       }
     }
@@ -348,7 +432,7 @@
         }
         &__title {
           h3 {
-            font-size: 26px;
+            font-size: 23px;
           }
         }
 
@@ -357,7 +441,7 @@
 
           p {
             font-size: 14px;
-            line-height: 22px;
+            line-height: 20px;
           }
         }
       }
@@ -394,24 +478,34 @@
     .btn-group {
       display: block;
       text-align: center;
+
+      button {
+        font-size: 15px;
+      }
     }
   }
 
   //   cta
   .cta {
-    height: 585px;
+    height: 537px;
 
     &__img {
-      text-align: center;
-      height: auto;
       margin-left: 50%;
       transform: translateX(-50%);
+      width: auto;
+      height: auto;
+
+      img {
+        width: 335px;
+        height: 260px;
+        border-radius: 20px;
+      }
     }
 
     &__background {
       width: auto;
       border-radius: 0;
-      height: 505px;
+      height: 455px;
 
       &__content {
         width: 100%;
@@ -423,18 +517,18 @@
           text-align: center;
 
           h2 {
-            font-size: 27px;
+            font-size: 24px;
           }
         }
 
         &__desc {
-          width: 90%;
+          width: 80%;
           text-align: center;
           padding: 0;
           margin: 0 auto;
           p {
             font-size: 14px;
-            line-height: 22px;
+            line-height: 20px;
           }
         }
 
@@ -451,11 +545,54 @@
   // footer
   .footer {
     &__content {
-      text-align: center;
+      &__logo {
+        justify-content: center;
+
+        &__background {
+          width: 20.51px;
+          height: 20.99px;
+          margin-right: 2px;
+          img {
+            width: 50%;
+          }
+        }
+
+        &__trademark {
+          img {
+            width: 65px;
+          }
+        }
+      }
 
       &__item {
+        &__title {
+          text-align: center;
+
+          h6 {
+            font-size: 16px;
+            margin-bottom: 0;
+          }
+        }
+        &__desc {
+          text-align: center;
+          padding: 0.5rem 0;
+
+          p {
+            margin-bottom: 5px;
+            font-size: 14px;
+          }
+        }
+
+        &__logo {
+          justify-content: center;
+        }
+
         &--style {
           width: 65%;
+        }
+
+        &__star {
+          text-align: center;
         }
       }
     }

@@ -10,7 +10,9 @@ $font-manrope: "Manrope", sans-serif;
   &__content {
     .slick-prev:before,
     .slick-next:before {
-      background-color: #f85a47;
+      background-color: #f1f1f1;
+      color: #f85a47;
+      border-radius: 100%;
     }
 
     &--style {
@@ -58,6 +60,13 @@ $font-manrope: "Manrope", sans-serif;
         }
       }
     }
+
+    .slick-slide {
+      border: 1px solid #f85a47;
+      text-align: center;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
   }
 
   &__info {
@@ -79,8 +88,4 @@ $font-manrope: "Manrope", sans-serif;
       }
     }
   }
-}
-
-.slick-slide {
-  margin: 0 10px;
 }

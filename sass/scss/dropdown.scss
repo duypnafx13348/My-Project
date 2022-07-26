@@ -11,7 +11,12 @@
 }
 
 .dropdown-item {
-  color: #f1f1f1;
-  background-color: #333;
-  padding: 0.5rem 1.5rem;
+  background-color: #f1f1f1;
+  color: #f85a47;
+  border: 1px solid #f85a47;
+}
+
+.dropdown-menu {
+  display: none;
+  background: #f1f1f1;
 }

@@ -158,16 +158,26 @@ $(document).ready(function () {
   // xử lý scroll window hero__navbar
   $(window).on("scroll", function () {
     const scrolled = this.scrollY;
+    console.log("scrolled", scrolled);
     const spaceStartHome = $(".hero").offset().top;
     const spaceEndHome = $(".howitworks").offset().top;
-    const spaceStartService = $(".service").offset().top - 180;
+    const spaceStartService = $(".service").offset().top - 164;
     const spaceEndService = $(".service2__background__content__other").offset()
       .top;
-    const spaceStartAbout =
-      $(".service2__background__content__other").offset().top + 10;
+    const spaceStartAbout = $(".testimonial__header").offset().top - 174;
     const spaceEndAbout = $(".cta__background__content").offset().top;
     const spaceStartContact =
       $(".cta__background__content__btn").offset().top - 100;
+
+    if (scrolled == 0) {
+      $(".hero__navbar").css("background", "none");
+    } else {
+      $(".hero__navbar").css({
+        background: "#f1f1f1",
+        opacity: "0.9",
+        transition: "0.5s linear",
+      });
+    }
 
     if (spaceStartHome == 0 && scrolled <= spaceEndHome) {
       $(".hero ul li a").removeClass("active");
@@ -196,6 +206,13 @@ $(document).ready(function () {
   }).addTo(map);
   L.Control.geocoder().addTo(map);
 
+  // event leaflet popupopen để lấy giá trị search input
+  map.on("popupopen", function (e) {
+    const searchValue = e.popup._contentNode.innerText;
+    $(".modal-footer__location__desc").text(searchValue);
+    // $("#location").text(searchValue);
+  });
+
   // xử lý datapicker và hero__menu
   $(".hero__menu__list__item--checkin").on("click", function () {
     $(".hero__menu__list__item--checkin span").hide();
@@ -214,22 +231,31 @@ $(document).ready(function () {
   });
 
   $(".hero__menu__list__search").on("click", function () {
+    const locationValue = $("#location").text();
     const checkinValue = $("#checkin").val();
     const checkoutValue = $("#checkout").val();
-    const locationValue = $("#location").text();
-    $("p.checkin").text(checkinValue);
-    $("p.checkout").text(checkoutValue);
-    $("p.location").text(locationValue);
-  });
-
-  // event leaflet popupopen để lấy giá trị search input
-  map.on("popupopen", function (e) {
-    const searchValue = e.popup._contentNode.innerText;
-    $(".modal-footer__location__desc").text(searchValue);
-    // $("#location").text(searchValue);
+    $("span.location").text(locationValue);
+    $("span.checkin").text(checkinValue);
+    $("span.checkout").text(checkoutValue);
   });
 
   $(".modal-footer .save").on("click", function () {
     $("#location").text($(".modal-footer__location__desc").text());
+  });
+
+  $(".hero__menu__modal__close").on("click", function () {
+    $("#location").text("Where are you going ?");
+    $("#checkin").hide();
+    $(".hero__menu__list__item--checkin span").show();
+    $("#checkout").hide();
+    $(".hero__menu__list__item--checkout span").show();
+  });
+
+  $(".navbar__signup").on("click", function () {
+    $("#myModal").on("shown.bs.modal", function () {
+      $("#myInput").trigger("focus");
+    });
+
+    console.log("signup");
   });
 });

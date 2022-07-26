@@ -44,6 +44,93 @@
     />
   </head>
   <body>
+    <!-- modal signup -->
+    <div
+      class="modal fade modal-content__signup"
+      id="signup"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              <div class="hero__navbar__logo d-flex align-items-center">
+                <div class="hero__navbar__logo--1">
+                  <img src="./assets/logo.svg" alt="logo" />
+                </div>
+                <div class="hero__navbar__logo--2">
+                  <img src="./assets/trademark.svg" alt="trademark" />
+                </div>
+              </div>
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body__title">
+              <button class="btn btn-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  />
+                </svg>
+                Continue with Facebook
+              </button>
+              <button class="btn btn-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-google"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+                  />
+                </svg>
+                Continue with Gmail
+              </button>
+            </div>
+            <div class="form">
+              <input type="text" id="fullname" placeholder="Họ tên" />
+            </div>
+            <div class="form">
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <div class="form">
+              <input type="password" id="password" placeholder="Mật khẩu" />
+            </div>
+            <div class="form">
+              <input
+                type="password"
+                id="confirmpassword"
+                placeholder="Xác nhận mật khẩu"
+              />
+            </div>
+            <div class="form">
+              <button type="submit" class="btn">Đăng ký</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Modal -->
     <div
       class="modal"
@@ -100,32 +187,47 @@
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Thông tin Booking!!</h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <div class="hero__menu__modal__name">
-              <h4>Xin Chào!!</h4>
-              <h3>Phạm Nguyễn Anh Duy</h3>
+              <h5>Xin Chào!!</h5>
+              <h4>Phạm Nguyễn Anh Duy</h4>
             </div>
             <div class="hero__menu__modal__booking">
               <div class="hero__menu__modal__location">
-                <h5>Điểm đến:</h5>
-                <p class="location"></p>
+                <h5>
+                  Điểm đến:
+                  <span class="location"></span>
+                </h5>
               </div>
               <div class="hero__menu__modal__checkin">
-                <h5>Giờ Checkin:</h5>
-                <p class="checkin"></p>
+                <h5>
+                  Giờ Checkin:
+                  <span class="checkin"></span>
+                </h5>
               </div>
               <div class="hero__menu__modal__checkout">
-                <h5>Giờ Checkout:</h5>
-                <p class="checkout"></p>
+                <h5>
+                  Giờ Checkout:
+                  <span class="checkout"></span>
+                </h5>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
+            <button
+              type="button"
+              class="btn btn-secondary hero__menu__modal__close"
+              data-dismiss="modal"
+            >
               Close
             </button>
           </div>
@@ -176,9 +278,13 @@
                   <a href="#footer">Contact us</a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <button class="btn my-2 my-sm-0" type="submit">Sign up</button>
-              </form>
+              <div
+                class="d-flex justify-content-center align-items-center navbar__signup"
+                data-toggle="modal"
+                data-target="#signup"
+              >
+                Sign up
+              </div>
             </div>
           </nav>
         </div>
@@ -253,11 +359,11 @@
                   class="hero__menu__list hero__menu__list__item--btn hero__menu__list--padding d-flex justify-content-around align-items-center"
                 >
                   <div
-                    class="hero__menu__list__search d-flex justify-content-around align-items-center"
+                    class="hero__menu__list__search d-flex justify-content-center align-items-center"
                     data-toggle="modal"
                     data-target="#myModal"
                   >
-                    <button class="btn">564 property found</button>
+                    564 property found
                     <img src="./assets/Icon.svg" alt="Icon Search" />
                   </div>
                 </div>
@@ -392,25 +498,25 @@
                   service-id="service-usa"
                   class="service__content__list__item service-active"
                 >
-                  <p>United States</p>
+                  United States
                 </div>
                 <div
                   service-id="service-canada"
                   class="service__content__list__item"
                 >
-                  <p>Canada</p>
+                  Canada
                 </div>
                 <div
                   service-id="service-england"
                   class="service__content__list__item"
                 >
-                  <p>United Kingdom</p>
+                  United Kingdom
                 </div>
                 <div
                   service-id="service-mexico"
                   class="service__content__list__item"
                 >
-                  <p>Mexico</p>
+                  Mexico
                 </div>
               </div>
               <div class="btn-group">
@@ -676,7 +782,7 @@
           <div class="row align-items-center testimonial__info">
             <div class="col-12 col-md-12 col-lg-5">
               <div
-                class="testimonial__info__logo d-flex justify-content-around align-items-center"
+                class="testimonial__info__logo testimonial__info__logo-1 d-flex justify-content-around align-items-center"
               >
                 <div class="testimonial__info__logo__item">
                   <img src="./assets/Vector.svg" alt="logo" />
@@ -691,7 +797,7 @@
             </div>
             <div class="col-12 col-md-12 col-lg-3">
               <div
-                class="testimonial__info__logo d-flex justify-content-around align-items-center"
+                class="testimonial__info__logo testimonial__info__logo-2 d-flex justify-content-around align-items-center"
               >
                 <div class="testimonial__info__logo__item">
                   <img src="./assets/Vector (3).svg" alt="logo" />
