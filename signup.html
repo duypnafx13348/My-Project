@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
-    <link rel="stylesheet" href="./sass/css/index.css" />
+    <link rel="stylesheet" href="./sass/css/signup.css" />
 
+    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,56 +16,165 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button
-          class="nav-link active"
-          id="signup-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#nav-home"
-          type="button"
-          role="tab"
-          aria-controls="nav-home"
-          aria-selected="true"
-        >
-          Sign up
-        </button>
-        <button
-          class="nav-link"
-          id="login-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#nav-profile"
-          type="button"
-          role="tab"
-          aria-controls="nav-profile"
-          aria-selected="false"
-        >
-          Log in
-        </button>
+    <div class="container-fluid">
+      <div class="logo">
+        <div class="logo__general d-flex align-items-center">
+          <div class="logo__general__background">
+            <img src="./assets/logo.svg" alt="logo" />
+          </div>
+          <div class="logo__general__trademark">
+            <img src="./assets/trademark.svg" alt="trademark" />
+          </div>
+        </div>
       </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div
-        class="tab-pane fade show active"
-        id="nav-home"
-        role="tabpanel"
-        aria-labelledby="signup-tab"
-      >
-        123
+      <div class="box box-signup">
+        <div class="box__title">
+          <h4>Create an Account</h4>
+          <div class="box__desc">
+            Already have an account? <a href="">Forgot Password ?</a>
+          </div>
+        </div>
+
+        <form id="signupform" class="box__form">
+          <div class="box__firstname form-group">
+            <label for="firstname">First name</label>
+            <input
+              type="text"
+              id="firstname"
+              class="form-control"
+              placeholder="First name"
+              name="firstname"
+            />
+          </div>
+          <div class="box__lastname form-group">
+            <label for="lastname">Last name</label>
+            <input
+              type="text"
+              id="lastname"
+              class="form-control"
+              placeholder="Last name"
+              name="lastname"
+            />
+          </div>
+          <div class="box__email signup__email form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Email"
+              name="email"
+            />
+            <span class="signup__email-error">Email đã tồn tại</span>
+          </div>
+          <div class="box__password signup__password form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="Password"
+              name="password"
+            />
+            <div class="box__password__line">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="box__password__check">
+              <span
+                >Use 8 or more characters with a mix of letters, numbers &
+                symbols.</span
+              >
+            </div>
+          </div>
+          <div class="box__confirmpassword form-group">
+            <label for="confirmpassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmpassword"
+              class="form-control"
+              placeholder="Password confimation"
+              name="confirmpassword"
+            />
+          </div>
+          <div class="box__checkbox">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="check"
+              name="check"
+            />
+            <label class="form-check-label" for="check"
+              >I Agree the <a href="#">terms and conditions.</a></label
+            >
+          </div>
+          <div class="box__submit nav">
+            <input
+              type="submit"
+              class="btn btn-primary submit"
+              value="Submit"
+            />
+          </div>
+          <div class="box__cancel">
+            <input type="button" class="btn btn-primary" value="Cancel" />
+          </div>
+        </form>
       </div>
-      <div
-        class="tab-pane fade"
-        id="nav-profile"
-        role="tabpanel"
-        aria-labelledby="login-tab"
-      >
-        456
+
+      <div class="box box-login">
+        <div class="box__title">
+          <h4>Sign In to Besnik</h4>
+          <div class="box__desc">
+            New Here? <a href="#" id="signup">Create an Account</a>
+          </div>
+        </div>
+
+        <form id="loginform" class="box__form">
+          <div class="box__email login__email form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Email"
+              name="email"
+            />
+            <span class="login__email-error"
+              >Email or mật khẩu không đúng.</span
+            >
+          </div>
+          <div class="box__password login__password form-group">
+            <label for="password"
+              >Password <a href="">Forgot Password ?</a></label
+            >
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+          <div class="box__continue">
+            <button type="submit" class="btn btn-primary">Continue</button>
+          </div>
+        </form>
       </div>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- jquery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <!-- validate jquery -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!-- signup.js -->
+    <script src="./js/signup.js"></script>
   </body>
 </html>

@@ -15,6 +15,16 @@ $font-manrope: "Manrope", sans-serif;
       border-radius: 100%;
     }
 
+    .slick-dots li.slick-active button:before {
+      opacity: 0.75;
+      color: #f85a47;
+    }
+
+    .slick-dots li button:before {
+      font-size: 15px;
+      color: #f85a47;
+    }
+
     &--style {
       padding: 0;
     }

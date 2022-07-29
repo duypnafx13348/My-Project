@@ -178,10 +178,6 @@
     }
 
     &__content {
-      .slick-prev:before,
-      .slick-next:before {
-        background-color: #f85a47;
-      }
       &__list {
         display: none;
       }
@@ -399,12 +395,10 @@
     height: 780px;
 
     &__img {
-      text-align: center;
-      width: auto;
-      height: auto;
-
+      width: 80%;
+      margin: 0 auto;
       img {
-        width: 85%;
+        width: 100%;
       }
     }
 
@@ -456,6 +450,10 @@
       &__item {
         &--style {
           width: 65%;
+        }
+
+        &__logo {
+          justify-content: center;
         }
       }
     }

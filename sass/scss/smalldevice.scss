@@ -6,9 +6,14 @@
     &__navbar {
       padding: 0;
       width: 100%;
+      background-color: #f1f1f1;
 
       .navbar {
         padding: 1rem;
+
+        button {
+          outline: none;
+        }
       }
 
       form {
@@ -34,8 +39,25 @@
 
       .navbar__signup {
         width: 80px;
-        height: 40px;
+        height: 32px;
         margin: 0.5rem 1rem;
+        font-size: 16px;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: -0.01em;
+        color: #596b7b;
+      }
+
+      li a.active {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: -0.01em;
+        color: #1f2b6c;
       }
     }
 
@@ -110,8 +132,8 @@
 
           &__icon {
             right: 10%;
-            width: 30px;
-            height: 30px;
+            width: 37px;
+            height: 37px;
           }
 
           &--padding {
@@ -204,7 +226,7 @@
           &__desc {
             p {
               font-size: 14px;
-              line-height: 1.2;
+              line-height: 22px;
             }
           }
           &__icon {
@@ -332,6 +354,10 @@
     }
   }
 
+  .service2.general--padding {
+    padding: 5rem 0;
+  }
+
   //  testimonial
   .testimonial {
     margin-top: 0;
@@ -349,6 +375,16 @@
     &__content {
       .col-12 {
         margin: 0.5rem 0;
+      }
+
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        color: #f85a47;
+      }
+
+      .slick-dots li button:before {
+        font-size: 8px;
+        color: #f85a47;
       }
 
       &__card {
@@ -369,13 +405,17 @@
 
         &__author {
           padding: 1rem 2rem;
+          justify-content: center;
 
           strong {
             font-size: 16px;
+            padding-left: 1rem;
           }
 
           p {
             font-size: 14px;
+            text-align: left;
+            padding-left: 1rem;
           }
         }
       }
@@ -414,7 +454,7 @@
       }
     }
 
-    .general--padding {
+    .testimonial__content.general--padding {
       padding: 2rem 0 0;
     }
   }
@@ -478,6 +518,7 @@
     .btn-group {
       display: block;
       text-align: center;
+      margin: 1rem auto;
 
       button {
         font-size: 15px;
@@ -490,6 +531,7 @@
     height: 537px;
 
     &__img {
+      margin-top: -40px;
       margin-left: 50%;
       transform: translateX(-50%);
       width: auto;
@@ -506,11 +548,12 @@
       width: auto;
       border-radius: 0;
       height: 455px;
+      top: 17%;
 
       &__content {
         width: 100%;
         margin-left: 0;
-        margin-top: 56%;
+        margin-top: 58%;
 
         &__title {
           width: 100%;
@@ -599,6 +642,12 @@
   }
 
   .footer2 {
+    padding: 1rem 1rem;
     justify-content: space-around !important;
+    margin-top: -40px;
   }
+}
+
+.btn:focus {
+  box-shadow: none;
 }

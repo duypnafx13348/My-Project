@@ -10,9 +10,7 @@
 @import "./mobile";
 @import "./tablet";
 @import "./desktop-small";
-@import "./large";
 @import "./dropdown";
-@import "./signup";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&family=Roboto&display=swap");
 
@@ -82,7 +80,6 @@ ul {
 .modal-content {
   width: 90%;
   margin: 0 auto;
-  border: 3px solid #f85a47;
   border-radius: 15px;
 }
 
@@ -104,6 +101,10 @@ ul {
       color: #f85a47;
     }
   }
+
+  .close:focus {
+    opacity: 1;
+  }
 }
 
 .modal-body {
@@ -123,6 +124,11 @@ ul {
       margin: 2rem 0;
 
       h5 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      h6 {
         font-size: 18px;
         font-weight: 500;
       }
@@ -145,6 +151,16 @@ ul {
   .btn-save {
     background-color: #f85a47;
     border: none;
+    color: white;
+  }
+}
+
+.modal-footer__thank {
+  justify-content: flex-start;
+
+  h6 {
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 
@@ -152,12 +168,25 @@ ul {
   font-size: 14px;
 }
 
-.ui-widget-header,
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight {
+// custom date picker
+.ui-widget-header {
   border: 1px solid #f85a47 !important;
   background: #f85a47 !important;
   color: #f1f1f1 !important;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight {
+  background: #ebcfcd !important;
+  border: 1px solid #f3b9b3 !important;
+  color: #1c94c4 !important;
+}
+
+.ui-state-default {
+  border: 1px solid #f3b9b3 !important;
+}
+
+.ui-state-hover {
 }
 
 // leaflet

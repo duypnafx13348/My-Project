@@ -2,6 +2,14 @@ const lengthService = $(
   ".service__content__list .service__content__list__item"
 ).length;
 const lengthFeature = $(".feature__menu .feature__menu__text").length;
+const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+
+// handle Login Logout
+if (!isLoggedIn || false) {
+  $(".navbar__signup").text("Sign up");
+} else {
+  $(".navbar__signup").text("Log out");
+}
 
 $(document).ready(function () {
   // handleService > 4 item
@@ -40,6 +48,7 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
+          dots: false,
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
@@ -49,6 +58,7 @@ $(document).ready(function () {
       {
         breakpoint: 480,
         settings: {
+          dots: false,
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
@@ -101,6 +111,8 @@ $(document).ready(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 992,
@@ -108,6 +120,8 @@ $(document).ready(function () {
           infinite: true,
           speed: 300,
           slidesToShow: 2,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
       {
@@ -117,15 +131,20 @@ $(document).ready(function () {
           speed: 300,
           slidesToShow: 1,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
       {
         breakpoint: 480,
         settings: {
+          dots: true,
           infinite: true,
           speed: 300,
           slidesToShow: 1,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
     ],
@@ -157,41 +176,53 @@ $(document).ready(function () {
 
   // xử lý scroll window hero__navbar
   $(window).on("scroll", function () {
+    let targetDistance = 180;
     const scrolled = this.scrollY;
-    console.log("scrolled", scrolled);
-    const spaceStartHome = $(".hero").offset().top;
-    const spaceEndHome = $(".howitworks").offset().top;
-    const spaceStartService = $(".service").offset().top - 164;
-    const spaceEndService = $(".service2__background__content__other").offset()
-      .top;
-    const spaceStartAbout = $(".testimonial__header").offset().top - 174;
-    const spaceEndAbout = $(".cta__background__content").offset().top;
-    const spaceStartContact =
-      $(".cta__background__content__btn").offset().top - 100;
+    const spaceStartService = $("#service").offset().top - targetDistance;
+    const spaceStartAbout = $("#testimonial").offset().top - targetDistance;
+    const spaceStartContact = $("#cta").offset().top;
 
-    if (scrolled == 0) {
-      $(".hero__navbar").css("background", "none");
-    } else {
-      $(".hero__navbar").css({
-        background: "#f1f1f1",
-        opacity: "0.9",
-        transition: "0.5s linear",
-      });
-    }
-
-    if (spaceStartHome == 0 && scrolled <= spaceEndHome) {
+    if (scrolled < spaceStartService) {
       $(".hero ul li a").removeClass("active");
       $(".hero ul li:first-child a").addClass("active");
-    } else if (spaceStartService <= scrolled && scrolled <= spaceEndService) {
+    } else if (scrolled < spaceStartAbout) {
       $(".hero ul li a").removeClass("active");
       $(".hero ul li:nth-child(2) a").addClass("active");
-    } else if (spaceStartAbout <= scrolled && scrolled <= spaceEndAbout) {
+    } else if (scrolled < spaceStartContact) {
       $(".hero ul li a").removeClass("active");
       $(".hero ul li:nth-child(3) a").addClass("active");
-    } else if (spaceStartContact <= scrolled) {
+    } else {
       $(".hero ul li a").removeClass("active");
       $(".hero ul li:nth-child(4) a").addClass("active");
     }
+
+    if (scrolled == 0 && $(window).width() > 992) {
+      $(".hero__navbar").css("background", "none");
+      console.log("abc");
+    } else {
+      $(".hero__navbar").css({
+        background: "#f1f1f1",
+        opacity: "1",
+        transition: "0.5s linear",
+      });
+    }
+  });
+
+  // xử lý click vào link ở navbar
+  $(".scrollTo").on("click", function () {
+    const getAttr = $(this).attr("href");
+    console.log("$(getAttr).length", $(getAttr));
+    if ($(getAttr)) {
+      let getOffset = $(getAttr).offset().top;
+      let targetDistance = 95;
+      $("html,body").animate(
+        {
+          scrollTop: getOffset - targetDistance,
+        },
+        1000
+      );
+    }
+    return false;
   });
 
   // hiển thị button search trong leaflet map
@@ -252,10 +283,9 @@ $(document).ready(function () {
   });
 
   $(".navbar__signup").on("click", function () {
-    $("#myModal").on("shown.bs.modal", function () {
-      $("#myInput").trigger("focus");
-    });
+    // console.log("signupText", signupText);
 
-    console.log("signup");
+    localStorage.setItem("isLoggedIn", false);
+    window.location.replace("http://127.0.0.1:5500/signup.html");
   });
 });

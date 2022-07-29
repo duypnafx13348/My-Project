@@ -5,18 +5,36 @@
 
 .btn-group > .btn:first-child {
   min-width: 160px;
-  background-color: #f1f1f1;
+  background-color: white;
   color: #f85a47;
   border: 1px solid #f85a47;
 }
 
 .dropdown-item {
-  background-color: #f1f1f1;
-  color: #f85a47;
-  border: 1px solid #f85a47;
+  background-color: white;
+}
+
+.dropdown-item:hover,
+.dropdown-item:active {
+  background-color: #f85a47;
+  color: white;
 }
 
 .dropdown-menu {
   display: none;
-  background: #f1f1f1;
+  background: white;
+  // opacity: 0.9;
+  top: auto !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  button {
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+  }
+
+  button:focus {
+    border: none;
+    outline: none;
+  }
 }
