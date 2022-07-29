@@ -97,7 +97,9 @@ $(document).ready(function () {
       });
       console.log("isExistPassword", isExistPassword);
       if (isExistPassword) {
-        location.replace("/");
+        location.replace(
+          "https://duypnafx13348.github.io/My-Project/index.html"
+        );
         localStorage.setItem("isLoggedIn", true);
       } else {
         $(".box__error-message").show();

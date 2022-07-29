@@ -332,6 +332,8 @@ $(document).ready(function () {
 
   $(".navbar__signup").on("click", function () {
     localStorage.setItem("isLoggedIn", false);
-    window.location.replace("http://127.0.0.1:5500/signup.html");
+    window.location.replace(
+      "https://duypnafx13348.github.io/My-Project/signup.html"
+    );
   });
 });
