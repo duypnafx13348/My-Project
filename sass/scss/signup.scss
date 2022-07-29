@@ -183,14 +183,16 @@ body {
 
 .box-signup,
 .signup__email-error,
-.login__email-error,
+.box__error-message,
 .login__password-error {
   display: none;
 }
 
 .signup__email-error,
-.login__email-error,
+.box__error-message,
 .login__password-error,
+#firstname-error,
+#lastname-error,
 #email-error,
 #password-error,
 #confirmpassword-error {
@@ -198,6 +200,17 @@ body {
   font-size: 1rem;
   font-weight: 400;
   color: red;
+}
+
+.box__error {
+  margin: 3rem auto 0;
+  max-width: 250px;
+
+  &-message {
+    padding: 0.7rem 1rem;
+    border: 1px solid red;
+    text-align: center;
+  }
 }
 
 // @media screen and (max-width: 768px) {

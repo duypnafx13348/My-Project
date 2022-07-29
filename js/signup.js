@@ -51,7 +51,7 @@ $(document).ready(function () {
         },
         password: {
           required: true,
-          rangelength: [8, 15],
+          rangelength: [3, 12],
         },
         confirmpassword: {
           required: true,
@@ -71,7 +71,7 @@ $(document).ready(function () {
         },
         password: {
           required: "This field is required.",
-          rangelength: "Please enter a value between 8 and 15 characters long.",
+          rangelength: "Please enter a value between 3 and 12 characters long.",
         },
         confirmpassword: {
           required: "This field is required.",
@@ -100,11 +100,10 @@ $(document).ready(function () {
         location.replace("/");
         localStorage.setItem("isLoggedIn", true);
       } else {
-        $(".login__email-error").show();
+        $(".box__error-message").show();
       }
-      // isExistPassword ? location.replace("/") : $(".login__email-error").show();
     } else {
-      $(".login__email-error").show();
+      $(".box__error-message").show();
     }
   };
 

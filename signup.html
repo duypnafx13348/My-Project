@@ -132,6 +132,11 @@
         </div>
 
         <form id="loginform" class="box__form">
+          <div class="box__error">
+            <div class="box__error-message">
+              email or password is incorrect.
+            </div>
+          </div>
           <div class="box__email login__email form-group">
             <label for="email">Email</label>
             <input
@@ -141,9 +146,6 @@
               placeholder="Email"
               name="email"
             />
-            <span class="login__email-error"
-              >Email or mật khẩu không đúng.</span
-            >
           </div>
           <div class="box__password login__password form-group">
             <label for="password"
