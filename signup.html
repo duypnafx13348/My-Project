@@ -76,17 +76,13 @@
               placeholder="Password"
               name="password"
             />
-            <div class="box__password__line">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
+            <div class="signup__password__indicator">
+              <span class="weak"></span>
+              <span class="medium"></span>
+              <span class="strong"></span>
             </div>
-            <div class="box__password__check">
-              <span
-                >Use 8 or more characters with a mix of letters, numbers &
-                symbols.</span
-              >
+            <div class="signup__password__text">
+              Use 8 or more characters with a mix of letters, numbers & symbols.
             </div>
           </div>
           <div class="box__confirmpassword form-group">
@@ -110,11 +106,12 @@
               >I Agree the <a href="#">terms and conditions.</a></label
             >
           </div>
-          <div class="box__submit nav">
+          <div class="box__submit">
             <input
               type="submit"
               class="btn btn-primary submit"
               value="Submit"
+              disabled
             />
           </div>
           <div class="box__cancel">

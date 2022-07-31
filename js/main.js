@@ -2,13 +2,22 @@ const lengthService = $(
   ".service__content__list .service__content__list__item"
 ).length;
 const lengthFeature = $(".feature__menu .feature__menu__text").length;
-const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+const dataUser = JSON.parse(localStorage.getItem("user"));
+console.log("dataUser", dataUser);
+const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
+console.log("isLoggedIn", isLoggedIn);
 
 // handle Login Logout
-if (!isLoggedIn || false) {
+if (isLoggedIn == "") {
+  console.log("Sign up");
   $(".navbar__signup").text("Sign up");
+  $(".hero__menu__modal__name h5").text("");
 } else {
+  console.log("Log out");
   $(".navbar__signup").text("Log out");
+  $(".hero__menu__modal__name h5").text(
+    `${isLoggedIn[0].firstname} ${isLoggedIn[0].lastname}`
+  );
 }
 
 // handleService > 4 item
@@ -33,7 +42,6 @@ $(document).ready(function () {
       {
         breakpoint: 768,
         settings: {
-          dots: false,
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
@@ -43,7 +51,6 @@ $(document).ready(function () {
       {
         breakpoint: 480,
         settings: {
-          dots: false,
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
@@ -56,7 +63,7 @@ $(document).ready(function () {
   $(".feature__img__list").slick({
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 3,
     responsive: [
       {
@@ -82,7 +89,7 @@ $(document).ready(function () {
 
   $(".testimonial__content").slick({
     infinite: true,
-    speed: 300,
+    speed: 1000,
     slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -91,7 +98,7 @@ $(document).ready(function () {
         breakpoint: 992,
         settings: {
           infinite: true,
-          speed: 300,
+          speed: 1000,
           slidesToShow: 2,
           autoplay: true,
           autoplaySpeed: 2000,
@@ -101,7 +108,7 @@ $(document).ready(function () {
         breakpoint: 768,
         settings: {
           infinite: true,
-          speed: 300,
+          speed: 1000,
           slidesToShow: 1,
           arrows: false,
           autoplay: true,
@@ -113,7 +120,7 @@ $(document).ready(function () {
         settings: {
           dots: true,
           infinite: true,
-          speed: 300,
+          speed: 1000,
           slidesToShow: 1,
           arrows: false,
           autoplay: true,
@@ -181,7 +188,6 @@ $(document).ready(function () {
 
     if (scrolled == 0 && $(window).width() > 992) {
       $(".hero__navbar").css("background", "none");
-      console.log("abc");
     } else {
       $(".hero__navbar").css({
         background: "#f1f1f1",
@@ -204,42 +210,9 @@ $(document).ready(function () {
       $(".hero ul li:nth-child(4) a").addClass("active");
     }
   }
-
   $(window).on("scroll", handleScrollY);
-  // xử lý scroll window hero__navbar
-  // $(window).on("scroll", function () {
-  //   let targetDistance = 180;
-  //   const scrolled = this.scrollY;
-  //   const spaceStartService = $("#service").offset().top - targetDistance;
-  //   const spaceStartAbout = $("#testimonial").offset().top - targetDistance;
-  //   const spaceStartContact = $("#cta").offset().top;
 
-  //   if (scrolled < spaceStartService) {
-  //     $(".hero ul li a").removeClass("active");
-  //     $(".hero ul li:first-child a").addClass("active");
-  //   } else if (scrolled < spaceStartAbout) {
-  //     $(".hero ul li a").removeClass("active");
-  //     $(".hero ul li:nth-child(2) a").addClass("active");
-  //   } else if (scrolled < spaceStartContact) {
-  //     $(".hero ul li a").removeClass("active");
-  //     $(".hero ul li:nth-child(3) a").addClass("active");
-  //   } else {
-  //     $(".hero ul li a").removeClass("active");
-  //     $(".hero ul li:nth-child(4) a").addClass("active");
-  //   }
-
-  //   if (scrolled == 0 && $(window).width() > 992) {
-  //     $(".hero__navbar").css("background", "none");
-  //     console.log("abc");
-  //   } else {
-  //     $(".hero__navbar").css({
-  //       background: "#f1f1f1",
-  //       opacity: "1",
-  //       transition: "0.5s linear",
-  //     });
-  //   }
-  // });
-
+  // Click navbar item
   function handleClickNav() {
     const getAttr = $(this).attr("href");
     console.log("$(getAttr).length", $(getAttr));
@@ -256,23 +229,6 @@ $(document).ready(function () {
     return false;
   }
   $(".scrollTo").on("click", handleClickNav);
-
-  // xử lý click vào link ở navbar
-  // $(".scrollTo").on("click", function () {
-  //   const getAttr = $(this).attr("href");
-  //   console.log("$(getAttr).length", $(getAttr));
-  //   if ($(getAttr)) {
-  //     let getOffset = $(getAttr).offset().top;
-  //     let targetDistance = 95;
-  //     $("html,body").animate(
-  //       {
-  //         scrollTop: getOffset - targetDistance,
-  //       },
-  //       1000
-  //     );
-  //   }
-  //   return false;
-  // });
 
   // hiển thị button search trong leaflet map
   var map = L.map("map").setView([0, 0], 2);
@@ -331,9 +287,20 @@ $(document).ready(function () {
   });
 
   $(".navbar__signup").on("click", function () {
-    localStorage.setItem("isLoggedIn", false);
-    window.location.replace(
-      "https://duypnafx13348.github.io/My-Project/signup.html"
-    );
+    if (isLoggedIn && isLoggedIn != "") {
+      console.log("success");
+      isLoggedIn[0].isLoggedIn = false;
+      localStorage.setItem("user", JSON.stringify(isLoggedIn));
+      window.location.replace(
+        // "https://duypnafx13348.github.io/My-Project/signup.html"
+        "/signup.html"
+      );
+    } else {
+      console.log("fail");
+      window.location.replace(
+        // "https://duypnafx13348.github.io/My-Project/signup.html"
+        "/signup.html"
+      );
+    }
   });
 });

@@ -117,24 +117,58 @@ body {
 .box__cancel input:hover {
   color: #f1faff;
 }
-.box__password__line {
-  max-width: 400px;
+.box .signup__password__indicator {
+  height: 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 10px 0;
 }
-.box__password__line .line {
-  width: 23%;
-  height: 7px;
-  background-color: #e4e6ef;
+.box .signup__password__indicator span {
+  width: 100%;
+  height: 100%;
+  background: lightgrey;
+  border-radius: 5px;
+  position: relative;
+}
+.box .signup__password__indicator span.medium {
+  margin-left: 3px;
+  margin-right: 1.5px;
+}
+.box .signup__password__indicator span.strong {
+  margin-left: 1.5px;
+  margin-right: 3px;
+}
+.box .signup__password__indicator span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
-.box__password__check {
-  max-width: 400px;
+.box .signup__password__indicator span.active.weak:before {
+  background: #ff4757;
 }
-.box__password__check span {
+.box .signup__password__indicator span.active.medium:before {
+  background: orange;
+}
+.box .signup__password__indicator span.active.strong:before {
+  background: #23ad5c;
+}
+.box .signup__password__text {
   font-size: 13px;
   color: #5e6278;
+}
+.box .signup__password__text.weak {
+  color: #ff4757;
+}
+.box .signup__password__text.medium {
+  color: orange;
+}
+.box .signup__password__text.strong {
+  color: #23ad5c;
 }
 .box__checkbox label {
   margin-left: 0.55rem;

@@ -78,29 +78,49 @@ $(document).ready(function () {
           equalTo: "Please enter the same value again.",
         },
       },
+      checkboxHandler: $(".box__checkbox input").on("click", function () {
+        const check = $(".box__checkbox input").is(":checked");
+        console.log("helo", check);
+        check
+          ? $(".box__submit input").attr("disabled", false)
+          : $(".box__submit input").attr("disabled");
+      }),
       submitHandler: validateSignup,
     });
   };
 
+  // handle button Cancel
+  const handleCancel = function () {
+    console.log("4");
+    $(".box-login").fadeIn(1500);
+    $(".box-signup").fadeOut(500);
+  };
+
   // validate form login with jquery
-  const validateLogin = function () {
+  const validateLogin = function (e) {
     console.log("5");
+
     const emailVal = $(".login__email input").val();
     const passwordVal = $(".login__password input").val();
     const dataUser = JSON.parse(localStorage.getItem("user"));
-    const isExistEmail = dataUser.some((user) => {
+    console.log("datauser", dataUser);
+
+    const isExistEmail = dataUser.filter((user, index) => {
       return emailVal.toLowerCase() == user.email.toLowerCase();
     });
-    if (isExistEmail) {
+
+    if (isExistEmail && isExistEmail != "" && isExistEmail != null) {
       const isExistPassword = dataUser.some((user) => {
         return passwordVal.toLowerCase() == user.password.toLowerCase();
       });
-      console.log("isExistPassword", isExistPassword);
+
       if (isExistPassword) {
+        isExistEmail[0].isLoggedIn = true;
+        localStorage.setItem("user", JSON.stringify(isExistEmail));
         location.replace(
-          "https://duypnafx13348.github.io/My-Project/index.html"
+          // "https://duypnafx13348.github.io/My-Project/index.html"
+          "/"
         );
-        localStorage.setItem("isLoggedIn", true);
       } else {
         $(".box__error-message").show();
       }
@@ -112,9 +132,6 @@ $(document).ready(function () {
   const handleLoginValidate = function () {
     console.log("4");
     $("#loginform").validate({
-      onfocusout: false,
-      onkeyup: false,
-      onclick: false,
       rules: {
         email: {
           required: true,
@@ -135,15 +152,73 @@ $(document).ready(function () {
     });
   };
 
-  // handle button Cancel in Sign up
-  const handleCancel = function () {
-    console.log("4");
-    $(".box-login").fadeIn(1500);
-    $(".box-signup").fadeOut(500);
+  // regex password strength
+  const regexPassword = function () {
+    const indicator = $(".signup__password__indicator");
+    const inputPw = $(".signup__password input").val();
+    const weak = $(".weak");
+    const medium = $(".medium");
+    const strong = $(".strong");
+    const text = $(".signup__password__text");
+    let regexWeak = /[a-z]/;
+    let regexMedium = /[A-Z0-9]/;
+    let regexStrong = /.[!,@,#,$,%,^,&,*,?,...,~,-,(,)]/;
+
+    if (inputPw != "" && inputPw.length >= 3) {
+      if (
+        (inputPw.length >= 3 && inputPw.match(regexWeak)) ||
+        inputPw.match(regexMedium) ||
+        inputPw.match(regexStrong)
+      ) {
+        weak.addClass("active");
+        text.show().text("Your password is too weak.").addClass("weak");
+      }
+
+      if (
+        (inputPw.length >= 6 &&
+          inputPw.match(regexWeak) &&
+          inputPw.match(regexMedium)) ||
+        (inputPw.match(regexMedium) && inputPw.match(regexStrong)) ||
+        (inputPw.match(regexWeak) && inputPw.match(regexStrong))
+      ) {
+        weak.addClass("active");
+        medium.addClass("active");
+        text.show().text("Your password is medium.").addClass("medium");
+      } else {
+        medium.removeClass("active");
+        text.removeClass("medium");
+      }
+
+      if (
+        inputPw.length >= 8 &&
+        inputPw.match(regexWeak) &&
+        inputPw.match(regexMedium) &&
+        inputPw.match(regexStrong)
+      ) {
+        weak.addClass("active");
+        medium.addClass("active");
+        strong.addClass("active");
+        text.show().text("Your password is strong.").addClass("strong");
+      } else {
+        strong.removeClass("active");
+        text.removeClass("strong");
+      }
+    } else {
+      weak.removeClass("active");
+      medium.removeClass("active");
+      strong.removeClass("active");
+      text.removeClass("weak");
+      text.removeClass("medium");
+      text.removeClass("strong");
+      text.text(
+        "Use 8 or more characters with a mix of letters, numbers & symbols."
+      );
+    }
   };
 
   $("#signup").on("click", signupFormTab);
   handleSignupValidate();
+  $(".signup__password input").on("input", regexPassword);
   handleLoginValidate();
   $(".box__cancel input[type=button]").on("click", handleCancel);
 });

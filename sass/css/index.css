@@ -797,6 +797,7 @@
     width: 50%;
     text-align: center;
     border: none;
+    padding-right: 0;
   }
   .hero__menu__list__item h6 {
     margin-bottom: 0;
@@ -2007,26 +2008,27 @@ ul li {
   width: 90%;
   margin: 0 auto;
   border-radius: 15px;
+  background-color: #f85a47;
 }
 
 .modal-header {
   border-radius: 20px 20px 0 0;
-  border-bottom: 2px solid #f85a47;
+  border-bottom: 2px solid white;
+}
+.modal-header .close {
+  opacity: 1;
 }
 .modal-header h4 {
   font-size: 20px;
-  color: #000;
+  color: white;
 }
 .modal-header h5 {
-  color: #000;
-}
-.modal-header button span {
-  color: #f85a47;
-}
-.modal-header .close:focus {
-  opacity: 1;
+  color: white;
 }
 
+.modal-body {
+  background-color: whitesmoke;
+}
 .modal-body .hero__menu__modal__name {
   margin: 1rem auto;
   text-align: center;
@@ -2067,10 +2069,10 @@ ul li {
 
 .modal-footer {
   border-radius: 0 0 20px 20px;
-  border-top: 2px solid #f85a47;
+  border-top: 2px solid white;
 }
 .modal-footer .btn-save {
-  background-color: #f85a47;
+  background-color: #2f76ff;
   border: none;
   color: white;
 }
@@ -2081,6 +2083,7 @@ ul li {
 .modal-footer__thank h6 {
   font-size: 18px;
   font-weight: 500;
+  color: white;
 }
 
 .modal-footer__location__desc {
@@ -2102,6 +2105,10 @@ ul li {
 
 .ui-state-default {
   border: 1px solid #f3b9b3 !important;
+}
+
+.ui-widget {
+  font-size: 1em;
 }
 
 .leaflet-control-zoom-in span,
