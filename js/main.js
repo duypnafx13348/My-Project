@@ -282,9 +282,9 @@ $(document).ready(function () {
   });
 
   $(".navbar__signup").on("click", function () {
-    if (isLoggedIn && isLoggedIn != "") {
+    if (isLoggedIn != "") {
       isLoggedIn[0].isLoggedIn = false;
-      localStorage.setItem("user", JSON.stringify(isLoggedIn));
+      localStorage.setItem("user", JSON.stringify(dataUser));
       window.location.replace(
         "https://duypnafx13348.github.io/My-Project/signup.html"
         // "/signup.html"

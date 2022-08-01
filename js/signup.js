@@ -32,6 +32,7 @@ $(document).ready(function () {
       alert("Đăng ký thành công!!!");
       $(".box-login").fadeIn(1500);
       $(".box-signup").fadeOut(500);
+      $(".box__error-message").hide();
     }
   };
 
@@ -95,29 +96,34 @@ $(document).ready(function () {
   };
 
   // validate form login with jquery
-  const validateLogin = function (e) {
+  const validateLogin = function () {
     console.log("5");
-
     const emailVal = $(".login__email input").val();
     const passwordVal = $(".login__password input").val();
     const dataUser = JSON.parse(localStorage.getItem("user"));
 
-    const isExistEmail = dataUser.filter((user, index) => {
-      return emailVal.toLowerCase() == user.email.toLowerCase();
-    });
-
-    if (isExistEmail && isExistEmail != "" && isExistEmail != null) {
-      const isExistPassword = dataUser.some((user) => {
-        return passwordVal.toLowerCase() == user.password.toLowerCase();
+    if (dataUser) {
+      const isExistEmail = dataUser.filter((user) => {
+        return emailVal.toLowerCase() == user.email.toLowerCase();
       });
+      console.log("isExistEmail", isExistEmail);
 
-      if (isExistPassword) {
-        isExistEmail[0].isLoggedIn = true;
-        localStorage.setItem("user", JSON.stringify(isExistEmail));
-        location.replace(
-          "https://duypnafx13348.github.io/My-Project/index.html"
-          // "/"
-        );
+      if (isExistEmail != "") {
+        $(".box__error-message").hide();
+        const isExistPassword = dataUser.some((user) => {
+          return passwordVal.toLowerCase() == user.password.toLowerCase();
+        });
+
+        if (isExistPassword) {
+          isExistEmail[0].isLoggedIn = true;
+          localStorage.setItem("user", JSON.stringify(dataUser));
+          location.replace(
+            "https://duypnafx13348.github.io/My-Project/index.html"
+            // "/"
+          );
+        } else {
+          $(".box__error-message").show();
+        }
       } else {
         $(".box__error-message").show();
       }
@@ -145,7 +151,13 @@ $(document).ready(function () {
           required: "This field is required.",
         },
       },
-      submitHandler: validateLogin,
+      submitHandler: () => {
+        console.log($("#loginform"));
+        $("#loginform").submit((e) => e.preventDefault());
+        validateLogin();
+      },
+
+      // validateLogin,
     });
   };
 
