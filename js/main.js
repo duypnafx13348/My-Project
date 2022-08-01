@@ -3,10 +3,10 @@ const lengthService = $(
 ).length;
 const lengthFeature = $(".feature__menu .feature__menu__text").length;
 const dataUser = JSON.parse(localStorage.getItem("user"));
-const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
 
 // handle Login Logout
 if (dataUser) {
+  const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
   if (isLoggedIn == "") {
     $(".navbar__signup").text("Sign up");
     $(".hero__menu__modal__name h5").text("");
@@ -287,6 +287,13 @@ $(document).ready(function () {
   });
 
   $(".navbar__signup").on("click", function () {
+    if (!dataUser) {
+      return window.location.replace(
+        "https://duypnafx13348.github.io/My-Project/signup.html"
+        // "/signup.html"
+      );
+    }
+    const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
     if (isLoggedIn != "") {
       isLoggedIn[0].isLoggedIn = false;
       localStorage.setItem("user", JSON.stringify(dataUser));
