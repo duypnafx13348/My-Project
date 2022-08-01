@@ -107,6 +107,8 @@
 
       &--padding {
         padding: 10px;
+        width: 100%;
+        margin: 0 auto;
       }
 
       &__list {
@@ -291,6 +293,16 @@
         margin: 0.5rem 0;
       }
 
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        color: #f85a47;
+      }
+
+      .slick-dots li button:before {
+        font-size: 8px;
+        color: #f85a47;
+      }
+
       &__card {
         margin: 0 auto;
         width: 90%;
@@ -312,7 +324,7 @@
 
       &__card--shadow {
         width: 100%;
-        margin: 1rem auto;
+        margin: 0 auto;
       }
     }
 

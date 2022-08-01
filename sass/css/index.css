@@ -782,8 +782,10 @@
     padding: 3px;
   }
   .hero__menu {
-    left: 50%;
-    width: 93%;
+    width: 100%;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
     top: 35%;
   }
   .hero__menu--border {
@@ -791,6 +793,8 @@
   }
   .hero__menu--padding {
     padding: 10px;
+    width: 100%;
+    margin: 0 auto;
   }
   .hero__menu__list {
     padding: 0.5rem;
@@ -1235,6 +1239,8 @@
   }
   .hero__menu--padding {
     padding: 10px;
+    width: 100%;
+    margin: 0 auto;
   }
   .hero__menu__list {
     padding: 0.5rem;
@@ -1365,6 +1371,14 @@
   .testimonial__content .col-12 {
     margin: 0.5rem 0;
   }
+  .testimonial__content .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: #f85a47;
+  }
+  .testimonial__content .slick-dots li button:before {
+    font-size: 8px;
+    color: #f85a47;
+  }
   .testimonial__content__card {
     margin: 0 auto;
     width: 90%;
@@ -1380,7 +1394,7 @@
   }
   .testimonial__content__card--shadow {
     width: 100%;
-    margin: 1rem auto;
+    margin: 0 auto;
   }
   .testimonial__info__logo {
     margin: 1rem auto;
@@ -1638,7 +1652,7 @@
     color: #f85a47;
   }
   .service__content__img .slick-dots li button:before {
-    font-size: 8px;
+    font-size: 10px;
     color: #f85a47;
   }
   .service__content .btn-group {
@@ -1709,6 +1723,14 @@
   .testimonial__content .col-12 {
     margin: 0.5rem 0;
   }
+  .testimonial__content .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: #f85a47;
+  }
+  .testimonial__content .slick-dots li button:before {
+    font-size: 10px;
+    color: #f85a47;
+  }
   .testimonial__content__card {
     margin: 0 auto;
     width: 90%;
@@ -1764,7 +1786,7 @@
     color: #f85a47;
   }
   .feature__img__list .slick-dots li button:before {
-    font-size: 8px;
+    font-size: 10px;
     color: #f85a47;
   }
   .feature__img__item {

@@ -103,11 +103,13 @@ $(document).ready(function () {
           slidesToShow: 2,
           autoplay: true,
           autoplaySpeed: 2000,
+          dots: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
+          dots: true,
           infinite: true,
           speed: 1000,
           slidesToShow: 1,

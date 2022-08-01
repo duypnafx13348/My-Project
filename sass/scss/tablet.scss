@@ -206,7 +206,7 @@
         }
 
         .slick-dots li button:before {
-          font-size: 8px;
+          font-size: 10px;
           color: #f85a47;
         }
       }
@@ -302,6 +302,16 @@
         margin: 0.5rem 0;
       }
 
+      .slick-dots li.slick-active button:before {
+        opacity: 0.75;
+        color: #f85a47;
+      }
+
+      .slick-dots li button:before {
+        font-size: 10px;
+        color: #f85a47;
+      }
+
       &__card {
         margin: 0 auto;
         width: 90%;
@@ -387,7 +397,7 @@
         }
 
         .slick-dots li button:before {
-          font-size: 8px;
+          font-size: 10px;
           color: #f85a47;
         }
       }
