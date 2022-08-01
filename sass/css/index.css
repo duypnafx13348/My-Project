@@ -58,10 +58,11 @@
   top: 0;
   right: 0;
   z-index: -1;
+  height: 635px;
+  overflow: hidden;
 }
 .hero__banner img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .hero__background {
@@ -724,6 +725,7 @@
   .hero__banner {
     width: 100%;
     opacity: 0.4;
+    height: 380px;
   }
   .hero__background {
     height: 860px;
@@ -1157,6 +1159,11 @@
   box-shadow: none;
 }
 
+@media screen and (min-width: 474px) and (max-width: 543px) {
+  .hero__content--style {
+    margin-top: 285px;
+  }
+}
 @media screen and (min-width: 543px) and (max-width: 768px) {
   .hero {
     height: 937px;
@@ -1913,6 +1920,11 @@
   .cta__background__content {
     margin-left: 50%;
     margin-top: 15%;
+  }
+}
+@media screen and (max-width: 1364px) {
+  .hero__banner img {
+    height: 100%;
   }
 }
 @media screen and (min-width: 1200px) {

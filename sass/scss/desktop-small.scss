@@ -73,3 +73,13 @@
     }
   }
 }
+
+@media screen and (max-width: 1364px) {
+  .hero {
+    &__banner {
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
