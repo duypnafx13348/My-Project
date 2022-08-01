@@ -218,6 +218,7 @@
         width: 90%;
         margin-left: 7%;
         height: auto;
+        border-radius: 40px;
       }
     }
 
@@ -411,25 +412,29 @@
 
   //   cta
   .cta {
-    height: 780px;
+    height: 685px;
 
     &__img {
       width: 80%;
       margin: 0 auto;
+      height: 360px;
+
       img {
         width: 100%;
+        border-radius: 33px;
+        height: 100%;
       }
     }
 
     &__background {
       width: auto;
       border-radius: 0;
-      height: 670px;
+      height: 580px;
 
       &__content {
         width: 100%;
         margin-left: 0;
-        margin-top: 86%;
+        margin-top: 325px;
 
         &__title {
           width: 100%;

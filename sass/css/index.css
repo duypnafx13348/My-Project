@@ -1315,6 +1315,7 @@
     width: 90%;
     margin-left: 7%;
     height: auto;
+    border-radius: 40px;
   }
   .service2__background {
     width: 100%;
@@ -1449,24 +1450,27 @@
     display: block;
   }
   .cta {
-    height: 780px;
+    height: 685px;
   }
   .cta__img {
     width: 80%;
     margin: 0 auto;
+    height: 360px;
   }
   .cta__img img {
     width: 100%;
+    border-radius: 33px;
+    height: 100%;
   }
   .cta__background {
     width: auto;
     border-radius: 0;
-    height: 670px;
+    height: 580px;
   }
   .cta__background__content {
     width: 100%;
     margin-left: 0;
-    margin-top: 86%;
+    margin-top: 325px;
   }
   .cta__background__content__title {
     width: 100%;
@@ -1667,6 +1671,7 @@
   .service2__img img {
     width: 100%;
     height: auto;
+    border-radius: 25px;
   }
   .service2__background {
     width: 100%;
@@ -1805,12 +1810,13 @@
   }
   .cta__img {
     width: 80%;
-    height: 410px;
+    height: 342px;
     margin: 4rem auto;
   }
   .cta__img img {
     width: 100%;
     height: 100%;
+    border-radius: 25px;
   }
   .cta__background {
     width: auto;
@@ -1821,7 +1827,7 @@
   .cta__background__content {
     width: 100%;
     margin-left: 0;
-    margin-top: 56%;
+    margin-top: 345px;
     padding: 0 10rem;
   }
   .cta__background__content__title {

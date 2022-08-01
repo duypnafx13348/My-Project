@@ -83,7 +83,7 @@ $(document).ready(function () {
         const check = $(".box__checkbox input").is(":checked");
         check
           ? $(".box__submit input").attr("disabled", false)
-          : $(".box__submit input").attr("disabled");
+          : $(".box__submit input").attr("disabled", true);
       }),
       submitHandler: validateSignup,
     });
