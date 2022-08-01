@@ -3,17 +3,13 @@ const lengthService = $(
 ).length;
 const lengthFeature = $(".feature__menu .feature__menu__text").length;
 const dataUser = JSON.parse(localStorage.getItem("user"));
-console.log("dataUser", dataUser);
 const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
-console.log("isLoggedIn", isLoggedIn);
 
 // handle Login Logout
 if (isLoggedIn == "") {
-  console.log("Sign up");
   $(".navbar__signup").text("Sign up");
   $(".hero__menu__modal__name h5").text("");
 } else {
-  console.log("Log out");
   $(".navbar__signup").text("Log out");
   $(".hero__menu__modal__name h5").text(
     `${isLoggedIn[0].firstname} ${isLoggedIn[0].lastname}`
@@ -215,7 +211,6 @@ $(document).ready(function () {
   // Click navbar item
   function handleClickNav() {
     const getAttr = $(this).attr("href");
-    console.log("$(getAttr).length", $(getAttr));
     if ($(getAttr)) {
       let getOffset = $(getAttr).offset().top;
       let targetDistance = 95;
@@ -288,18 +283,16 @@ $(document).ready(function () {
 
   $(".navbar__signup").on("click", function () {
     if (isLoggedIn && isLoggedIn != "") {
-      console.log("success");
       isLoggedIn[0].isLoggedIn = false;
       localStorage.setItem("user", JSON.stringify(isLoggedIn));
       window.location.replace(
-        // "https://duypnafx13348.github.io/My-Project/signup.html"
-        "/signup.html"
+        "https://duypnafx13348.github.io/My-Project/signup.html"
+        // "/signup.html"
       );
     } else {
-      console.log("fail");
       window.location.replace(
-        // "https://duypnafx13348.github.io/My-Project/signup.html"
-        "/signup.html"
+        "https://duypnafx13348.github.io/My-Project/signup.html"
+        // "/signup.html"
       );
     }
   });

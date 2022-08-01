@@ -80,7 +80,6 @@ $(document).ready(function () {
       },
       checkboxHandler: $(".box__checkbox input").on("click", function () {
         const check = $(".box__checkbox input").is(":checked");
-        console.log("helo", check);
         check
           ? $(".box__submit input").attr("disabled", false)
           : $(".box__submit input").attr("disabled");
@@ -91,7 +90,6 @@ $(document).ready(function () {
 
   // handle button Cancel
   const handleCancel = function () {
-    console.log("4");
     $(".box-login").fadeIn(1500);
     $(".box-signup").fadeOut(500);
   };
@@ -103,7 +101,6 @@ $(document).ready(function () {
     const emailVal = $(".login__email input").val();
     const passwordVal = $(".login__password input").val();
     const dataUser = JSON.parse(localStorage.getItem("user"));
-    console.log("datauser", dataUser);
 
     const isExistEmail = dataUser.filter((user, index) => {
       return emailVal.toLowerCase() == user.email.toLowerCase();
@@ -118,8 +115,8 @@ $(document).ready(function () {
         isExistEmail[0].isLoggedIn = true;
         localStorage.setItem("user", JSON.stringify(isExistEmail));
         location.replace(
-          // "https://duypnafx13348.github.io/My-Project/index.html"
-          "/"
+          "https://duypnafx13348.github.io/My-Project/index.html"
+          // "/"
         );
       } else {
         $(".box__error-message").show();
