@@ -9,6 +9,13 @@
       background: #f1f1f1;
       opacity: 0.9;
 
+      .navbar {
+        padding: 1rem 2rem;
+        button {
+          background-color: #2f76ff;
+        }
+      }
+
       form {
         button {
           height: auto;

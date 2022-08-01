@@ -685,6 +685,7 @@
   }
   .hero__navbar .navbar button {
     outline: none;
+    background-color: #2f76ff;
   }
   .hero__navbar form button {
     height: auto;
@@ -1161,6 +1162,12 @@
     background: #f1f1f1;
     opacity: 0.9;
   }
+  .hero__navbar .navbar {
+    padding: 1rem 2rem;
+  }
+  .hero__navbar .navbar button {
+    background-color: #2f76ff;
+  }
   .hero__navbar form button {
     height: auto;
   }
@@ -1494,6 +1501,9 @@
   }
   .hero__navbar .navbar {
     padding: 1rem 2rem;
+  }
+  .hero__navbar .navbar button {
+    background-color: #2f76ff;
   }
   .hero__navbar form button {
     height: auto;
