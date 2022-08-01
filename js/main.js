@@ -6,14 +6,19 @@ const dataUser = JSON.parse(localStorage.getItem("user"));
 const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
 
 // handle Login Logout
-if (isLoggedIn == "") {
+if (dataUser) {
+  if (isLoggedIn == "") {
+    $(".navbar__signup").text("Sign up");
+    $(".hero__menu__modal__name h5").text("");
+  } else {
+    $(".navbar__signup").text("Log out");
+    $(".hero__menu__modal__name h5").text(
+      `${isLoggedIn[0].firstname} ${isLoggedIn[0].lastname}`
+    );
+  }
+} else {
   $(".navbar__signup").text("Sign up");
   $(".hero__menu__modal__name h5").text("");
-} else {
-  $(".navbar__signup").text("Log out");
-  $(".hero__menu__modal__name h5").text(
-    `${isLoggedIn[0].firstname} ${isLoggedIn[0].lastname}`
-  );
 }
 
 // handleService > 4 item

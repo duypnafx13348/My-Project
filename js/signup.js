@@ -119,7 +119,6 @@ $(document).ready(function () {
           localStorage.setItem("user", JSON.stringify(dataUser));
           location.replace(
             "https://duypnafx13348.github.io/My-Project/index.html"
-            // "/"
           );
         } else {
           $(".box__error-message").show();
