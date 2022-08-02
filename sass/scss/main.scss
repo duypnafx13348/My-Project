@@ -59,19 +59,6 @@ ul {
   margin-top: 7rem;
 }
 
-#map {
-  width: 100%;
-  height: 300px;
-}
-
-.leaflet-container .leaflet-control-attribution {
-  display: none;
-}
-
-.leaflet-control-geocoder-alternatives-minimized {
-  display: block;
-}
-
 #checkin,
 #checkout {
   display: none;
@@ -195,9 +182,29 @@ ul {
 }
 
 // leaflet
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out {
-  span {
-    color: #f85a47;
-  }
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-control-geocoder-alternatives-minimized {
+  display: block;
+}
+
+.leaflet-control-geocoder-form {
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+}
+
+.leaflet-bar a {
+  border: 1px solid #f85a47 !important;
 }
