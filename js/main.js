@@ -1,139 +1,142 @@
-const lengthService = $(
-  ".service__content__list .service__content__list__item"
-).length;
-const lengthFeature = $(".feature__menu .feature__menu__text").length;
 const dataUser = JSON.parse(localStorage.getItem("user"));
+function handleHtmlInit() {
+  const lengthService = $(
+    ".service__content__list .service__content__list__item"
+  ).length;
+  const lengthFeature = $(".feature__menu .feature__menu__text").length;
 
-// handle Login Logout
-if (dataUser) {
-  const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
-  if (isLoggedIn == "") {
+  // handle Login Logout
+  if (dataUser) {
+    const isLoggedIn = dataUser.filter((user) => user.isLoggedIn);
+    if (isLoggedIn == "") {
+      $(".navbar__signup").text("Sign up");
+      $(".hero__menu__modal__name h5").text("");
+    } else {
+      $(".navbar__signup").text("Log out");
+      $(".hero__menu__modal__name h5").text(
+        `${isLoggedIn[0].firstname} ${isLoggedIn[0].lastname}`
+      );
+    }
+  } else {
     $(".navbar__signup").text("Sign up");
     $(".hero__menu__modal__name h5").text("");
-  } else {
-    $(".navbar__signup").text("Log out");
-    $(".hero__menu__modal__name h5").text(
-      `${isLoggedIn[0].firstname} ${isLoggedIn[0].lastname}`
-    );
   }
-} else {
-  $(".navbar__signup").text("Sign up");
-  $(".hero__menu__modal__name h5").text("");
+
+  // handleService > 4 item
+  if (lengthService > 4) {
+    $(".service__content__list").show();
+    $(".btn-group").show();
+  }
+
+  // handle feature > 5 item
+  if (lengthFeature > 5) {
+    $(".feature__menu").hide();
+    $(".btn-group").show();
+  }
 }
 
-// handleService > 4 item
-if (lengthService > 4) {
-  $(".service__content__list").show();
-  $(".btn-group").show();
-}
-
-// handle feature > 5 item
-if (lengthFeature > 5) {
-  $(".feature__menu").hide();
-  $(".btn-group").show();
-}
-
+handleHtmlInit();
 $(document).ready(function () {
-  // xử dụng slick slider để xử lý ảnh
-  $(".service__content__img").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
+  function handleSlick() {
+    $(".service__content__img").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 2,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 1,
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 1,
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
 
-  $(".feature__img__list").slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
+    $(".feature__img__list").slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 2,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 1,
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: "40px",
+            slidesToShow: 1,
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
 
-  $(".testimonial__content").slick({
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          infinite: true,
-          speed: 1000,
-          slidesToShow: 2,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          dots: true,
+    $(".testimonial__content").slick({
+      infinite: true,
+      speed: 1000,
+      slidesToShow: 3,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 2,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+          },
         },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          dots: true,
-          infinite: true,
-          speed: 1000,
-          slidesToShow: 1,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 2000,
+        {
+          breakpoint: 768,
+          settings: {
+            dots: true,
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          dots: true,
-          infinite: true,
-          speed: 1000,
-          slidesToShow: 1,
-          arrows: false,
-          autoplay: true,
-          autoplaySpeed: 2000,
+        {
+          breakpoint: 480,
+          settings: {
+            dots: true,
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          },
         },
-      },
-    ],
-  });
+      ],
+    });
+  }
 
-  // handleClick service
   function handleClickService() {
     let serviceId = $(this).attr("service-id");
 
@@ -155,7 +158,6 @@ $(document).ready(function () {
     imgId.slick("refresh");
   }
 
-  // handleClick feature
   function handleClickFeature() {
     let itemId = $(this).attr("data-id");
 
@@ -170,18 +172,6 @@ $(document).ready(function () {
     sliderId.slick("refresh");
   }
 
-  $(".service__content__img:not(:first-child)").hide();
-  $(".service__content__list__item").on("click", handleClickService);
-  $(".dropdown-content__service").on("click", handleClickService);
-
-  // ẩn tất cả ảnh feature trừ cái đầu tiên
-  $(".feature__img__list:not(:first-child)").hide();
-
-  // xử lý event click feature
-  $(".feature__menu__text").on("click", handleClickFeature);
-  $(".dropdown-content__item").on("click", handleClickFeature);
-
-  // xử lý scroll window hero__navbar
   function handleScrollY() {
     let targetDistance = 180;
     const scrolled = this.scrollY;
@@ -213,9 +203,7 @@ $(document).ready(function () {
       $(".hero ul li:nth-child(4) a").addClass("active");
     }
   }
-  $(window).on("scroll", handleScrollY);
 
-  // Click navbar item
   function handleClickNav() {
     const getAttr = $(this).attr("href");
     if ($(getAttr)) {
@@ -230,65 +218,9 @@ $(document).ready(function () {
     }
     return false;
   }
-  $(".scrollTo").on("click", handleClickNav);
 
-  // hiển thị button search trong leaflet map
-  var map = L.map("map").setView([0, 0], 2);
-  L.tileLayer("https://{s}.tile.osm.org/{z}/{x}/{y}.png", {
-    attribution:
-      '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
-    center: [20.5937, 78.9629],
-    zoom: 5,
-    zoomControl: true,
-    trackResize: true,
-  }).addTo(map);
-  L.Control.geocoder().addTo(map);
-
-  // event leaflet popupopen để lấy giá trị search input
-  map.on("popupopen", function (e) {
-    const searchValue = e.popup._contentNode.innerText;
-    $(".modal-footer__location__desc").text(searchValue);
-  });
-
-  // xử lý datapicker và hero__menu
-  $(".hero__menu__list__item--checkin").on("click", function () {
-    $(".hero__menu__list__item--checkin span").hide();
-    $("#checkin").show().focus();
-    $("#checkin").datepicker({
-      dateFormat: "dd/mm/yy",
-    });
-  });
-
-  $(".hero__menu__list__item--checkout").on("click", function () {
-    $(".hero__menu__list__item--checkout span").hide();
-    $("#checkout").show().focus();
-    $("#checkout").datepicker({
-      dateFormat: "dd/mm/yy",
-    });
-  });
-
-  $(".hero__menu__list__search").on("click", function () {
-    const locationValue = $("#location").text();
-    const checkinValue = $("#checkin").val();
-    const checkoutValue = $("#checkout").val();
-    $("span.location").text(locationValue);
-    $("span.checkin").text(checkinValue);
-    $("span.checkout").text(checkoutValue);
-  });
-
-  $(".modal-footer .btn-save").on("click", function () {
-    $("#location").text($(".modal-footer__location__desc").text());
-  });
-
-  $(".hero__menu__modal__close").on("click", function () {
-    $("#location").text("Where are you going ?");
-    $("#checkin").hide();
-    $(".hero__menu__list__item--checkin span").show();
-    $("#checkout").hide();
-    $(".hero__menu__list__item--checkout span").show();
-  });
-
-  $(".navbar__signup").on("click", function () {
+  // xử lý signup logout
+  function handleSignup() {
     if (!dataUser) {
       return window.location.replace(
         "https://duypnafx13348.github.io/My-Project/signup.html"
@@ -309,5 +241,80 @@ $(document).ready(function () {
         // "/signup.html"
       );
     }
-  });
+  }
+
+  // ẩn tất cả ảnh feature trừ cái đầu tiên
+  $(".service__content__img:not(:first-child)").hide();
+  $(".feature__img__list:not(:first-child)").hide();
+
+  function handleLeafletMap() {
+    var map = L.map("map").setView([0, 0], 2);
+    L.tileLayer("https://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
+      center: [20.5937, 78.9629],
+      zoom: 5,
+      zoomControl: true,
+      trackResize: true,
+    }).addTo(map);
+    L.Control.geocoder().addTo(map);
+
+    // event leaflet popupopen để lấy giá trị search input
+    map.on("popupopen", function (e) {
+      const searchValue = e.popup._contentNode.innerText;
+      $(".modal-footer__location__desc").text(searchValue);
+    });
+  }
+
+  function handlePickerCheckin() {
+    $(".hero__menu__list__item--checkin span").hide();
+    $("#checkin").show().focus();
+    $("#checkin").datepicker({
+      dateFormat: "dd/mm/yy",
+    });
+  }
+
+  function handlePickerCheckout() {
+    $(".hero__menu__list__item--checkout span").hide();
+    $("#checkout").show().focus();
+    $("#checkout").datepicker({
+      dateFormat: "dd/mm/yy",
+    });
+  }
+
+  function handleButtonSearch() {
+    const locationValue = $("#location").text();
+    const checkinValue = $("#checkin").val();
+    const checkoutValue = $("#checkout").val();
+    $("span.location").text(locationValue);
+    $("span.checkin").text(checkinValue);
+    $("span.checkout").text(checkoutValue);
+  }
+
+  function handleButtonSave() {
+    $("#location").text($(".modal-footer__location__desc").text());
+  }
+
+  function handleButtonClose() {
+    $("#location").text("Where are you going ?");
+    $("#checkin").hide();
+    $(".hero__menu__list__item--checkin span").show();
+    $("#checkout").hide();
+    $(".hero__menu__list__item--checkout span").show();
+  }
+
+  handleSlick();
+  handleLeafletMap();
+  $(".service__content__list__item").on("click", handleClickService);
+  $(".dropdown-content__service").on("click", handleClickService);
+  $(".feature__menu__text").on("click", handleClickFeature);
+  $(".dropdown-content__item").on("click", handleClickFeature);
+  $(window).on("scroll", handleScrollY);
+  $(".scrollTo").on("click", handleClickNav);
+  $(".hero__menu__list__item--checkin").on("click", handlePickerCheckin);
+  $(".hero__menu__list__item--checkout").on("click", handlePickerCheckout);
+  $(".hero__menu__list__search").on("click", handleButtonSearch);
+  $(".modal-footer .btn-save").on("click", handleButtonSave);
+  $(".hero__menu__modal__close").on("click", handleButtonClose);
+  $(".navbar__signup").on("click", handleSignup);
 });

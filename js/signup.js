@@ -30,8 +30,8 @@ $(document).ready(function () {
 
       localStorage.setItem("user", json);
       alert("Đăng ký thành công!!!");
-      $(".box-login").fadeIn(1500);
       $(".box-signup").fadeOut(500);
+      $(".box-login").fadeIn(1500);
       $(".box__error-message").hide();
     }
   };
@@ -91,8 +91,9 @@ $(document).ready(function () {
 
   // handle button Cancel
   const handleCancel = function () {
-    $(".box-login").fadeIn(1500);
     $(".box-signup").fadeOut(500);
+    $(".box__error-message").hide();
+    $(".box-login").fadeIn(1500);
   };
 
   // validate form login with jquery

@@ -118,26 +118,18 @@ body {
   color: #f1faff;
 }
 .box .signup__password__indicator {
-  height: 10px;
+  height: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 11px 0;
 }
 .box .signup__password__indicator span {
-  width: 100%;
   height: 100%;
   background: lightgrey;
   border-radius: 5px;
   position: relative;
-}
-.box .signup__password__indicator span.medium {
-  margin-left: 3px;
-  margin-right: 1.5px;
-}
-.box .signup__password__indicator span.strong {
-  margin-left: 1.5px;
-  margin-right: 3px;
+  width: 31%;
 }
 .box .signup__password__indicator span:before {
   content: "";
