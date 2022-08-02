@@ -119,7 +119,7 @@ $(document).ready(function () {
           isExistEmail[0].isLoggedIn = true;
           localStorage.setItem("user", JSON.stringify(dataUser));
           location.replace(
-            "https://duypnafx13348.github.io/My-Project/index.html"
+            "/My-Project"
             // "/"
           );
         } else {
