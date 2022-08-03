@@ -193,3 +193,8 @@ ul {
 .leaflet-control-zoom a {
   border: 1px solid #f85a47 !important;
 }
+
+.leaflet-control-geocoder-alternatives {
+  height: 250px;
+  overflow: scroll;
+}
