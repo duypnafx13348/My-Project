@@ -168,6 +168,13 @@ ul {
 }
 
 // custom date picker
+.flatpickr-months {
+  padding: 0.5rem 0;
+
+  .flatpickr-next-month {
+    padding: 15px;
+  }
+}
 
 // leaflet
 

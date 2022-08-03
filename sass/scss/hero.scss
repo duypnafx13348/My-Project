@@ -136,6 +136,7 @@ $font-manrope: "Manrope", sans-serif;
         input {
           width: 120px;
           border: none;
+          cursor: pointer;
 
           &:focus-visible {
             outline: none;

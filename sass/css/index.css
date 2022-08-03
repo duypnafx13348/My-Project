@@ -115,6 +115,7 @@
 .hero__menu__list__item input {
   width: 120px;
   border: none;
+  cursor: pointer;
 }
 .hero__menu__list__item input:focus-visible {
   outline: none;
@@ -2179,6 +2180,13 @@ ul li {
 
 .modal-footer__location__desc {
   font-size: 14px;
+}
+
+.flatpickr-months {
+  padding: 0.5rem 0;
+}
+.flatpickr-months .flatpickr-next-month {
+  padding: 15px;
 }
 
 #map {
