@@ -14,6 +14,10 @@
         button {
           outline: none;
           background-color: #2f76ff;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -79,7 +83,7 @@
           text-align: center;
 
           h1 {
-            font-size: 40px;
+            font-size: 33px;
             line-height: 1.1;
           }
         }
@@ -98,7 +102,7 @@
       }
 
       &__header.general--margin-top {
-        margin-top: 5rem;
+        margin-top: 8rem;
       }
 
       &--style {
@@ -389,9 +393,13 @@
         color: #f85a47;
       }
 
-      .slick-dots li button:before {
-        font-size: 8px;
-        color: #f85a47;
+      .slick-dots {
+        bottom: 10px;
+
+        li button:before {
+          font-size: 8px;
+          color: #f85a47;
+        }
       }
 
       &__card {
@@ -462,7 +470,7 @@
     }
 
     .testimonial__content.general--padding {
-      padding: 2rem 0 0;
+      padding: 2rem 0 3rem;
     }
   }
 
@@ -499,6 +507,8 @@
     }
 
     &__img {
+      margin-top: 2rem;
+
       &__list {
         .slick-dots li.slick-active button:before {
           opacity: 0.75;

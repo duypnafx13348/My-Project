@@ -20,9 +20,17 @@ $font-manrope: "Manrope", sans-serif;
       color: #f85a47;
     }
 
-    .slick-dots li button:before {
-      font-size: 15px;
-      color: #f85a47;
+    .slick-dots {
+      bottom: -35px;
+
+      li {
+        margin: 0 15px;
+
+        button:before {
+          font-size: 15px;
+          color: #f85a47;
+        }
+      }
     }
 
     &--style {

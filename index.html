@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <title>Real Estate</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <!-- reset css -->
     <link
       rel="stylesheet"
@@ -56,7 +64,9 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Chọn vị trí</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Choose location
+            </h5>
             <button
               type="button"
               class="close btn"
@@ -73,7 +83,12 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-save" data-dismiss="modal">
+            <button
+              type="button"
+              class="btn btn-save"
+              data-dismiss="modal"
+              disabled
+            >
               Save
             </button>
           </div>
@@ -88,7 +103,7 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Thông tin Booking!!</h5>
+            <h5 class="modal-title">Booking infomation!!</h5>
             <button
               type="button"
               class="close btn"
@@ -102,32 +117,32 @@
           </div>
           <div class="modal-body">
             <div class="hero__menu__modal__name">
-              <h6>Xin Chào!!</h6>
+              <h6>Hello!!</h6>
               <h5></h5>
             </div>
             <div class="hero__menu__modal__booking">
               <div class="hero__menu__modal__location">
                 <h6>
-                  Điểm đến:
+                  Location:
                   <span class="location"></span>
                 </h6>
               </div>
               <div class="hero__menu__modal__checkin">
                 <h6>
-                  Giờ Checkin:
+                  Checkin:
                   <span class="checkin"></span>
                 </h6>
               </div>
               <div class="hero__menu__modal__checkout">
                 <h6>
-                  Giờ Checkout:
+                  Checkout:
                   <span class="checkout"></span>
                 </h6>
               </div>
             </div>
           </div>
           <div class="modal-footer modal-footer__thank">
-            <h6>Cảm ơn bạn đã booking!!</h6>
+            <h6>Thank you for booking!!</h6>
           </div>
         </div>
       </div>
@@ -136,7 +151,7 @@
     <div class="container-fluid realestate">
       <header id="home" class="hero">
         <div class="hero__navbar">
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#home">
               <div class="hero__navbar__logo d-flex align-items-center">
                 <div class="hero__navbar__logo--1">
@@ -229,8 +244,7 @@
                     class="hero__menu__list__item hero__menu__list__item--checkin"
                   >
                     <h6>Check in</h6>
-                    <span>Add dates </span>
-                    <input id="checkin" type="text" placeholder="dd/mm/yy" />
+                    <input id="checkin" type="text" placeholder="Add dates" />
                   </div>
                 </div>
               </div>
@@ -242,8 +256,7 @@
                     class="hero__menu__list__item hero__menu__list__item--checkout"
                   >
                     <h6>Check out</h6>
-                    <span>Add dates</span>
-                    <input id="checkout" type="text" placeholder="dd/mm/yy" />
+                    <input id="checkout" type="text" placeholder="Add dates" />
                   </div>
                   <div
                     class="hero__menu__list__item hero__menu__list__item--rent"
@@ -984,6 +997,14 @@
         </div>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/plugins/rangePlugin.min.js"
+      integrity="sha512-44bA1YzQUqHACfLj2v0wEdX9z6EmlALcta6ENgPZnxH/aIiuBw92he+M/51kTCueY/2DsqEYM7mCwGUyO2q79w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>

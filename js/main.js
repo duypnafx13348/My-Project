@@ -263,22 +263,12 @@ $(document).ready(function () {
     map.on("popupopen", function (e) {
       const searchValue = e.popup._contentNode.innerText;
       $(".modal-footer__location__desc").text(searchValue);
-    });
-  }
 
-  function handlePickerCheckin() {
-    $(".hero__menu__list__item--checkin span").hide();
-    $("#checkin").show().focus();
-    $("#checkin").datepicker({
-      dateFormat: "dd/mm/yy",
-    });
-  }
-
-  function handlePickerCheckout() {
-    $(".hero__menu__list__item--checkout span").hide();
-    $("#checkout").show().focus();
-    $("#checkout").datepicker({
-      dateFormat: "dd/mm/yy",
+      if ($(".modal-footer__location__desc").text()) {
+        $(".modal-footer button").attr("disabled", false);
+      } else {
+        $(".modal-footer button").attr("disabled", true);
+      }
     });
   }
 
@@ -297,11 +287,19 @@ $(document).ready(function () {
 
   function handleButtonClose() {
     $("#location").text("Where are you going ?");
-    $("#checkin").hide();
-    $(".hero__menu__list__item--checkin span").show();
-    $("#checkout").hide();
-    $(".hero__menu__list__item--checkout span").show();
+    $("#checkin").val("");
+    $("#checkout").val("");
   }
+
+  flatpickr("#checkin", {
+    dateFormat: "d/m/Y",
+    minDate: "today",
+    plugins: [
+      new rangePlugin({
+        input: "#checkout",
+      }),
+    ],
+  });
 
   handleSlick();
   handleLeafletMap();
@@ -311,8 +309,6 @@ $(document).ready(function () {
   $(".dropdown-content__item").on("click", handleClickFeature);
   $(window).on("scroll", handleScrollY);
   $(".scrollTo").on("click", handleClickNav);
-  $(".hero__menu__list__item--checkin").on("click", handlePickerCheckin);
-  $(".hero__menu__list__item--checkout").on("click", handlePickerCheckout);
   $(".hero__menu__list__search").on("click", handleButtonSearch);
   $(".modal-footer .btn-save").on("click", handleButtonSave);
   $(".hero__menu__modal__close").on("click", handleButtonClose);

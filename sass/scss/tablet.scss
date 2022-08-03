@@ -14,11 +14,11 @@
 
         button {
           background-color: #2f76ff;
-        }
 
-        // button:focus {
-        //   outline: none;
-        // }
+          &:focus {
+            outline: none;
+          }
+        }
       }
 
       form {
@@ -308,9 +308,13 @@
         color: #f85a47;
       }
 
-      .slick-dots li button:before {
-        font-size: 10px;
-        color: #f85a47;
+      .slick-dots {
+        bottom: 10px;
+
+        li button:before {
+          font-size: 10px;
+          color: #f85a47;
+        }
       }
 
       &__card {
@@ -354,7 +358,7 @@
     }
 
     .general--padding {
-      padding: 2rem 0 0;
+      padding: 3rem 0 3rem;
     }
   }
 

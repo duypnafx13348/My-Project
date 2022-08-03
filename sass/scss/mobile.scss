@@ -11,8 +11,13 @@
 
       .navbar {
         padding: 1rem 2rem;
+
         button {
           background-color: #2f76ff;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
@@ -299,9 +304,13 @@
         color: #f85a47;
       }
 
-      .slick-dots li button:before {
-        font-size: 8px;
-        color: #f85a47;
+      .slick-dots {
+        bottom: 10px;
+
+        li button:before {
+          font-size: 8px;
+          color: #f85a47;
+        }
       }
 
       &__card {
@@ -345,7 +354,7 @@
     }
 
     .general--padding {
-      padding: 2rem 0 0;
+      padding: 2rem 0 3rem;
     }
   }
 

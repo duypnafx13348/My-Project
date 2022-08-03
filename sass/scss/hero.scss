@@ -123,7 +123,7 @@ $font-manrope: "Manrope", sans-serif;
           margin-bottom: 5px;
         }
 
-        input,
+        input::placeholder,
         span {
           font-weight: 400;
           font-size: 15px;
@@ -135,6 +135,11 @@ $font-manrope: "Manrope", sans-serif;
 
         input {
           width: 120px;
+          border: none;
+
+          &:focus-visible {
+            outline: none;
+          }
         }
 
         #location {

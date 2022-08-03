@@ -122,7 +122,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 11px 0;
+  margin: 10px 0;
 }
 .box .signup__password__indicator span {
   height: 100%;

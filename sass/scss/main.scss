@@ -59,11 +59,6 @@ ul {
   margin-top: 7rem;
 }
 
-#checkin,
-#checkout {
-  display: none;
-}
-
 //  css modal
 .modal-content {
   width: 90%;
@@ -87,6 +82,13 @@ ul {
 
   h5 {
     color: white;
+    font-size: 16px;
+    font-family: $font-manrope;
+    font-weight: 400;
+  }
+  span {
+    color: white;
+    font-weight: 400;
   }
 }
 
@@ -139,9 +141,11 @@ ul {
   border-top: 2px solid white;
 
   .btn-save {
-    background-color: #2f76ff;
+    background-color: white;
     border: none;
-    color: white;
+    color: #f85a47;
+    font-weight: 600;
+    font-family: "Manrope";
   }
 }
 
@@ -149,8 +153,9 @@ ul {
   justify-content: flex-start;
 
   h6 {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-family: $font-manrope;
+    font-weight: 400;
     color: white;
   }
 }
@@ -160,26 +165,6 @@ ul {
 }
 
 // custom date picker
-.ui-widget-header {
-  border: 1px solid #f85a47 !important;
-  background: #f85a47 !important;
-  color: #f1f1f1 !important;
-}
-
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight {
-  background: #ebcfcd !important;
-  border: 1px solid #f3b9b3 !important;
-  color: #1c94c4 !important;
-}
-
-.ui-state-default {
-  border: 1px solid #f3b9b3 !important;
-}
-
-.ui-widget {
-  font-size: 1em;
-}
 
 // leaflet
 

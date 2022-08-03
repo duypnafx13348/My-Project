@@ -164,7 +164,8 @@ $(document).ready(function () {
 
   // regex password strength
   const regexPassword = function () {
-    const indicator = $(".signup__password__indicator");
+    const indicator = $(".signup__password__indicator span");
+    console.log("indicator", indicator);
     const inputPw = $(".signup__password input").val();
     const weak = $(".weak");
     const medium = $(".medium");
@@ -172,58 +173,90 @@ $(document).ready(function () {
     const text = $(".signup__password__text");
     let regexWeak = /[a-z]/;
     let regexMedium = /[A-Z0-9]/;
-    let regexStrong = /.[!,@,#,$,%,^,&,*,?,...,~,-,(,)]/;
+    let regexStrong = /[!,@,#,$,%,^,&,*,?,...,~,-,(,)]/;
+    let regex = [regexWeak, regexMedium, regexStrong];
+    let level = 0;
 
-    if (inputPw != "" && inputPw.length >= 3) {
-      if (
-        (inputPw.length >= 3 && inputPw.match(regexWeak)) ||
-        inputPw.match(regexMedium) ||
-        inputPw.match(regexStrong)
-      ) {
-        weak.addClass("active");
-        text.show().text("Your password is too weak.").addClass("weak");
-      }
-
-      if (
-        (inputPw.length >= 6 &&
-          inputPw.match(regexWeak) &&
-          inputPw.match(regexMedium)) ||
-        (inputPw.match(regexMedium) && inputPw.match(regexStrong)) ||
-        (inputPw.match(regexWeak) && inputPw.match(regexStrong))
-      ) {
-        weak.addClass("active");
-        medium.addClass("active");
-        text.show().text("Your password is medium.").addClass("medium");
-      } else {
-        medium.removeClass("active");
-        text.removeClass("medium");
-      }
-
-      if (
-        inputPw.length >= 8 &&
-        inputPw.match(regexWeak) &&
-        inputPw.match(regexMedium) &&
-        inputPw.match(regexStrong)
-      ) {
-        weak.addClass("active");
-        medium.addClass("active");
-        strong.addClass("active");
-        text.show().text("Your password is strong.").addClass("strong");
-      } else {
-        strong.removeClass("active");
-        text.removeClass("strong");
-      }
-    } else {
-      weak.removeClass("active");
-      medium.removeClass("active");
-      strong.removeClass("active");
-      text.removeClass("weak");
-      text.removeClass("medium");
-      text.removeClass("strong");
-      text.text(
-        "Use 8 or more characters with a mix of letters, numbers & symbols."
-      );
+    for (let i = 0; i < regex.length; i++) {
+      regex[i].test(inputPw) ? level++ : "";
+      console.log("level", level);
     }
+
+    const activeUI = (color) => {
+      for (let i = 0; i < level; i++) {
+        indicator[i].setAttribute("style", `background-color: ${color}`);
+      }
+      for (let i = level; i < indicator.length; i++) {
+        indicator[i].setAttribute("style", "background-color: lightGrey");
+      }
+    };
+
+    switch (level) {
+      case 0:
+        indicator.css({
+          backgroundColor: "lightGrey",
+        });
+        break;
+      case 1:
+        activeUI("red");
+        break;
+      case 2:
+        activeUI("yellow");
+        break;
+      case 3:
+        activeUI("green");
+    }
+
+    // if (inputPw != "" && inputPw.length >= 3) {
+    //   if (
+    //     inputPw.match(regexWeak) ||
+    //     inputPw.match(regexMedium) ||
+    //     inputPw.match(regexStrong)
+    //   ) {
+    //     weak.addClass("active");
+    //     text.show().text("Your password is too weak.").addClass("weak");
+    //   }
+
+    //   if (
+    //     (inputPw.length >= 6 &&
+    //       inputPw.match(regexWeak) &&
+    //       inputPw.match(regexMedium)) ||
+    //     (inputPw.match(regexMedium) && inputPw.match(regexStrong)) ||
+    //     (inputPw.match(regexWeak) && inputPw.match(regexStrong))
+    //   ) {
+    //     weak.addClass("active");
+    //     medium.addClass("active");
+    //     text.show().text("Your password is medium.").addClass("medium");
+    //   } else {
+    //     medium.removeClass("active");
+    //     text.removeClass("medium");
+    //   }
+
+    //   if (
+    //     inputPw.length >= 8 &&
+    //     inputPw.match(regexWeak) &&
+    //     inputPw.match(regexMedium) &&
+    //     inputPw.match(regexStrong)
+    //   ) {
+    //     weak.addClass("active");
+    //     medium.addClass("active");
+    //     strong.addClass("active");
+    //     text.show().text("Your password is strong.").addClass("strong");
+    //   } else {
+    //     strong.removeClass("active");
+    //     text.removeClass("strong");
+    //   }
+    // } else {
+    //   weak.removeClass("active");
+    //   medium.removeClass("active");
+    //   strong.removeClass("active");
+    //   text.removeClass("weak");
+    //   text.removeClass("medium");
+    //   text.removeClass("strong");
+    //   text.text(
+    //     "Use 8 or more characters with a mix of letters, numbers & symbols."
+    //   );
+    // }
   };
 
   $("#signup").on("click", signupFormTab);
