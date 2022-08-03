@@ -109,10 +109,12 @@ ul {
   }
 
   .hero__menu__modal__booking {
+    margin: 2rem 0;
+
     .hero__menu__modal__location,
     .hero__menu__modal__checkin,
     .hero__menu__modal__checkout {
-      margin: 2rem 0;
+      margin: 0.5rem 0;
 
       h5 {
         font-size: 20px;
@@ -120,13 +122,14 @@ ul {
       }
 
       h6 {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 500;
       }
 
       span {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 14px;
+        font-weight: 300;
+        color: #6c757d;
       }
     }
   }

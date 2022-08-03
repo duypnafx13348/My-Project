@@ -2124,10 +2124,13 @@ ul li {
   font-size: 18px;
   font-weight: 500;
 }
+.modal-body .hero__menu__modal__booking {
+  margin: 2rem 0;
+}
 .modal-body .hero__menu__modal__booking .hero__menu__modal__location,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkin,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkout {
-  margin: 2rem 0;
+  margin: 0.5rem 0;
 }
 .modal-body .hero__menu__modal__booking .hero__menu__modal__location h5,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkin h5,
@@ -2138,14 +2141,15 @@ ul li {
 .modal-body .hero__menu__modal__booking .hero__menu__modal__location h6,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkin h6,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkout h6 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
 }
 .modal-body .hero__menu__modal__booking .hero__menu__modal__location span,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkin span,
 .modal-body .hero__menu__modal__booking .hero__menu__modal__checkout span {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6c757d;
 }
 .modal-body .leaflet-touch .leaflet-control-geocoder {
   border: 1px solid #f85a47;
