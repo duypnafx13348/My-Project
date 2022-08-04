@@ -196,67 +196,25 @@ $(document).ready(function () {
         indicator.css({
           backgroundColor: "lightGrey",
         });
+        text
+          .text(
+            "Use 8 or more characters with a mix of letters, numbers & symbols."
+          )
+          .css("color", "#5e6278");
         break;
       case 1:
-        activeUI("red");
+        activeUI("#ff4757");
+        text.text("Your password is too weak.").css("color", "#ff4757");
         break;
       case 2:
-        activeUI("yellow");
+        activeUI("orange");
+        text.text("Your password is medium.").css("color", "orange");
+
         break;
       case 3:
-        activeUI("green");
+        activeUI("#23ad5c");
+        text.text("Your password is strong.").css("color", "#23ad5c");
     }
-
-    // if (inputPw != "" && inputPw.length >= 3) {
-    //   if (
-    //     inputPw.match(regexWeak) ||
-    //     inputPw.match(regexMedium) ||
-    //     inputPw.match(regexStrong)
-    //   ) {
-    //     weak.addClass("active");
-    //     text.show().text("Your password is too weak.").addClass("weak");
-    //   }
-
-    //   if (
-    //     (inputPw.length >= 6 &&
-    //       inputPw.match(regexWeak) &&
-    //       inputPw.match(regexMedium)) ||
-    //     (inputPw.match(regexMedium) && inputPw.match(regexStrong)) ||
-    //     (inputPw.match(regexWeak) && inputPw.match(regexStrong))
-    //   ) {
-    //     weak.addClass("active");
-    //     medium.addClass("active");
-    //     text.show().text("Your password is medium.").addClass("medium");
-    //   } else {
-    //     medium.removeClass("active");
-    //     text.removeClass("medium");
-    //   }
-
-    //   if (
-    //     inputPw.length >= 8 &&
-    //     inputPw.match(regexWeak) &&
-    //     inputPw.match(regexMedium) &&
-    //     inputPw.match(regexStrong)
-    //   ) {
-    //     weak.addClass("active");
-    //     medium.addClass("active");
-    //     strong.addClass("active");
-    //     text.show().text("Your password is strong.").addClass("strong");
-    //   } else {
-    //     strong.removeClass("active");
-    //     text.removeClass("strong");
-    //   }
-    // } else {
-    //   weak.removeClass("active");
-    //   medium.removeClass("active");
-    //   strong.removeClass("active");
-    //   text.removeClass("weak");
-    //   text.removeClass("medium");
-    //   text.removeClass("strong");
-    //   text.text(
-    //     "Use 8 or more characters with a mix of letters, numbers & symbols."
-    //   );
-    // }
   };
 
   $("#signup").on("click", signupFormTab);
