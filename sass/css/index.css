@@ -2185,8 +2185,9 @@ ul li {
 .flatpickr-months {
   padding: 0.5rem 0;
 }
-.flatpickr-months .flatpickr-next-month {
-  padding: 15px;
+
+.flatpickr-next-month {
+  padding: 15px !important;
 }
 
 #map {
