@@ -294,6 +294,7 @@ $(document).ready(function () {
   flatpickr("#checkin", {
     dateFormat: "d/m/Y",
     minDate: "today",
+    disableMobile: "true",
     plugins: [
       new rangePlugin({
         input: "#checkout",
