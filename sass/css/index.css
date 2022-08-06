@@ -762,7 +762,7 @@
     text-align: center;
   }
   .hero__content__header__title h1 {
-    font-size: 33px;
+    font-size: 30px;
     line-height: 1.1;
   }
   .hero__content__header__desc {
@@ -1195,6 +1195,11 @@
 @media screen and (min-width: 474px) and (max-width: 543px) {
   .hero__content--style {
     margin-top: 285px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .hero__content__header__desc p {
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 543px) and (max-width: 768px) {
